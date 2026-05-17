@@ -1,0 +1,3865 @@
+[
+  {
+    "tên": "MÌ spaghetti sốt tôm-rau củ",
+    "thời gian": "40 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "mì Ý spaghetti",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "tôm lột vỏ",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "nấm kim châm",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "bông cải xanh",
+        "khối lượng": "90 g"
+      },
+      {
+        "tên": "cà rốt hoặc bí đỏ",
+        "khối lượng": "80 g"
+      },
+      {
+        "tên": "hành tây",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "ngò rí",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "whipping cream cooking cream hoặc sữa tươi",
+        "khối lượng": "200 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "bơ lạt",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "cafe muối",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "cafe tiêu xay",
+        "khối lượng": "1/2 muỗng"
+      }
+    ]
+  },
+  {
+    "tên": "Cơm Rang Dưa Bò",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Thịt bò",
+        "khối lượng": "150 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Cơm nguội",
+        "khối lượng": "400 g"
+      },
+      {
+        "tên": "Hành lá",
+        "khối lượng": "2 cây"
+      },
+      {
+        "tên": "Trứng gà",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Tỏi băm",
+        "khối lượng": "1 thìa cà phê"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Dưa cải muối",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "2 thìa canh"
+      },
+      {
+        "tên": "Nước mắm",
+        "khối lượng": "1 thìa canh"
+      },
+      {
+        "tên": "Hạt tiêu",
+        "khối lượng": "1/2 thìa cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Pate Nấm và Khoai Lang Chay",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Khoai lang",
+        "khối lượng": "200 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nấm hương tươi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Hành tây",
+        "khối lượng": "1/2 củ"
+      },
+      {
+        "tên": "Bơ đậu phộng",
+        "khối lượng": "1 thìa canh"
+      },
+      {
+        "tên": "Bánh mì nguyên cám hoặc bánh mì hạt",
+        "khối lượng": "2 lát"
+      },
+      {
+        "tên": "hạt lanh nếu có",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Bơ thực vật",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "Muối",
+        "khối lượng": "1/4 thìa cà phê"
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": "1/4 thìa cà phê"
+      },
+      {
+        "tên": "Hạt mè",
+        "khối lượng": "1 thìa cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Rau luộc và trứng luộc",
+    "thời gian": "15 phút",
+    "số người": "1 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Trứng gà ta",
+        "khối lượng": "4 quả"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "cải",
+        "khối lượng": "1/2 bắp"
+      },
+      {
+        "tên": "cà chua",
+        "khối lượng": "2 quả"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Gà Hấp Nấm (One Pot)",
+    "thời gian": "15 phút",
+    "số người": "2-3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Gà nguyên con",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "Nấm lộc nhung khô",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "Nấm hương khô",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "Cải thảo",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "Gừng",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "Sả",
+        "khối lượng": "2 cây"
+      },
+      {
+        "tên": "Bột nghệ",
+        "khối lượng": "1 thìa cà phê"
+      },
+      {
+        "tên": "Hành lá",
+        "khối lượng": "20 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Muối",
+        "khối lượng": "1 thìa cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Đậu phộng da cá nước cốt dừa",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "đậu phộng sống",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "1 lon nước cốt dừa loại coconut cream loại 160mlNếu mua loại coconut milk hoặc vắt nước cốt nguyên chất thì 3-5tbsp phần bột bên ngoài trộn đến khi nó đặc gần giống coconut cream",
+        "khối lượng": "160 ml"
+      },
+      {
+        "tên": "bột béo bột năng vị cốt dừa của tài ký",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "ko phải bột sữa béo làm trà sữa hoặc bột cốt dừa",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "nhặt bỏ phần hỏng",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "bột mì",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "bột nếp",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "bột bắp",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "1/4 tsp bột nở",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1/8 tsp baking soda",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "đường",
+        "khối lượng": "100 g"
+      }
+    ]
+  },
+  {
+    "tên": "Thịt Hươu Xào Xả Ớt",
+    "thời gian": "35 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt hươu",
+        "khối lượng": "500 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "củ sả",
+        "khối lượng": "5 g"
+      },
+      {
+        "tên": "1 mcf bột canh",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 mcf mì chính",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "ớt",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "nước mắm",
+        "khối lượng": "1 thìa"
+      }
+    ]
+  },
+  {
+    "tên": "Bữa cơm gia đình",
+    "thời gian": "45 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Gà rán nồi chiên không dầu",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "Bánh và trái cây",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "Canh rong biển nấu tôm khô",
+        "khối lượng": "1 con"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Cá basa chiên giòn",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá basa cắt khúc",
+        "khối lượng": "4 lát"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cơm nhà nấu nhanh",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Thịt rang đậu hũ",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "Canh bí thịt xay và rau sống",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Yaourt và trái cây",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Thịt rang đậu hũ",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt ba rọi",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "đậu hũ bi chiên",
+        "khối lượng": "200 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh Khổ qua dồn cá thác lác",
+    "thời gian": "15 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "600 khổ qua",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "2 gram cá thác lác",
+        "khối lượng": "1 con"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 gram thịt xay",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "nước",
+        "khối lượng": "1 l"
+      },
+      {
+        "tên": "Hành lá",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      },
+      {
+        "tên": "bột ngọt",
+        "khối lượng": null
+      },
+      {
+        "tên": "hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "nước mắm",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bánh Mì Bò Nướng Sả",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Thịt bò xay",
+        "khối lượng": "500 g"
+      },
+      {
+        "tên": "4 ổ Bánh mì",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Sả băm nhuyễn",
+        "khối lượng": "4 muỗng canh"
+      },
+      {
+        "tên": "Hành tím băm nhuyễn",
+        "khối lượng": "2 muỗng canh"
+      },
+      {
+        "tên": "Hành trắng băm nhuyễn",
+        "khối lượng": "2 muỗng canh"
+      },
+      {
+        "tên": "Dưa chua",
+        "khối lượng": "1 chén"
+      },
+      {
+        "tên": "Phần sốt",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "hành tím băm nhuyễn",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "1/4 cup hoisin sauce",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "3 mc nước",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1/2 mc nước chanh",
+        "khối lượng": "1 quả"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Dầu mè",
+        "khối lượng": "1 muỗng cà phê"
+      },
+      {
+        "tên": "Dầu hào",
+        "khối lượng": "2 muỗng cà phê"
+      },
+      {
+        "tên": "Đường",
+        "khối lượng": "1/2 muỗng cà phê"
+      },
+      {
+        "tên": "Bột nêm",
+        "khối lượng": "1/2 muỗng cà phê"
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": "2 muỗng cà phê"
+      },
+      {
+        "tên": "Tương ăn phở hoisin",
+        "khối lượng": "2 muỗng cà phê"
+      },
+      {
+        "tên": "1 mcf dầu ăn",
+        "khối lượng": null
+      },
+      {
+        "tên": "bơ",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "1 ít tiêu đen",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cá basa chiên EatWell",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "300- cá basa phi lê",
+        "khối lượng": "400 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 ít xả",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "hành tỏi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "nghệ xay",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "ớt",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cá Trèn Kho Tộ",
+    "thời gian": "35 phút",
+    "số người": "3-4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "600 gam cá Trèn",
+        "khối lượng": "1 con"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "5 tbsp nước mắm",
+        "khối lượng": null
+      },
+      {
+        "tên": "5 tbsp đường",
+        "khối lượng": null
+      },
+      {
+        "tên": "1 tsp bột ngọt",
+        "khối lượng": null
+      },
+      {
+        "tên": "1/2 tsp tiêu",
+        "khối lượng": null
+      },
+      {
+        "tên": "1 tbsp mật ong",
+        "khối lượng": null
+      },
+      {
+        "tên": "1 tbsp dầu ăn",
+        "khối lượng": null
+      },
+      {
+        "tên": "ớt sừng",
+        "khối lượng": "1 quả"
+      }
+    ]
+  },
+  {
+    "tên": "Thịt kho tàu",
+    "thời gian": "30 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt",
+        "khối lượng": "300 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "nước",
+        "khối lượng": "100 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "cf đường",
+        "khối lượng": "1 thìa"
+      },
+      {
+        "tên": "Gia vị các loại",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Mực hấp EatWell",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "3-4 lạng mực ghim Chọn size đủ nhỏ để vừa mực /cuốn rau",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "sả hấp mực",
+        "khối lượng": "1 con"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 vài loại rau sống",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "diếp cá",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "bạc hà",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "giá",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 ít gừng",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 ít gừng",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "ớt làm mắm",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Chả cá, giò lụa sốt cà chua",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "giò lụa",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "chả cá",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "cà chua",
+        "khối lượng": "2 quả"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "hành khô",
+        "khối lượng": "1 củ"
+      },
+      {
+        "tên": "3 nhánh tỏi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Hành lá mùi ta",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      },
+      {
+        "tên": "nước mắm",
+        "khối lượng": null
+      },
+      {
+        "tên": "hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "đường",
+        "khối lượng": null
+      },
+      {
+        "tên": "tiêu bắc",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Mì trứng xào bò và hành tây",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "mì trứng",
+        "khối lượng": "4 vắt"
+      },
+      {
+        "tên": "phi lê bò",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "hành tây",
+        "khối lượng": "1 củ"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Mì trứng xào thịt xá xíu",
+    "thời gian": "15 phút",
+    "số người": "1 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "mì trứng",
+        "khối lượng": "2 vắt"
+      },
+      {
+        "tên": "thịt xá xíu",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Mì Thái tôm chua cay",
+    "thời gian": "10 phút",
+    "số người": "1 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "mì tôm",
+        "khối lượng": "1 gói"
+      },
+      {
+        "tên": "tôm",
+        "khối lượng": "1 con"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "sốt lẩu Thái",
+        "khối lượng": "1 gói"
+      },
+      {
+        "tên": "1 ít rau muống cọng",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Topping tùy ý",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "mực",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "nghêu",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "viên thả lẩu",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Cá hộp sốt cà xào hành tây",
+    "thời gian": "15 phút",
+    "số người": "1 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá nục sốt cà",
+        "khối lượng": "1 hộp"
+      },
+      {
+        "tên": "hành tây nhỏ",
+        "khối lượng": "1 củ"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Vài lát bánh mì bơ tỏi",
+        "khối lượng": null
+      },
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bánh mì cá hộp ốp la",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá nục sốt cà",
+        "khối lượng": "1 hộp"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "trứng gà",
+        "khối lượng": "2 cái"
+      },
+      {
+        "tên": "1 ít đầu hành",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "1 ít tiêu",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Nấm Hầu Thủ Kho Sa Tế",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Nấm hầu thủ",
+        "khối lượng": "200 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nước",
+        "khối lượng": "50 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "cafe Sa tế",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "Nước tương",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "Đường",
+        "khối lượng": "1 muỗng cà phê"
+      },
+      {
+        "tên": "vừa đủ Muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "vừa đủ dầu ăn",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "MÌ spaghetti sốt tôm-rau củ",
+    "thời gian": "40 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "mì Ý spaghetti",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "tôm lột vỏ",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "nấm kim châm",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "bông cải xanh",
+        "khối lượng": "90 g"
+      },
+      {
+        "tên": "cà rốt hoặc bí đỏ",
+        "khối lượng": "80 g"
+      },
+      {
+        "tên": "hành tây",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "ngò rí",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "whipping cream cooking cream hoặc sữa tươi",
+        "khối lượng": "200 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "bơ lạt",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "cafe muối",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "cafe tiêu xay",
+        "khối lượng": "1/2 muỗng"
+      }
+    ]
+  },
+  {
+    "tên": "Cơm Rang Dưa Bò",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Thịt bò",
+        "khối lượng": "150 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Cơm nguội",
+        "khối lượng": "400 g"
+      },
+      {
+        "tên": "Hành lá",
+        "khối lượng": "2 cây"
+      },
+      {
+        "tên": "Trứng gà",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Tỏi băm",
+        "khối lượng": "1 thìa cà phê"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Dưa cải muối",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "2 thìa canh"
+      },
+      {
+        "tên": "Nước mắm",
+        "khối lượng": "1 thìa canh"
+      },
+      {
+        "tên": "Hạt tiêu",
+        "khối lượng": "1/2 thìa cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Pate Nấm và Khoai Lang Chay",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Khoai lang",
+        "khối lượng": "200 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nấm hương tươi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Hành tây",
+        "khối lượng": "1/2 củ"
+      },
+      {
+        "tên": "Bơ đậu phộng",
+        "khối lượng": "1 thìa canh"
+      },
+      {
+        "tên": "Bánh mì nguyên cám hoặc bánh mì hạt",
+        "khối lượng": "2 lát"
+      },
+      {
+        "tên": "hạt lanh nếu có",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Bơ thực vật",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "Muối",
+        "khối lượng": "1/4 thìa cà phê"
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": "1/4 thìa cà phê"
+      },
+      {
+        "tên": "Hạt mè",
+        "khối lượng": "1 thìa cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Rau luộc và trứng luộc",
+    "thời gian": "15 phút",
+    "số người": "1 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Trứng gà ta",
+        "khối lượng": "4 quả"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "cải",
+        "khối lượng": "1/2 bắp"
+      },
+      {
+        "tên": "cà chua",
+        "khối lượng": "2 quả"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Gà Hấp Nấm (One Pot)",
+    "thời gian": "15 phút",
+    "số người": "2-3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Gà nguyên con",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "Nấm lộc nhung khô",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "Nấm hương khô",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "Cải thảo",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "Gừng",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "Sả",
+        "khối lượng": "2 cây"
+      },
+      {
+        "tên": "Bột nghệ",
+        "khối lượng": "1 thìa cà phê"
+      },
+      {
+        "tên": "Hành lá",
+        "khối lượng": "20 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Muối",
+        "khối lượng": "1 thìa cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Cá Hộp Chưng Trứng Thịt Băm",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Cá hộp 3 cô gái",
+        "khối lượng": "1 hộp"
+      },
+      {
+        "tên": "Thịt nạc dăm heo băm nhuyễn",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "Trứng gà",
+        "khối lượng": "3 quả"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 cũ hành tím",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "hạt nêm",
+        "khối lượng": "1 muỗng cà phê"
+      },
+      {
+        "tên": "đường",
+        "khối lượng": "1/2 muỗng cà phê"
+      },
+      {
+        "tên": "tiêu",
+        "khối lượng": "1/3 muỗng cà phê"
+      },
+      {
+        "tên": "dầu ăn",
+        "khối lượng": "1 muỗng canh"
+      }
+    ]
+  },
+  {
+    "tên": "Bí xanh, cà rốt xào nấm",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Bí xanh",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "Cà rốt",
+        "khối lượng": "50 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nấm đông cô tươi",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "Ngò rí",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "dầu ăn",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Thịt ba chỉ/sườn ba chỉ kho trứng nước",
+    "thời gian": "45 phút",
+    "số người": "4 người ăn",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt ba chỉ",
+        "khối lượng": "400 g"
+      },
+      {
+        "tên": "trứng cút hoặc trứng gà",
+        "khối lượng": "10 quả"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "nước sôi để nguội",
+        "khối lượng": "1 chén"
+      },
+      {
+        "tên": "hành tím",
+        "khối lượng": "4 củ"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "cafe tiêu",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "thìa ăn nước mắm",
+        "khối lượng": "2 muỗng"
+      },
+      {
+        "tên": "cafe đường đen",
+        "khối lượng": "2 muỗng"
+      }
+    ]
+  },
+  {
+    "tên": "Cá xạo/bông lau sốt cà",
+    "thời gian": "10-15 phút",
+    "số người": "4 người ăn",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá Xạo/ bông lau/ cá đù",
+        "khối lượng": "3 con"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "tỏi",
+        "khối lượng": "1 củ"
+      },
+      {
+        "tên": "cà chua",
+        "khối lượng": "2 quả"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "ớt",
+        "khối lượng": "2 quả"
+      },
+      {
+        "tên": "nước mắm",
+        "khối lượng": "2 muỗng"
+      },
+      {
+        "tên": "cafe đường",
+        "khối lượng": "2 muỗng"
+      },
+      {
+        "tên": "cafe tiêu",
+        "khối lượng": "1/2 muỗng"
+      }
+    ]
+  },
+  {
+    "tên": "Canh cá + thơm cà (hồng/dìa/)",
+    "thời gian": "15 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá",
+        "khối lượng": "3 con"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "thơm",
+        "khối lượng": "1/2 quả"
+      },
+      {
+        "tên": "cà chua",
+        "khối lượng": "2 quả"
+      },
+      {
+        "tên": "3 cũ hành tím",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "hành",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "ngò",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "1",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "lít",
+        "khối lượng": "5 l"
+      },
+      {
+        "tên": "cafe ruốc huế",
+        "khối lượng": "1/2 muỗng"
+      },
+      {
+        "tên": "cafe vị tinh",
+        "khối lượng": "1 muỗng"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "nước mắm thìa ăn ướp cá",
+        "khối lượng": "2 muỗng"
+      },
+      {
+        "tên": "cafe tiêu ướp cá",
+        "khối lượng": "1/4 muỗng"
+      },
+      {
+        "tên": "cafe hạt nêm",
+        "khối lượng": "2 muỗng"
+      }
+    ]
+  },
+  {
+    "tên": "Đậu Phụ Xào Sa Tế",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "2 bìa Đậu phụ tươi",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "nhỏ Sa tế chay",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "1- Hạt nêm",
+        "khối lượng": "2 muỗng cà phê"
+      },
+      {
+        "tên": "Nước tương",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "Đường",
+        "khối lượng": "1/2 muỗng cà phê"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bí xanh xào nấm đông cô",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Bí xanh",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "Nấm đông cô",
+        "khối lượng": "3 cái"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 ít Rau mùi ta",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Nước lọc",
+        "khối lượng": "3 muỗng canh"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Hạt nêm",
+        "khối lượng": "1 muỗng cà phê"
+      },
+      {
+        "tên": "Muối",
+        "khối lượng": "1/3 muỗng cà phê"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "1/2 muỗng canh"
+      }
+    ]
+  },
+  {
+    "tên": "Cá Hộp Ngâm Dầu Sốt Cà",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "có thể bỏ nếu không thích béo Dầu cá hộp",
+        "khối lượng": "1 muỗng canh"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Cá hộp sardine ngâm dầu",
+        "khối lượng": "1 hộp"
+      },
+      {
+        "tên": "lớn hơn",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "băm nhỏ Tỏi",
+        "khối lượng": "3 g"
+      },
+      {
+        "tên": "Nước",
+        "khối lượng": "20 ml"
+      },
+      {
+        "tên": "1 ổ Bánh mì",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Tương cà",
+        "khối lượng": "1 muỗng cà phê"
+      },
+      {
+        "tên": "Nước mắm",
+        "khối lượng": "1/2 muỗng cà phê"
+      },
+      {
+        "tên": "Đường",
+        "khối lượng": "1/4 muỗng cà phê"
+      },
+      {
+        "tên": "Bột nêm",
+        "khối lượng": "1/4 muỗng cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Tôm sốt bơ tỏi xạ hương bất bại",
+    "thời gian": "60 phút",
+    "số người": "4-6 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "tôm tươi",
+        "khối lượng": "1.5 kg"
+      },
+      {
+        "tên": "xạ hương băm nhỏ",
+        "khối lượng": "1 muỗng canh"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "15 khóm tỏi",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "nước mắm",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "bơ lạt",
+        "khối lượng": "100 g"
+      }
+    ]
+  },
+  {
+    "tên": "Cá nục kho nước mía",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá nục to",
+        "khối lượng": "5 con"
+      },
+      {
+        "tên": "nước mía",
+        "khối lượng": "750 ml"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "hành tím to",
+        "khối lượng": "4 củ"
+      },
+      {
+        "tên": "gừng nhỏ",
+        "khối lượng": "1 củ"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "trà muối",
+        "khối lượng": "1.5 muỗng"
+      },
+      {
+        "tên": "nước mắm",
+        "khối lượng": "3 muỗng canh"
+      },
+      {
+        "tên": "ớt hiểm",
+        "khối lượng": "4 quả"
+      }
+    ]
+  },
+  {
+    "tên": "Phở Trộn Sốt Nấm Hương",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "sợi bánh phở tươi",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "1 ít Rau tiến vua ngâm chua ngọt",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 nắm rau cải thìa",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "1 ít chả bì ớt xiêm xanh",
+        "khối lượng": null
+      },
+      {
+        "tên": "trứng gà ngâm tương",
+        "khối lượng": "2 quả"
+      }
+    ]
+  },
+  {
+    "tên": "Sandwich Bò Băm Vét Tủ Lạnh",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "bò băm",
+        "khối lượng": "12 muỗng canh"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "sandwich lạt",
+        "khối lượng": "6 lát"
+      },
+      {
+        "tên": "bắp ngọt",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "phô mai mozzarella",
+        "khối lượng": "6 muỗng canh"
+      },
+      {
+        "tên": "xúc xích",
+        "khối lượng": "1 cây"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Đậu Hũ Non Xào Rong Biển",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Đậu hũ non",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "1 Lá rong biển cuốn cơm",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Boa rô",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "Hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": null
+      },
+      {
+        "tên": "ớt tuỳ ý",
+        "khối lượng": null
+      },
+      {
+        "tên": "1- Dầu ăn",
+        "khối lượng": "2 muỗng canh"
+      }
+    ]
+  },
+  {
+    "tên": "Bánh sandwich nướng bò phô mai",
+    "thời gian": "10 phút",
+    "số người": "1 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "bánh sandwich",
+        "khối lượng": "1 miếng"
+      },
+      {
+        "tên": "phô mai mozzarella",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "bò băm xào",
+        "khối lượng": "30 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "1 mc tương ớt",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cháo hạt sen nấm hương",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "8 tai nấm hương",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "hạt sen khô",
+        "khối lượng": "30 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "cơm nguội",
+        "khối lượng": "2 chén"
+      },
+      {
+        "tên": "thịt xay",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 mc hành tím",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bún mọc bò viên",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "bò viên",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "mọc",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "chả Huế",
+        "khối lượng": "2 cây"
+      },
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "bún tươi",
+        "khối lượng": "400 g"
+      },
+      {
+        "tên": "Giá ăn kèm",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Phở thịt bằm",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt xay",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "phở khô",
+        "khối lượng": "2 vắt"
+      },
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 mc hành tím",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Rau giá ăn kèm",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bò kho mì giòn",
+    "thời gian": "120 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "nạm bò",
+        "khối lượng": "1 kg"
+      },
+      {
+        "tên": "sốt bò kho",
+        "khối lượng": "1 gói"
+      },
+      {
+        "tên": "mì giòn",
+        "khối lượng": "4 miếng"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "hành tây",
+        "khối lượng": "2 củ"
+      },
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "sả băm",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "hành tím băm",
+        "khối lượng": "10 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh rau củ thịt bằm",
+    "thời gian": "20 phút",
+    "số người": "2 - 3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Thịt bằm",
+        "khối lượng": "150 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Cà rốt",
+        "khối lượng": "1 củ"
+      },
+      {
+        "tên": "Khoai tây",
+        "khối lượng": "1 củ"
+      },
+      {
+        "tên": "Hành tím",
+        "khối lượng": "2 củ"
+      },
+      {
+        "tên": "2 nhánh Hành lá",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "1 nhánh Rau mùi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Nước",
+        "khối lượng": "800 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "Hạt nêm",
+        "khối lượng": "1 muỗng cà phê"
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": "1/4 muỗng cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Canh cá khoai",
+    "thời gian": "30 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Cá khoai",
+        "khối lượng": "500 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "lá ném",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "hành tím",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "hành lá",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "khế",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "cà chua",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "rau me",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "rau tần ô",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "1q ớt",
+        "khối lượng": null
+      },
+      {
+        "tên": "bột nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "bột ớt",
+        "khối lượng": null
+      },
+      {
+        "tên": "muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "Bột ngọt",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Chả đậu thịt",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "2 bìa đậu",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "thịt xay",
+        "khối lượng": "200 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 trứng gà",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "Hành hoa",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "tiêu bột",
+        "khối lượng": null
+      },
+      {
+        "tên": "mắm ngon",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Mì Ý xốt kem với thịt hun khói và nấm",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Mì Ý fettuccine hoặc tagliatelle",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "Thịt hun khói",
+        "khối lượng": "80 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nấm nấm mỡ hoặc nấm trắng",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "Phô mai mozzarella",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "Kem tươi whipping cream",
+        "khối lượng": "150 ml"
+      },
+      {
+        "tên": "Sữa tươi",
+        "khối lượng": "50 ml"
+      },
+      {
+        "tên": "Tỏi băm",
+        "khối lượng": "1 tép"
+      },
+      {
+        "tên": "Dầu ô liu",
+        "khối lượng": "1 muỗng canh"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Muối",
+        "khối lượng": "1/2 muỗng cà phê"
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": "1/4 muỗng cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Bò Kho",
+    "thời gian": "2 giờ",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt bò",
+        "khối lượng": "1 kg"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "2- khoai tây",
+        "khối lượng": "3 củ"
+      },
+      {
+        "tên": "cà rốt",
+        "khối lượng": "2 củ"
+      },
+      {
+        "tên": "sả",
+        "khối lượng": "3 cây"
+      },
+      {
+        "tên": "hành lá",
+        "khối lượng": "3 cây"
+      },
+      {
+        "tên": "ngò rí",
+        "khối lượng": "3 cây"
+      },
+      {
+        "tên": "rau húng quế và lá ngò gai",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "1 nồi nấu chậm",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "gia vị nấu bò kho",
+        "khối lượng": "1 gói"
+      },
+      {
+        "tên": "1 ít tiêu xay",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bún Thái hải sản",
+    "thời gian": "60 phút",
+    "số người": "4 người ăn",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "tôm tươi",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "mực",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "chả cá tùy chọn có thể thêm các món theo sở thích",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 ít Rau củ",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "dứa thơm",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "sả",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "riềng",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "lá chanh",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "dừa để lấy nước Hoặc có thể hầm xương lấy nước ngọt",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Bún tươi",
+        "khối lượng": "500 g"
+      },
+      {
+        "tên": "1 ít các rau ăn kèm",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "bắp chuối",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "rau nhút",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "ớt",
+        "khối lượng": null
+      },
+      {
+        "tên": "gia vị lẩu thái để tối ưu thời gia n",
+        "khối lượng": "1 gói"
+      },
+      {
+        "tên": "1 vài loại Gia vị",
+        "khối lượng": null
+      },
+      {
+        "tên": "đường phèn",
+        "khối lượng": null
+      },
+      {
+        "tên": "nước mắm",
+        "khối lượng": null
+      },
+      {
+        "tên": "hạt nêm",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh sườn bò hầm kiểu Hàn",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "sườn bò",
+        "khối lượng": "2 kg"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "hành tây",
+        "khối lượng": "1 kg"
+      },
+      {
+        "tên": "củ cải trắng",
+        "khối lượng": "1 kg"
+      },
+      {
+        "tên": "hành boa rô",
+        "khối lượng": "500 g"
+      },
+      {
+        "tên": "tỏi to",
+        "khối lượng": "3 củ"
+      },
+      {
+        "tên": "gừng tươi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 bịch miến dong khô làng So",
+        "khối lượng": "450 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "tiêu xanh",
+        "khối lượng": "60 g"
+      },
+      {
+        "tên": "muối ủ rừng sác Cần Giờ",
+        "khối lượng": "2 muỗng canh"
+      },
+      {
+        "tên": "xì dầu kikkoman",
+        "khối lượng": "4 muỗng canh"
+      }
+    ]
+  },
+  {
+    "tên": "Hoành thánh lá nấu tôm khô, nấm rơm",
+    "thời gian": "1 giờ",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Hoành thánh lá",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "Tôm khô",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "Nấm rơm",
+        "khối lượng": "150 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Trứng cút",
+        "khối lượng": "9 quả"
+      },
+      {
+        "tên": "1 ít Hẹ lá",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "Nước",
+        "khối lượng": "1200 ml"
+      },
+      {
+        "tên": "Hành phi",
+        "khối lượng": "1.5 muỗng canh"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Củ cải muối",
+        "khối lượng": "45 g"
+      },
+      {
+        "tên": "Dầu mè",
+        "khối lượng": "1.5 muỗng cà phê"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "1.5 muỗng canh"
+      },
+      {
+        "tên": "Muối",
+        "khối lượng": "3/4 muỗng cà phê"
+      },
+      {
+        "tên": "Nước mắm",
+        "khối lượng": "1.5 muỗng cà phê"
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": "1/3 muỗng cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Cháo hải sản",
+    "thời gian": "15 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "cơm nguội",
+        "khối lượng": "1.5 chén"
+      },
+      {
+        "tên": "1 ít tôm khô",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "nhỏ bí đỏ",
+        "khối lượng": "1 miếng"
+      },
+      {
+        "tên": "mực sữa",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "1 ít hành",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "ngò",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Bò om dưa",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Nạm sườn bò",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Gân bò",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Bắp bò",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Dưa chua",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Cà chua",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Gừng",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Tỏi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Hành tím",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "nước mắm",
+        "khối lượng": null
+      },
+      {
+        "tên": "nước tương",
+        "khối lượng": null
+      },
+      {
+        "tên": "rượu nấu ăn",
+        "khối lượng": null
+      },
+      {
+        "tên": "đường",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Trứng đúc thịt hấp nồi cơm",
+    "thời gian": "30-45 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "trứng vịt hoặc trứng gà",
+        "khối lượng": "2 quả"
+      },
+      {
+        "tên": "100-150 gram thịt xay",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 ít hành khô phi vàng",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "ngò rí mùi ta",
+        "khối lượng": "2 cây"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "mắm ngon",
+        "khối lượng": "1 thìa"
+      },
+      {
+        "tên": "1 ít dầu ăn",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cá ngừ kho dưa cải",
+    "thời gian": "1h 30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá ngừ",
+        "khối lượng": "4 lát"
+      },
+      {
+        "tên": "dưa cải",
+        "khối lượng": "300 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Nui xào tôm thịt măng tây",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Tôm nõn tươi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Thịt thăn heo",
+        "khối lượng": "80 g"
+      },
+      {
+        "tên": "Măng tây",
+        "khối lượng": "50 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nui",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "Củ hũ dừa",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "Cà rốt",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "Tỏi băm",
+        "khối lượng": "1/2 muỗng canh"
+      },
+      {
+        "tên": "hành tím băm",
+        "khối lượng": "1/2 muỗng canh"
+      },
+      {
+        "tên": "1 ít hành lá cắt khúc",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Dầu hào",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "Nước tương",
+        "khối lượng": "1 muỗng cà phê"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "Muối",
+        "khối lượng": "1/4 muỗng cà phê"
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": "1/4 muỗng cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Cơm GÀ nấu rau củ bằng nồi cơm điện",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "ức gà",
+        "khối lượng": "250 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "gạo trắng",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "nấm hương khô",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "bắp hạt vàng bắp Mỹ",
+        "khối lượng": "70 g"
+      },
+      {
+        "tên": "đậu cô-ve",
+        "khối lượng": "70 g"
+      },
+      {
+        "tên": "cà rốt",
+        "khối lượng": "70 g"
+      },
+      {
+        "tên": "ngò rí",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "cafe hạt nêm",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "cafe nước tương",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "dầu hào",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "cafe tiêu xay",
+        "khối lượng": "1/2 muỗng"
+      },
+      {
+        "tên": "nước tương có ớt",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bữa cơm lười",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "thịt ba chỉ",
+        "khối lượng": "400 g"
+      },
+      {
+        "tên": "cà chua",
+        "khối lượng": "4 quả"
+      },
+      {
+        "tên": "1 nắm nhúm dưa cải chua",
+        "khối lượng": "1 quả"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Miến Sườn Rau Húng Quế",
+    "thời gian": "35 phút",
+    "số người": "3-4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "500 gam sườn non",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "50 gam lá húng quế",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "3- miến",
+        "khối lượng": "4 vắt"
+      },
+      {
+        "tên": "hành tây",
+        "khối lượng": "1 củ"
+      },
+      {
+        "tên": "15 tbsp hành tím băm",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "15 tbsp tỏi băm",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 tbsp gốc ngò rí",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 tbsp nước cốt chanh",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "2 tbsp hành phi",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "15 tsp muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "1 tsp tiêu",
+        "khối lượng": null
+      },
+      {
+        "tên": "1/2 tbsp hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "25 tbsp đường vàng",
+        "khối lượng": null
+      },
+      {
+        "tên": "ớt sừng băm",
+        "khối lượng": "1.5 quả"
+      },
+      {
+        "tên": "25 tbsp đường",
+        "khối lượng": null
+      },
+      {
+        "tên": "1/2 tsp bột ngọt",
+        "khối lượng": null
+      },
+      {
+        "tên": "25 tbsp nước mắm",
+        "khối lượng": null
+      },
+      {
+        "tên": "1 tbsp dầu ăn",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bò hầm pate tiêu xanh",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "bắp bò",
+        "khối lượng": "1 kg"
+      },
+      {
+        "tên": "nước dùng bò hoặc nước dừa tươi",
+        "khối lượng": "1 l"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "pate loại ăn bánh mì hoặc pate gan mua ở siêu thị",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "cà rốt",
+        "khối lượng": "3 củ"
+      },
+      {
+        "tên": "khoai tây",
+        "khối lượng": "3 củ"
+      },
+      {
+        "tên": "1-1 1/2 tbsp bột mì",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "cà chua paste",
+        "khối lượng": "1 hộp"
+      },
+      {
+        "tên": "1 hành tây 1/2 thái hạt lựu",
+        "khối lượng": "1/2 củ"
+      },
+      {
+        "tên": "demi-glace ko bắt buộc",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Vài nhánh tiêu xanh",
+        "khối lượng": null
+      },
+      {
+        "tên": "bơ lạt",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "bơ thực vật món này hợp bơ lạt hơn",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "2 tbsp tương cà",
+        "khối lượng": null
+      },
+      {
+        "tên": "4 tbsp nước tương",
+        "khối lượng": null
+      },
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      },
+      {
+        "tên": "hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "đường",
+        "khối lượng": null
+      },
+      {
+        "tên": "muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "tiêu",
+        "khối lượng": null
+      },
+      {
+        "tên": "tiêu hạt ko bắt buộc",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bánh mì Tôm Phô Mai Mayonnaise bằng Nồi chiên không dầu",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Bánh mì baguette",
+        "khối lượng": "6 lát"
+      },
+      {
+        "tên": "Tôm nõn hấp",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Phô mai mozzarella bào sợi",
+        "khối lượng": "40 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Bắp ngọt",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "Cà rốt",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "1 nhánh Hành lá",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "Mayonnaise",
+        "khối lượng": "20 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Cơm Gà Nấm Bằng Nồi Cơm Điện",
+    "thời gian": "45 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Thịt gà má đùi gà hoặc ức gà",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "Nấm đùi gà / nấm đông cô tươi",
+        "khối lượng": "80 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Gạo",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "2 tsp mirin",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 tsp tỏi băm",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 nhánh Gừng",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "Nước",
+        "khối lượng": "250 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Nước tương",
+        "khối lượng": "2 muỗng canh"
+      },
+      {
+        "tên": "1 mcf dầu mè",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Nấm hương tươi chiên giòn",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "nấm hương tươi",
+        "khối lượng": "300 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 cup bột gạo nếp",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Canh Gà Hầm Cải Thảo Da Heo Khô",
+    "thời gian": "40 phút",
+    "số người": "2-3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "500 gam cánh gà có thể pha thêm đầu cổ hoặc đùi",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "20 gam da heo khô",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "250 gam cải thảo",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "cà rốt",
+        "khối lượng": "1/2 củ"
+      },
+      {
+        "tên": "3- gừng",
+        "khối lượng": "4 lát"
+      },
+      {
+        "tên": "2 tbsp hành phi",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "1/2 tbsp dầu mè",
+        "khối lượng": null
+      },
+      {
+        "tên": "1/2 tsp muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "1/2 tbsp đường phèn",
+        "khối lượng": null
+      },
+      {
+        "tên": "1/4 tsp tiêu",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh rau dền nấu tôm và chả cá",
+    "thời gian": "20 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "tôm",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "chả cá",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 bó rau dền",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh rau đay nấu tôm thịt",
+    "thời gian": "20 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt xay",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "tôm càng xanh",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "1 bó rau đay",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh mồng tơi nấm nấu tôm thịt",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt xay",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "tôm khô",
+        "khối lượng": "30 g"
+      },
+      {
+        "tên": "1 bó rau mồng tơi",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Ít nấm linh chi trắng",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cải xoăn xào hải sản",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "hải sản",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "cải xoăn",
+        "khối lượng": "1 cây"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "tỏi lát",
+        "khối lượng": "50 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh xà lách xoong nấu thịt băm",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Thịt heo băm",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Xà lách xoong",
+        "khối lượng": "150 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Hành tím băm",
+        "khối lượng": "1 muỗng canh"
+      },
+      {
+        "tên": "Nước lọc",
+        "khối lượng": "600 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Muối",
+        "khối lượng": "1/2 muỗng cà phê"
+      },
+      {
+        "tên": "Nước mắm",
+        "khối lượng": "1 muỗng cà phê"
+      },
+      {
+        "tên": "Tiêu xay",
+        "khối lượng": "1/4 muỗng cà phê"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "1 muỗng canh"
+      }
+    ]
+  },
+  {
+    "tên": "Canh rong biển nấu tôm khô",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "rong biển khô",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "tôm khô",
+        "khối lượng": "50 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Hành lá",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh rau dền cơm nấu tôm khô",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "tôm khô",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "1 bó rau dền cơm",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Súp Nấm, Bí Đỏ, Hạt Mắc Ca",
+    "thời gian": "15 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Bí đỏ",
+        "khối lượng": "400 g"
+      },
+      {
+        "tên": "Hạt mắc ca sống",
+        "khối lượng": "50 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nấm kim châm hoặc nấm mỡ",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "nhỏ Hành tây",
+        "khối lượng": "1 chén"
+      },
+      {
+        "tên": "1 nhánh nhỏ Lá thơm parsley / rosemary hoặc rau mùi",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Nước",
+        "khối lượng": "600 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Muối",
+        "khối lượng": null
+      },
+      {
+        "tên": "Bơ hoặc dầu ăn",
+        "khối lượng": "1 muỗng canh"
+      }
+    ]
+  },
+  {
+    "tên": "Bò xào măng tây",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "g thịt bò",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "1 bó măng tây",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 mc tỏi băm",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Rau Bí Xào Đơn Giản",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Rau bí đã làm sạch",
+        "khối lượng": "300 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nấm bào ngư hoặc nấm đùi gà tuỳ ý",
+        "khối lượng": "30 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Muối",
+        "khối lượng": "1/2 muỗng cà phê"
+      },
+      {
+        "tên": "Hạt nêm",
+        "khối lượng": "2 muỗng cà phê"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "1 muỗng canh"
+      }
+    ]
+  },
+  {
+    "tên": "Canh rong biển bò băm",
+    "thời gian": "20 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "rong biển khô",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "bò băm",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "giá sống",
+        "khối lượng": "40 g"
+      },
+      {
+        "tên": "hành lá",
+        "khối lượng": "20 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh cải ngọt nấu mọc và bò viên",
+    "thời gian": "20 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "5 viên bò viên lớn",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "1 bó cải ngọt",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "mọc",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Rau muống xào ốc giác",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "ốc giác nên chọn ốc tươi hoặc phần thịt ốc đã làm sạch",
+        "khối lượng": "500 g"
+      },
+      {
+        "tên": "1 bó rau muống chọn loại rau muống nước cọng to sẽ giòn hơn",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "hành tím",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "1 ít đậu phộng rang hoặc hành phi ăn kèm",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "1 ít Gia vị",
+        "khối lượng": null
+      },
+      {
+        "tên": "ớt",
+        "khối lượng": null
+      },
+      {
+        "tên": "dầu hào",
+        "khối lượng": null
+      },
+      {
+        "tên": "nước mắm",
+        "khối lượng": null
+      },
+      {
+        "tên": "hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "đường",
+        "khối lượng": null
+      },
+      {
+        "tên": "tiêu",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh Rau Dền, Mướp nấu Cá Thác Lác",
+    "thời gian": "20 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá thác lác nạo sẵn",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "1 bó rau dền",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "mướp hương",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "nước lọc",
+        "khối lượng": "800 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị muối tiêu đường nước mắm",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cá hồi sốt cam bơ tỏi măng tây",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "cá hồi khúc giữa",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "măng tây",
+        "khối lượng": "200 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "5 nhánh tỏi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "cam vàng",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Giấy bạc",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "bơ lạt",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "Các loại gia vị như hạt nêm hoặc bột canh",
+        "khối lượng": null
+      },
+      {
+        "tên": "dầu hào",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Ốc móng tay xào rau muống",
+    "thời gian": "20 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "ốc móng tay đã tách vỏ",
+        "khối lượng": "500 g"
+      },
+      {
+        "tên": "rau muống cọng",
+        "khối lượng": "500 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 mc tỏi cắt lát hoặc tỏi băm",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh rau muống nấu tôm càng xanh chua cay",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "tôm",
+        "khối lượng": "4 con"
+      },
+      {
+        "tên": "rau muống",
+        "khối lượng": "300 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "1 mc sốt lẩu Thái",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cơm nhà nấu nhanh 20 phút",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Thịt xay rim trứng",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Canh cải ngọt bông cải nấu tôm thịt",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "Rau giá và trái cây",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Thịt xay rim trứng",
+    "thời gian": "20 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt xay",
+        "khối lượng": "300 g"
+      },
+      {
+        "tên": "trứng gà ta",
+        "khối lượng": "3 quả"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Hành ngò",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bữa cơm gia đình",
+    "thời gian": "60 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Trứng nướng tôm thịt bằng nồi chiên không dầu",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "Canh cải ngọt nấu thịt xay",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Thịt nướng mè",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh cải ngọt nấu thịt xay",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "thịt xay",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "1 bó cải ngọt",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Cơm nhà mình",
+    "thời gian": "60 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Má đùi gà rút xương nướng",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "Trứng rim cà chua nấm",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Canh cải xoăn nấu gà",
+        "khối lượng": "1 con"
+      },
+      {
+        "tên": "Nho và cherry",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Canh lá hẹ nấu nấm đông cô",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "1 bó lá hẹ",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "nấm đông cô xào",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "thịt heo xay",
+        "khối lượng": "60 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "1 xíu tiêu",
+        "khối lượng": null
+      },
+      {
+        "tên": "Gia vị nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "bột ngọt",
+        "khối lượng": null
+      },
+      {
+        "tên": "bột nêm",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh Rau Nấu Ghẹ",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "ghẹ tươi",
+        "khối lượng": "400 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "hành lá",
+        "khối lượng": "1 củ"
+      },
+      {
+        "tên": "rau tập tàng",
+        "khối lượng": "300 g"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "1 ít tiêu xay",
+        "khối lượng": null
+      },
+      {
+        "tên": "1 ít muối",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Bún cá chấm",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Cá rô phi lọc xương phi lê",
+        "khối lượng": "1 con"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Bún",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "Rau sống",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "tía tô tuỳ sở thích",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Bột mì hoặc bột năng",
+        "khối lượng": "1 cái"
+      },
+      {
+        "tên": "Nước chấm",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Cốt chanh",
+        "khối lượng": "1 quả"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị ướp cá",
+        "khối lượng": null
+      },
+      {
+        "tên": "Hành tỏi gừng tiêu thêm ít hạt nêm",
+        "khối lượng": null
+      },
+      {
+        "tên": "Nước mắm",
+        "khối lượng": null
+      },
+      {
+        "tên": "Đường",
+        "khối lượng": null
+      },
+      {
+        "tên": "Tỏi ớt băm nhỏ và thìa là",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Rau đậu hòa lan xào thịt bò",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "1 lb rau đậu hòa lan",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "thịt bò",
+        "khối lượng": "1 chén"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Gia vị tiêu tỏi",
+        "khối lượng": null
+      },
+      {
+        "tên": "dầu hào",
+        "khối lượng": null
+      }
+    ]
+  },
+  {
+    "tên": "Canh cải cúc nấu thịt băm",
+    "thời gian": "20 phút",
+    "số người": "4 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "1 bó cải cúc / tần ô",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "thịt nạc",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [],
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  }
+]
