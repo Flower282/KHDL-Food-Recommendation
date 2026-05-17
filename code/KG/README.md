@@ -33,7 +33,7 @@ python code/KG/run_pipeline.py export
 2) Nap vao Neo4j local:
 
 ```bash
-python code/KG/run_pipeline.py load-neo4j --uri neo4j://127.0.0.1:7687 --user neo4j --password 12345678 --database neo4j
+python code/KG/run_pipeline.py load-neo4j --uri neo4j://127.0.0.1:7687 --user neo4j --password YOUR_PASSWORD --database neo4j
 ```
 
 3) Nap vao Neo4j Aura (online):
