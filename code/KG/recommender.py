@@ -55,7 +55,8 @@ def _group_score(matches: list[IngredientMatch], group: str) -> float:
 
 
 def score_dish(recipe: dict[str, Any], stock: list[StockRecord]) -> DishScore:
-    dish_name = str(recipe.get("tên", "khong_ro")).strip() or "khong_ro"
+    # Updated: "tên" → "name"
+    dish_name = str(recipe.get("name", "khong_ro")).strip() or "khong_ro"
     ingredients = normalize_recipe_ingredients(recipe)
     dish_type, _ = resolve_recipe_dish_type(recipe)
 
@@ -108,7 +109,7 @@ def score_dish(recipe: dict[str, Any], stock: list[StockRecord]) -> DishScore:
     total_weight = 0.0
     for group, weight in GROUP_WEIGHT.items():
         group_value = _group_score(matches, group)
-        if group_value <= 0 and group != "nguyen_lieu_phu_2_co_the_bo_qua":
+        if group_value <= 0 and group != "optional_ingredients":
             continue
         weighted_score += weight * group_value
         total_weight += weight
@@ -146,7 +147,14 @@ def _recipe_matches_dish_type(recipe: dict[str, Any], dish_type_filter: str | No
     if not dish_type_filter:
         return True
 
-    recipe_type = recipe.get("loại món") or recipe.get("loai mon") or recipe.get("loại món ăn") or recipe.get("loai mon an")
+    # Support both old and new field names
+    recipe_type = (
+        recipe.get("loại món") or 
+        recipe.get("loai mon") or 
+        recipe.get("loại món ăn") or 
+        recipe.get("loai mon an") or
+        recipe.get("dish_type")  # New field
+    )
     if recipe_type is None:
         return False
 
@@ -173,7 +181,9 @@ def _recipe_within_time_limit(recipe: dict[str, Any], max_minutes: int | None) -
     if max_minutes is None:
         return True
 
-    minutes = _parse_minutes(recipe.get("thời gian"))
+    # Support both old "thời gian" and new "time" fields
+    time_value = recipe.get("time") or recipe.get("thời gian")
+    minutes = _parse_minutes(time_value)
     return minutes is not None and minutes <= max_minutes
 
 
@@ -367,10 +377,11 @@ def load_and_recommend(
 
     filtered_recipe_rows = [recipe for recipe in filtered_recipe_rows if _recipe_within_time_limit(recipe, max_minutes)]
 
+    # Updated: "tên" → "name"
     recipe_type_map = {
-        str(recipe.get("tên", "")).strip(): _recipe_dish_type(recipe)
+        str(recipe.get("name", "")).strip(): _recipe_dish_type(recipe)
         for recipe in filtered_recipe_rows
-        if str(recipe.get("tên", "")).strip()
+        if str(recipe.get("name", "")).strip()
     }
 
     ranked = rank_dishes(filtered_recipe_rows, stock_rows, top_k=top_k)
