@@ -6,14 +6,14 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
-GROUP_MAIN = "nguyen_lieu_chinh"
-GROUP_REQUIRED = "nguyen_lieu_phu_1_can_thiet"
-GROUP_OPTIONAL = "nguyen_lieu_phu_2_co_the_bo_qua"
+GROUP_MAIN = "main_ingredients"
+GROUP_REQUIRED = "required_ingredients"
+GROUP_OPTIONAL = "optional_ingredients"
 
 GROUP_KEY_MAPPING = {
-    "nguyen lieu chinh": GROUP_MAIN,
-    "nguyen lieu phu_1 can thiet": GROUP_REQUIRED,
-    "nguyen lieu phu_2 co the bo qua": GROUP_OPTIONAL,
+    "main_ingredients": GROUP_MAIN,
+    "required_ingredients": GROUP_REQUIRED,
+    "optional_ingredients": GROUP_OPTIONAL,
 }
 
 GROUP_WEIGHT = {
@@ -283,13 +283,13 @@ def resolve_recipe_dish_type(recipe: dict[str, Any]) -> tuple[str | None, str | 
     if explicit_key is not None:
         return explicit_value, explicit_key
 
-    inferred_value, inferred_key = infer_dish_type_from_text(recipe.get("tên"))
+    inferred_value, inferred_key = infer_dish_type_from_text(recipe.get("name"))  # "tên" → "name"
     if inferred_key is not None:
         return inferred_value, inferred_key
 
     ingredient_text = " ".join(
-        str(item.get("tên", ""))
-        for group_name in ["nguyên liệu chính", "nguyên liệu phụ_1 cần thiết", "nguyên liệu phụ_2 có thể bỏ qua"]
+        str(item.get("name", ""))  # "tên" → "name"
+        for group_name in ["main_ingredients", "required_ingredients", "optional_ingredients"]  # Các group mới
         for item in (recipe.get(group_name, []) if isinstance(recipe.get(group_name, []), list) else [])
         if isinstance(item, dict)
     )
@@ -333,9 +333,9 @@ def normalize_recipe_ingredients(recipe: dict[str, Any]) -> list[IngredientRecor
     normalized: list[IngredientRecord] = []
 
     for original_group in [
-        "nguyên liệu chính",
-        "nguyên liệu phụ_1 cần thiết",
-        "nguyên liệu phụ_2 có thể bỏ qua",
+        "main_ingredients",      # thay cho "nguyên liệu chính"
+        "required_ingredients",  # thay cho "nguyên liệu phụ_1 cần thiết"
+        "optional_ingredients",  # thay cho "nguyên liệu phụ_2 có thể bỏ qua"
     ]:
         group_key = normalize_group_key(original_group)
         rows = recipe.get(original_group, [])
@@ -346,11 +346,11 @@ def normalize_recipe_ingredients(recipe: dict[str, Any]) -> list[IngredientRecor
             if not isinstance(row, dict):
                 continue
 
-            name = str(row.get("tên", "")).strip()
+            name = str(row.get("name", "")).strip()  # "tên" → "name"
             if not name:
                 continue
 
-            raw_quantity = row.get("khối lượng")
+            raw_quantity = row.get("weight")  # "khối lượng" → "weight"
             value, unit = parse_quantity(raw_quantity)
 
             normalized.append(
