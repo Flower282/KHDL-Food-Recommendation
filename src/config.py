@@ -3,6 +3,7 @@ Food Recommendation System - Core Configuration
 """
 from pathlib import Path
 from typing import Optional
+import os
 
 # Project paths
 # __file__ = /path/to/KHDL-Food-Recommendation/src/config.py
@@ -22,11 +23,30 @@ DEFAULT_RECIPE_FILE = RESULT_DIR / "recipes_processed.json"
 DEFAULT_RAW_RECIPE_CSV = RESULT_DIR / "raw_data_CP.csv"
 DEFAULT_NLP_OUTPUT_FILE = RESULT_DIR / "recipes_processed.json"
 
+# Load .env file (simple parser) and set environment variables if not present
+_env_path = Path(__file__).resolve().parent.parent / ".env"
+if _env_path.exists():
+    try:
+        with _env_path.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                if "=" in line:
+                    k, v = line.split("=", 1)
+                    k = k.strip()
+                    v = v.strip().strip('\'"')
+                    if k and v and k not in os.environ:
+                        os.environ[k] = v
+    except Exception:
+        # If parsing fails, ignore and continue with defaults or existing environment
+        pass
+
 # Neo4j Configuration (from environment or defaults)
-DEFAULT_NEO4J_URI = "bolt://localhost:7687"
-DEFAULT_NEO4J_USER = "neo4j"
-DEFAULT_NEO4J_PASSWORD = "password"
-DEFAULT_NEO4J_DATABASE = "neo4j"
+DEFAULT_NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+DEFAULT_NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
+DEFAULT_NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
+DEFAULT_NEO4J_DATABASE = os.getenv("NEO4J_DATABASE", "neo4j")
 
 # Output files
 KG_PAYLOAD_FILE = RESULT_DIR / "kg_payload.json"
