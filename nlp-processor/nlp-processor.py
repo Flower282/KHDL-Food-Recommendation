@@ -442,48 +442,58 @@ def group(data):
     return res
 
 
-def convert_to_json_format(dish_name, grouped_data):
-    """Convert grouped result to format expected by KG pipeline"""
+def format_weight(value, unit):
+    """Format weight for display"""
+    if value is None:
+        return None
+    
+    # Format number: remove .0 if integer
+    if isinstance(value, float) and value.is_integer():
+        value = int(value)
+    
+    if unit and unit != "g":
+        return f"{value} {unit}"
+    elif unit == "g":
+        return f"{value} g"
+    elif value:
+        return str(value)
+    else:
+        return None
+
+
+def convert_to_json_format(dish_name, grouped_data, time=None, servings=None, difficulty=None):
+    """Convert grouped result to new JSON format"""
     output = {
-        "tên": dish_name,
-        "thời gian": None,
-        "số người": None,
-        "độ khó": None,
-        "nguyên liệu chính": [],
-        "nguyên liệu phụ_1 cần thiết": [],
-        "nguyên liệu phụ_2 có thể bỏ qua": []
+        "name": dish_name,
+        "time": time,
+        "servings": servings,
+        "difficulty": difficulty,
+        "main_ingredients": [],
+        "required_ingredients": [],
+        "optional_ingredients": []
     }
 
     # Main ingredients
     for item in grouped_data.get("main", []):
-        ingredient = item["ingredient"]
-        quantity = item["value"] if item["value"] is not None else 1
-        unit = item["unit"] if item["unit"] else ""
-        khoi_luong = f"{quantity} {unit}".strip() if quantity else ingredient
-        
-        output["nguyên liệu chính"].append({
-            "tên": ingredient,
-            "khối lượng": khoi_luong
+        weight = format_weight(item["value"], item["unit"])
+        output["main_ingredients"].append({
+            "name": item["ingredient"],
+            "weight": weight
         })
 
     # Required ingredients
     for item in grouped_data.get("required", []):
-        ingredient = item["ingredient"]
-        quantity = item["value"] if item["value"] is not None else 1
-        unit = item["unit"] if item["unit"] else ""
-        khoi_luong = f"{quantity} {unit}".strip() if quantity else ingredient
-        
-        output["nguyên liệu phụ_1 cần thiết"].append({
-            "tên": ingredient,
-            "khối lượng": khoi_luong
+        weight = format_weight(item["value"], item["unit"])
+        output["required_ingredients"].append({
+            "name": item["ingredient"],
+            "weight": weight
         })
 
     # Optional ingredients
     for item in grouped_data.get("optional", []):
-        ingredient = item["ingredient"]
-        output["nguyên liệu phụ_2 có thể bỏ qua"].append({
-            "tên": ingredient,
-            "khối lượng": None
+        output["optional_ingredients"].append({
+            "name": item["ingredient"],
+            "weight": None
         })
 
     return output
@@ -531,6 +541,11 @@ def process_csv(input_csv, output_json=None):
                 dish_name = row.get('tên', '').strip()
                 ingredients_text = row.get('nguyên liệu', '').strip()
                 
+                # Get optional fields if they exist in CSV
+                time = row.get('thời gian', None) or row.get('time', None)
+                servings = row.get('số người', None) or row.get('servings', None)
+                difficulty = row.get('độ khó', None) or row.get('difficulty', None)
+                
                 # Debug on first few rows
                 if idx <= 3:
                     print(f"  [Row {idx}] name='{dish_name[:40]}' | ing_len={len(ingredients_text)}")
@@ -556,7 +571,7 @@ def process_csv(input_csv, output_json=None):
                     grouped = group(extracted)
                     
                     # Convert to JSON format
-                    json_item = convert_to_json_format(dish_name, grouped)
+                    json_item = convert_to_json_format(dish_name, grouped, time, servings, difficulty)
                     recipes.append(json_item)
                     
                 except Exception as e:
@@ -570,7 +585,7 @@ def process_csv(input_csv, output_json=None):
     
     # Save to JSON
     try:
-        # Output as direct JSON array (expected by KG pipeline)
+        # Output as direct JSON array
         with open(output_json, 'w', encoding='utf-8') as f:
             json.dump(recipes, f, ensure_ascii=False, indent=2)
         
@@ -600,15 +615,10 @@ def test_sample():
     """
 
     print("=" * 50)
-    print("Raw Output (Grouped):")
+    print("New JSON Output Format:")
     print("=" * 50)
     result = group(extract(name, ingredients))
-    pprint(result, sort_dicts=False)
-
-    print("\n" + "=" * 50)
-    print("JSON Output:")
-    print("=" * 50)
-    json_data = convert_to_json_format(name, result)
+    json_data = convert_to_json_format(name, result, "30 phút", "4 người", "trung bình")
     print(json.dumps(json_data, ensure_ascii=False, indent=2))
 
 
