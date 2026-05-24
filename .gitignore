@@ -1,0 +1,17 @@
+.env
+# Python
+__pycache__/
+*.py[cod]
+*.so
+# Virtual env
+.venv/
+venv/
+# VSCode
+.vscode/
+# Logs and runtime files
+logs/
+*.log
+# Byte-compiled / optimized
+__pycache__/
+# Optional: ignore results if you prefer to not commit outputs
+# result/
