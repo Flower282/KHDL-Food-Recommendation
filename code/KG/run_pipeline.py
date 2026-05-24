@@ -39,6 +39,9 @@ def _dump_json(path: Path, payload: Any) -> None:
 
 
 def command_export(args: argparse.Namespace) -> None:
+    print(f"📖 Using recipe file: {args.recipe_file}")
+    print(f"📖 Using stock file: {args.stock_file}\n")
+    
     payload = build_kg_payload(args.recipe_file, args.stock_file)
     commands = payload_to_cypher_commands(payload)
 
@@ -99,10 +102,34 @@ def command_recommend(args: argparse.Namespace) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Recipe Knowledge Graph pipeline")
+    parser = argparse.ArgumentParser(
+        description="Recipe Knowledge Graph pipeline",
+        epilog="""
+Examples:
+  # Export using default recipe file (recipes_processed.json)
+  python3 code/KG/run_pipeline.py export
 
-    parser.add_argument("--recipe-file", default=str(DEFAULT_RECIPE_FILE), help="Path to recipe JSON file")
-    parser.add_argument("--stock-file", default=str(DEFAULT_STOCK_FILE), help="Path to stock JSON file")
+  # Export using custom recipe file
+  python3 code/KG/run_pipeline.py export --recipe-file result/your_recipes.json
+
+  # Load into Neo4j
+  python3 code/KG/run_pipeline.py load-neo4j --password YOUR_PASSWORD
+
+  # Get recommendations
+  python3 code/KG/run_pipeline.py recommend --max-dishes 3
+        """
+    )
+
+    parser.add_argument(
+        "--recipe-file",
+        default=str(DEFAULT_RECIPE_FILE),
+        help=f"Path to recipe JSON file (default: {DEFAULT_RECIPE_FILE})"
+    )
+    parser.add_argument(
+        "--stock-file",
+        default=str(DEFAULT_STOCK_FILE),
+        help=f"Path to stock JSON file (default: {DEFAULT_STOCK_FILE})"
+    )
 
     subparsers = parser.add_subparsers(dest="command", required=True)
 

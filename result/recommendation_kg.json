@@ -1,400 +1,272 @@
 {
   "top_dishes": [
     {
-      "dish_name": "Cơm Rang Dưa Bò",
-      "score": 0.7006,
-      "missing_required": 1,
-      "dish_type": "mon man",
+      "dish_name": "Rau đậu hòa lan xào thịt bò",
+      "score": 0.9531,
+      "missing_required": 0,
+      "dish_type": "rau",
       "dish_type_filter": null,
       "ingredient_matches": [
         {
-          "ingredient_name": "Thịt bò",
+          "ingredient_name": "thịt bò",
           "ingredient_group": "nguyen_lieu_chinh",
           "stock_name": "Thịt bò",
           "name_score": 1.0,
-          "quantity_score": 0.35,
-          "final_score": 0.805
+          "quantity_score": 1.0,
+          "final_score": 1.0
         },
         {
-          "ingredient_name": "Cơm nguội",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.3077,
-          "quantity_score": 0.35,
-          "final_score": 0.3204
-        },
-        {
-          "ingredient_name": "Hành lá",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Hành tây",
-          "name_score": 0.5667,
-          "quantity_score": 0.35,
-          "final_score": 0.5017
-        },
-        {
-          "ingredient_name": "Trứng gà",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Thịt gà",
-          "name_score": 0.6833,
-          "quantity_score": 0.35,
-          "final_score": 0.5833
-        },
-        {
-          "ingredient_name": "Tỏi băm",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Tỏi",
-          "name_score": 1.0,
-          "quantity_score": 0.35,
-          "final_score": 0.805
-        },
-        {
-          "ingredient_name": "Dưa cải muối",
-          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
-          "stock_name": "Cải xoăn",
-          "name_score": 0.625,
-          "quantity_score": 0.35,
-          "final_score": 0.5425
-        },
-        {
-          "ingredient_name": "Dầu ăn",
+          "ingredient_name": "tiêu",
           "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
           "stock_name": null,
-          "name_score": 0.2857,
-          "quantity_score": 0.35,
-          "final_score": 0.305
+          "name_score": 0.3636,
+          "quantity_score": 0.5,
+          "final_score": 0.4045
         },
         {
-          "ingredient_name": "Nước mắm",
-          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
-          "stock_name": "Nước mắm",
-          "name_score": 1.0,
-          "quantity_score": 0.35,
-          "final_score": 0.805
-        },
-        {
-          "ingredient_name": "Hạt tiêu",
+          "ingredient_name": "tỏi",
           "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
           "stock_name": null,
-          "name_score": 0.25,
-          "quantity_score": 0.35,
-          "final_score": 0.28
+          "name_score": 0.3333,
+          "quantity_score": 0.5,
+          "final_score": 0.3833
+        },
+        {
+          "ingredient_name": "dầu hào",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.3333,
+          "quantity_score": 0.5,
+          "final_score": 0.3833
         }
       ]
     },
     {
-      "dish_name": "Rau luộc và trứng luộc",
-      "score": 0.5208,
-      "missing_required": 1,
-      "dish_type": "rau",
-      "dish_type_filter": null,
-      "ingredient_matches": [
-        {
-          "ingredient_name": "Trứng gà ta",
-          "ingredient_group": "nguyen_lieu_chinh",
-          "stock_name": "Thịt gà",
-          "name_score": 0.6389,
-          "quantity_score": 0.35,
-          "final_score": 0.5522
-        },
-        {
-          "ingredient_name": "cải",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Cải xoăn",
-          "name_score": 0.7727,
-          "quantity_score": 0.35,
-          "final_score": 0.6459
-        },
-        {
-          "ingredient_name": "cà chua",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.4744,
-          "quantity_score": 0.35,
-          "final_score": 0.4371
-        }
-      ]
-    },
-    {
-      "dish_name": "Gà Hấp Nấm (One Pot)",
-      "score": 0.4943,
-      "missing_required": 4,
+      "dish_name": "Cá xạo/bông lau sốt cà",
+      "score": 0.9236,
+      "missing_required": 0,
       "dish_type": "mon man",
       "dish_type_filter": null,
       "ingredient_matches": [
         {
-          "ingredient_name": "Gà nguyên con",
+          "ingredient_name": "cà chua",
           "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.5167,
-          "quantity_score": 0.35,
-          "final_score": 0.4667
-        },
-        {
-          "ingredient_name": "Nấm lộc nhung khô",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Nấm",
-          "name_score": 0.5667,
-          "quantity_score": 0.35,
-          "final_score": 0.5017
-        },
-        {
-          "ingredient_name": "Nấm hương khô",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Nấm",
-          "name_score": 0.6875,
-          "quantity_score": 0.35,
-          "final_score": 0.5862
-        },
-        {
-          "ingredient_name": "Cải thảo",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Cải xoăn",
-          "name_score": 0.7292,
-          "quantity_score": 0.35,
-          "final_score": 0.6154
-        },
-        {
-          "ingredient_name": "Gừng",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.375,
-          "quantity_score": 0.35,
-          "final_score": 0.3675
-        },
-        {
-          "ingredient_name": "Sả",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.25,
-          "quantity_score": 0.35,
-          "final_score": 0.28
-        },
-        {
-          "ingredient_name": "Bột nghệ",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.25,
-          "quantity_score": 0.35,
-          "final_score": 0.28
-        },
-        {
-          "ingredient_name": "Hành lá",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Hành tây",
-          "name_score": 0.5667,
-          "quantity_score": 0.35,
-          "final_score": 0.5017
-        },
-        {
-          "ingredient_name": "Muối",
-          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
-          "stock_name": "Muối",
+          "stock_name": "Cà chua",
           "name_score": 1.0,
-          "quantity_score": 0.35,
-          "final_score": 0.805
+          "quantity_score": 1.0,
+          "final_score": 1.0
+        },
+        {
+          "ingredient_name": "tỏi",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.3333,
+          "quantity_score": 0.5,
+          "final_score": 0.3833
+        },
+        {
+          "ingredient_name": "ớt",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.4318,
+          "quantity_score": 0.5,
+          "final_score": 0.4523
+        },
+        {
+          "ingredient_name": "nước mắm",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.2667,
+          "quantity_score": 0.5,
+          "final_score": 0.3367
+        },
+        {
+          "ingredient_name": "đường",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.3077,
+          "quantity_score": 0.5,
+          "final_score": 0.3654
+        },
+        {
+          "ingredient_name": "tiêu",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.3636,
+          "quantity_score": 0.5,
+          "final_score": 0.4045
         }
       ]
     },
     {
-      "dish_name": "MÌ spaghetti sốt tôm-rau củ",
-      "score": 0.4412,
-      "missing_required": 3,
+      "dish_name": "Bò xào măng tây",
+      "score": 0.9229,
+      "missing_required": 0,
+      "dish_type": "mon man",
+      "dish_type_filter": null,
+      "ingredient_matches": [
+        {
+          "ingredient_name": "thịt bò",
+          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
+          "stock_name": "Thịt bò",
+          "name_score": 1.0,
+          "quantity_score": 1.0,
+          "final_score": 1.0
+        },
+        {
+          "ingredient_name": "tỏi",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.3333,
+          "quantity_score": 0.5,
+          "final_score": 0.3833
+        }
+      ]
+    },
+    {
+      "dish_name": "Bữa cơm gia đình",
+      "score": 0.875,
+      "missing_required": 0,
+      "dish_type": "mon man",
+      "dish_type_filter": null,
+      "ingredient_matches": [
+        {
+          "ingredient_name": "tôm",
+          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
+          "stock_name": "Tôm",
+          "name_score": 1.0,
+          "quantity_score": 1.0,
+          "final_score": 1.0
+        }
+      ]
+    },
+    {
+      "dish_name": "Cơm Gà Nấm Bằng Nồi Cơm Điện",
+      "score": 0.8318,
+      "missing_required": 0,
+      "dish_type": "mon man",
+      "dish_type_filter": null,
+      "ingredient_matches": [
+        {
+          "ingredient_name": "thịt gà",
+          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
+          "stock_name": "Thịt ức gà",
+          "name_score": 0.9951,
+          "quantity_score": 1.0,
+          "final_score": 0.9966
+        },
+        {
+          "ingredient_name": "đùi gà",
+          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
+          "stock_name": "Trứng gà",
+          "name_score": 0.7244,
+          "quantity_score": 1.0,
+          "final_score": 0.8071
+        },
+        {
+          "ingredient_name": "ức gà",
+          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
+          "stock_name": "Thịt ức gà",
+          "name_score": 0.9167,
+          "quantity_score": 1.0,
+          "final_score": 0.9417
+        },
+        {
+          "ingredient_name": "đùi gà",
+          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
+          "stock_name": "Trứng gà",
+          "name_score": 0.7244,
+          "quantity_score": 1.0,
+          "final_score": 0.8071
+        },
+        {
+          "ingredient_name": "tỏi",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.3333,
+          "quantity_score": 0.5,
+          "final_score": 0.3833
+        },
+        {
+          "ingredient_name": "gừng",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": "Gừng nhỏ",
+          "name_score": 0.5833,
+          "quantity_score": 0.5,
+          "final_score": 0.5583
+        },
+        {
+          "ingredient_name": "nước tương",
+          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
+          "stock_name": null,
+          "name_score": 0.3158,
+          "quantity_score": 0.5,
+          "final_score": 0.3711
+        }
+      ]
+    },
+    {
+      "dish_name": "Rau Bí Xào Đơn Giản",
+      "score": 0.7555,
+      "missing_required": 0,
       "dish_type": "rau",
       "dish_type_filter": null,
       "ingredient_matches": [
         {
-          "ingredient_name": "mì Ý spaghetti",
-          "ingredient_group": "nguyen_lieu_chinh",
-          "stock_name": null,
-          "name_score": 0.1429,
-          "quantity_score": 0.35,
-          "final_score": 0.205
-        },
-        {
-          "ingredient_name": "tôm lột vỏ",
-          "ingredient_group": "nguyen_lieu_chinh",
-          "stock_name": "Tôm",
-          "name_score": 0.6474,
-          "quantity_score": 0.35,
-          "final_score": 0.5582
-        },
-        {
-          "ingredient_name": "nấm kim châm",
+          "ingredient_name": "đùi gà",
           "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Nấm",
-          "name_score": 0.6167,
-          "quantity_score": 0.35,
-          "final_score": 0.5367
+          "stock_name": "Trứng gà",
+          "name_score": 0.7244,
+          "quantity_score": 1.0,
+          "final_score": 0.8071
         },
         {
-          "ingredient_name": "bông cải xanh",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Bông cải",
-          "name_score": 0.9643,
-          "quantity_score": 0.35,
-          "final_score": 0.78
-        },
-        {
-          "ingredient_name": "cà rốt hoặc bí đỏ",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Cà rốt",
-          "name_score": 0.7727,
-          "quantity_score": 0.35,
-          "final_score": 0.6459
-        },
-        {
-          "ingredient_name": "hành tây",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Hành tây",
-          "name_score": 1.0,
-          "quantity_score": 0.35,
-          "final_score": 0.805
-        },
-        {
-          "ingredient_name": "ngò rí",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.2857,
-          "quantity_score": 0.35,
-          "final_score": 0.305
-        },
-        {
-          "ingredient_name": "whipping cream cooking cream hoặc sữa tươi",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.125,
-          "quantity_score": 0.35,
-          "final_score": 0.1925
-        },
-        {
-          "ingredient_name": "bơ lạt",
+          "ingredient_name": "muối",
           "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
           "stock_name": null,
-          "name_score": 0.3205,
-          "quantity_score": 0.35,
-          "final_score": 0.3294
+          "name_score": 0.25,
+          "quantity_score": 0.5,
+          "final_score": 0.325
         },
         {
-          "ingredient_name": "cafe muối",
-          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
-          "stock_name": "Muối",
-          "name_score": 0.8077,
-          "quantity_score": 0.35,
-          "final_score": 0.6704
-        },
-        {
-          "ingredient_name": "cafe tiêu xay",
+          "ingredient_name": "hạt nêm",
           "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
           "stock_name": null,
-          "name_score": 0.2857,
-          "quantity_score": 0.35,
-          "final_score": 0.305
-        }
-      ]
-    },
-    {
-      "dish_name": "Pate Nấm và Khoai Lang Chay",
-      "score": 0.3537,
-      "missing_required": 4,
-      "dish_type": "chay",
-      "dish_type_filter": null,
-      "ingredient_matches": [
-        {
-          "ingredient_name": "Khoai lang",
-          "ingredient_group": "nguyen_lieu_chinh",
-          "stock_name": null,
-          "name_score": 0.2778,
-          "quantity_score": 0.35,
-          "final_score": 0.2994
+          "name_score": 0.5238,
+          "quantity_score": 0.5,
+          "final_score": 0.5167
         },
         {
-          "ingredient_name": "Nấm hương tươi",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Nấm",
-          "name_score": 0.6765,
-          "quantity_score": 0.35,
-          "final_score": 0.5785
-        },
-        {
-          "ingredient_name": "Hành tây",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": "Hành tây",
-          "name_score": 1.0,
-          "quantity_score": 0.35,
-          "final_score": 0.805
-        },
-        {
-          "ingredient_name": "Bơ đậu phộng",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.3205,
-          "quantity_score": 0.35,
-          "final_score": 0.3294
-        },
-        {
-          "ingredient_name": "Bánh mì nguyên cám hoặc bánh mì hạt",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.1628,
-          "quantity_score": 0.35,
-          "final_score": 0.219
-        },
-        {
-          "ingredient_name": "hạt lanh nếu có",
-          "ingredient_group": "nguyen_lieu_phu_1_can_thiet",
-          "stock_name": null,
-          "name_score": 0.2174,
-          "quantity_score": 0.35,
-          "final_score": 0.2572
-        },
-        {
-          "ingredient_name": "Bơ thực vật",
+          "ingredient_name": "dầu ăn",
           "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
           "stock_name": null,
-          "name_score": 0.2632,
-          "quantity_score": 0.35,
-          "final_score": 0.2892
-        },
-        {
-          "ingredient_name": "Muối",
-          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
-          "stock_name": "Muối",
-          "name_score": 1.0,
-          "quantity_score": 0.35,
-          "final_score": 0.805
-        },
-        {
-          "ingredient_name": "Tiêu",
-          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
-          "stock_name": null,
-          "name_score": 0.2857,
-          "quantity_score": 0.35,
-          "final_score": 0.305
-        },
-        {
-          "ingredient_name": "Hạt mè",
-          "ingredient_group": "nguyen_lieu_phu_2_co_the_bo_qua",
-          "stock_name": null,
-          "name_score": 0.2308,
-          "quantity_score": 0.35,
-          "final_score": 0.2665
+          "name_score": 0.2727,
+          "quantity_score": 0.5,
+          "final_score": 0.3409
         }
       ]
     }
   ],
   "meal_set": [
     {
-      "dish_name": "Cơm Rang Dưa Bò",
-      "score": 0.7006,
-      "missing_required": 1,
+      "dish_name": "Rau đậu hòa lan xào thịt bò",
+      "score": 0.9531,
+      "missing_required": 0,
+      "dish_type": "rau",
+      "dish_type_filter": null
+    },
+    {
+      "dish_name": "Cá xạo/bông lau sốt cà",
+      "score": 0.9236,
+      "missing_required": 0,
       "dish_type": "mon man",
       "dish_type_filter": null
     },
     {
-      "dish_name": "MÌ spaghetti sốt tôm-rau củ",
-      "score": 0.4412,
-      "missing_required": 3,
-      "dish_type": "rau",
+      "dish_name": "Bò xào măng tây",
+      "score": 0.9229,
+      "missing_required": 0,
+      "dish_type": "mon man",
       "dish_type_filter": null
     }
   ]
