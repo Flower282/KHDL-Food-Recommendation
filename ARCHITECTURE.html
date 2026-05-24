@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiến Trúc Project - KHDL Food Recommendation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { background: #3366cc; color: white; padding: 30px; text-align: center; }
+        header h1 { font-size: 2em; margin-bottom: 10px; }
+        .content { padding: 30px; }
+        .section { margin-bottom: 30px; }
+        .section h2 { color: #3366cc; font-size: 1.5em; border-bottom: 2px solid #3366cc; padding-bottom: 10px; margin-bottom: 20px; }
+        .section h3 { color: #555; font-size: 1.2em; margin: 20px 0 15px 0; }
+        .subsection { background: #f9f9f9; padding: 15px; border-left: 4px solid #3366cc; margin: 15px 0; }
+        .flow-diagram { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0; padding: 20px; border: 1px solid #ddd; }
+        .flow-box { background: #3366cc; color: white; padding: 10px 15px; border-radius: 5px; font-weight: bold; }
+        .flow-arrow { color: #3366cc; font-weight: bold; }
+        .folder-structure { background: #f9f9f9; padding: 20px; border-left: 4px solid #3366cc; font-family: monospace; }
+        .folder-item { padding: 5px 0; display: flex; align-items: center; }
+        .folder-item-indent-1 { padding-left: 30px; }
+        .folder-item-indent-2 { padding-left: 60px; }
+        .folder-item-indent-3 { padding-left: 90px; }
+        .folder-icon { margin-right: 8px; font-size: 14px; }
+        .folder-name { color: #3366cc; font-weight: bold; }
+        .file-name { color: #333; }
+        .file-desc { color: #999; font-size: 0.9em; margin-left: 10px; font-style: italic; font-family: Arial; }
+        .command-block { background: #f0f0f0; padding: 12px; margin: 15px 0; border-left: 3px solid #3366cc; font-family: monospace; overflow-x: auto; }
+        .command-block code { color: #d63384; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th { background: #3366cc; color: white; padding: 12px; text-align: left; }
+        td { border: 1px solid #ddd; padding: 12px; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .step-list { list-style: none; counter-reset: step-counter; }
+        .step-list li { counter-increment: step-counter; margin: 15px 0; padding-left: 40px; position: relative; }
+        .step-list li:before { content: counter(step-counter); position: absolute; left: 0; top: 0; background: #3366cc; color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .module-box { border: 1px solid #ddd; padding: 15px; margin: 15px 0; background: #fafafa; }
+        .module-box h4 { color: #3366cc; margin-bottom: 10px; }
+        .module-box code { background: #f0f0f0; padding: 2px 5px; color: #d63384; font-family: monospace; }
+        .note { background: #fff3cd; padding: 15px; border-left: 3px solid #ffc107; margin: 15px 0; }
+        .info { background: #d1ecf1; padding: 15px; border-left: 3px solid #17a2b8; margin: 15px 0; }
+        footer { background: #f9f9f9; padding: 15px; text-align: center; color: #666; border-top: 1px solid #ddd; }
+        ul { margin: 10px 0 10px 20px; }
+        li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍲 KHDL Food Recommendation</h1>
+            <p>Hệ thống Gợi Ý Món Ăn Dựa Trên Knowledge Graph</p>
+        </header>
+        
+        <div class="content">
+            <!-- Tổng Quan -->
+            <div class="section">
+                <h2>📋 Tổng Quan Project</h2>
+                <div class="subsection">
+                    <p><strong>Mục đích:</strong> Xây dựng một hệ thống gợi ý món ăn thông minh bằng cách:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Crawl dữ liệu công thức nấu ăn từ Cookpad và các nguồn khác</li>
+                        <li>Chuẩn hóa và xử lý dữ liệu (tên nguyên liệu, khối lượng, loại món)</li>
+                        <li>Xây dựng Knowledge Graph (đồ thị kiến thức) để biểu diễn quan hệ giữa các đơn vị</li>
+                        <li>Lưu trữ KG trong Neo4j database</li>
+                        <li>Gợi ý món ăn dựa trên nguyên liệu sẵn có và tiêu chí của người dùng</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Kiến Trúc Tổng Thể -->
+            <div class="section">
+                <h2>🏗️ Kiến Trúc Tổng Thể</h2>
+                
+                <h3>Quy Trình Pipeline Chính</h3>
+                <div class="flow-diagram">
+                    <div class="flow-box">Crawl dữ liệu</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box">Chuẩn hóa</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box">Build KG</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box">Load Neo4j</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box">Gợi Ý</div>
+                </div>
+                
+                <h3>Cấu Trúc Thư Mục</h3>
+                <div class="folder-structure">
+                    <div class="folder-item">
+                        <span class="folder-icon">📦</span>
+                        <span class="folder-name">KHDL-Food-Recommendation/</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-1">
+                        <span class="folder-icon">📄</span>
+                        <span class="file-name">README.md</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-1">
+                        <span class="folder-icon">📁</span>
+                        <span class="folder-name">code/</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📁</span>
+                        <span class="folder-name">Crawl/</span>
+                        <span class="file-desc">Thu thập dữ liệu</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">data_crawl_CP.py</span>
+                        <span class="file-desc">Crawl từ Cookpad</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">data_crawl_MNMN.py</span>
+                        <span class="file-desc">Crawl từ các nguồn khác</span>
+                    </div>
+
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📁</span>
+                        <span class="folder-name">KG/</span>
+                        <span class="file-desc">Knowledge Graph Module</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">config.py</span>
+                        <span class="file-desc">Cấu hình & Neo4j credentials</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">ontology.py</span>
+                        <span class="file-desc">Định nghĩa schema KG</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">preprocess.py</span>
+                        <span class="file-desc">Chuẩn hóa nguyên liệu</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">neo4j_pipeline.py</span>
+                        <span class="file-desc">Build & load KG</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">recommender.py</span>
+                        <span class="file-desc">Thuật toán gợi ý</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">run_pipeline.py</span>
+                        <span class="file-desc">CLI chính</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">gui_test.py</span>
+                        <span class="file-desc">GUI test gợi ý</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📁</span>
+                        <span class="folder-name">Storage/</span>
+                        <span class="file-desc">Quản lý lưu trữ</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-3">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">storage.py</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">test_goi_y.py</span>
+                        <span class="file-desc">Test recommendation</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-1">
+                        <span class="folder-icon">📁</span>
+                        <span class="folder-name">nlp-processor/</span>
+                        <span class="file-desc">Xử lý NLP & Chuẩn hóa dữ liệu</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📓</span>
+                        <span class="file-name">Ingredients_Parser.ipynb</span>
+                        <span class="file-desc">Jupyter Notebook - NLP & Chuẩn hóa Nguyên Liệu</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">🐍</span>
+                        <span class="file-name">nlp-processor.py</span>
+                        <span class="file-desc">Python script - Chạy NLP processor từ shell</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-1">
+                        <span class="folder-icon">📁</span>
+                        <span class="folder-name">data/</span>
+                        <span class="file-desc">Dữ liệu đầu vào</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📊</span>
+                        <span class="file-name">Kho.csv</span>
+                        <span class="file-desc">Danh sách nguyên liệu</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📄</span>
+                        <span class="file-name">Kho.json</span>
+                        <span class="file-desc">Dữ liệu kho JSON</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-1">
+                        <span class="folder-icon">📁</span>
+                        <span class="folder-name">result/</span>
+                        <span class="file-desc">Dữ liệu đầu ra</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📄</span>
+                        <span class="file-name">data_monan_day_du_CP.json</span>
+                        <span class="file-desc">Công thức chuẩn hóa</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📄</span>
+                        <span class="file-name">kg_payload.json</span>
+                        <span class="file-desc">Payload KG</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📄</span>
+                        <span class="file-name">load_kg.cypher</span>
+                        <span class="file-desc">Script Cypher</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📊</span>
+                        <span class="file-name">raw_data_CP.csv</span>
+                        <span class="file-desc">Dữ liệu thô Cookpad</span>
+                    </div>
+                    <div class="folder-item folder-item-indent-2">
+                        <span class="folder-icon">📄</span>
+                        <span class="file-name">recommendation_kg.json</span>
+                        <span class="file-desc">Kết quả gợi ý</span>
+                    </div>
+                </div>
+                
+                <h3>🎯 Refactored Pipeline Control (src/)</h3>
+                <div class="info">
+                    <p><strong>Cấu trúc mới để kiểm soát pipeline:</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>src/config.py</code> - Cấu hình tập trung (paths, Neo4j credentials)</li>
+                        <li><code>src/ontology.py</code> - Định nghĩa schema KG</li>
+                        <li><code>src/pipeline.py</code> - Lớp <strong>PipelineOrchestrator</strong> (kiểm soát workflow)</li>
+                        <li><code>src/__main__.py</code> - CLI entry point: <code>python -m src [command]</code></li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Standalone scripts (scripts/):</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>scripts/status.py</code> - Kiểm tra trạng thái pipeline</li>
+                        <li><code>scripts/normalize.py</code> - Chỉ normalize CSV → JSON</li>
+                        <li><code>scripts/build_kg.py</code> - Chỉ build KG</li>
+                        <li><code>scripts/recommend.py</code> - Chỉ tạo recommendations</li>
+                        <li><code>scripts/pipeline.py</code> - Chạy toàn bộ pipeline</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Các Module Chính -->
+            <div class="section">
+                <h2>🔧 Các Module Chính</h2>
+                
+                <div class="module-box">
+                    <h4>📥 1. Crawl Module (Crawl/)</h4>
+                    <p><strong>Chức năng:</strong> Thu thập dữ liệu công thức nấu ăn từ các website</p>
+                    <p><strong>File chính:</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>data_crawl_CP.py</code> - Crawl từ Cookpad (tên, cách nấu, nguyên liệu, thời gian, độ khó)</li>
+                        <li><code>data_crawl_MNMN.py</code> - Crawl từ các nguồn khác</li>
+                    </ul>
+                    <p><strong>Output:</strong> File CSV chứa dữ liệu thô (raw_data_CP.csv)</p>
+                </div>
+                
+                <div class="module-box">
+                    <h4>� 2. NLP Processor Module (nlp-processor/)</h4>
+                    <p><strong>Chức năng:</strong> Xử lý NLP tiếng Việt và chuẩn hóa dữ liệu thô thành định dạng chuẩn</p>
+                    <p><strong>File chính:</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>Ingredients_Parser.ipynb</code> - Jupyter Notebook xử lý NLP (để phát triển & test)</li>
+                        <li><code>nlp-processor.py</code> - Python script (chạy từ shell/pipeline)</li>
+                    </ul>
+                    <p><strong>Xử lý NLP:</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li>Sử dụng thư viện underthesea để tokenization tiếng Việt</li>
+                        <li>Phân loại nguyên liệu (chính/phụ bắt buộc/phụ tùy chọn)</li>
+                        <li>Chuẩn hóa tên nguyên liệu tiếng Việt với từ điển sẵn có</li>
+                        <li>Tách khối lượng và đơn vị (g, kg, ml, l, muỗng, cái, bó, củ...)</li>
+                        <li>Chuyển đổi đơn vị thành gram chuẩn</li>
+                        <li>Xác định loại món ăn từ tên</li>
+                    </ul>
+                    <p><strong>Output:</strong> File JSON chuẩn (recipes_processed.json)</p>
+                </div>
+                
+                <div class="module-box">
+                    <h4>🏛️ 3. Knowledge Graph Module (KG/)</h4>
+                    <p><strong>Chức năng:</strong> Xây dựng, quản lý và truy vấn Knowledge Graph</p>
+                    
+                    <h4 style="color: #764ba2; margin-top: 15px;">📄 Các file chính:</h4>
+                    
+                    <table>
+                        <tr>
+                            <th>File</th>
+                            <th>Chức Năng</th>
+                        </tr>
+                        <tr>
+                            <td><code>config.py</code></td>
+                            <td>Cấu hình đường dẫn file, thông tin kết nối Neo4j (Aura, local)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ontology.py</code></td>
+                            <td>Định nghĩa schema: Node types, Relations, Constraints, Indexes</td>
+                        </tr>
+                        <tr>
+                            <td><code>preprocess.py</code></td>
+                            <td>Chuẩn hóa nguyên liệu, tính độ tương đồng, load/parse dữ liệu</td>
+                        </tr>
+                        <tr>
+                            <td><code>neo4j_pipeline.py</code></td>
+                            <td>Build payload, tạo Cypher commands, load vào Neo4j</td>
+                        </tr>
+                        <tr>
+                            <td><code>recommender.py</code></td>
+                            <td>Thuật toán gợi ý: tính điểm, chọn meal set tối ưu</td>
+                        </tr>
+                        <tr>
+                            <td><code>run_pipeline.py</code></td>
+                            <td>CLI chính: export, load-neo4j, recommend</td>
+                        </tr>
+                        <tr>
+                            <td><code>gui_test.py</code></td>
+                            <td>Giao diện GUI Tkinter để test gợi ý</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="module-box">
+                    <h4>💾 4. Storage Module (Storage/)</h4>
+                    <p><strong>Chức năng:</strong> Quản lý lưu trữ và truy xuất dữ liệu</p>
+                    <p><strong>File chính:</strong> <code>storage.py</code></p>
+                </div>
+            </div>
+            
+            <!-- Ontology -->
+            <div class="section">
+                <h2>🎯 Knowledge Graph Ontology</h2>
+                
+                <p>Knowledge Graph được xây dựng với các node types và relations sau:</p>
+                
+                <h3>Node Types (Các loại Node)</h3>
+                <table>
+                    <tr>
+                        <th>Node Type</th>
+                        <th>Key Property</th>
+                        <th>Mô Tả</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Dish</strong></td>
+                        <td>name</td>
+                        <td>Các công thức nấu ăn (tên, thời gian, phục vụ bao nhiêu người, độ khó)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DishType</strong></td>
+                        <td>name</td>
+                        <td>Loại món ăn (mặn, canh, rau, chay, soup, khai vị...)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ingredient</strong></td>
+                        <td>canonical_name</td>
+                        <td>Nguyên liệu chuẩn (tên chính thức, tên hiển thị)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>StockItem</strong></td>
+                        <td>name</td>
+                        <td>Nguyên liệu sẵn có trong kho (tên, khối lượng)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Difficulty</strong></td>
+                        <td>name</td>
+                        <td>Mức độ khó: Dễ, Trung bình, Khó</td>
+                    </tr>
+                </table>
+                
+                <h3>Relationships (Các Mối Quan Hệ)</h3>
+                <table>
+                    <tr>
+                        <th>Quan Hệ</th>
+                        <th>Từ</th>
+                        <th>Đến</th>
+                        <th>Mô Tả</th>
+                    </tr>
+                    <tr>
+                        <td><strong>HAS_TYPE</strong></td>
+                        <td>Dish</td>
+                        <td>DishType</td>
+                        <td>Món ăn thuộc loại nào</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HAS_INGREDIENT</strong></td>
+                        <td>Dish</td>
+                        <td>Ingredient</td>
+                        <td>Món ăn cần nguyên liệu nào (với khối lượng, nhóm)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>REFERS_TO</strong></td>
+                        <td>StockItem</td>
+                        <td>Ingredient</td>
+                        <td>Nguyên liệu kho tương ứng với nguyên liệu chuẩn nào</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HAS_DIFFICULTY</strong></td>
+                        <td>Dish</td>
+                        <td>Difficulty</td>
+                        <td>Môn ăn có mức độ khó nào</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Thứ Tự Chạy -->
+            <div class="section">
+                <h2>🚀 Thứ Tự Chạy Project</h2>
+                
+                <h3>Bước 1: Chuẩn Bị Dữ Liệu</h3>
+                <ul class="step-list">
+                    <li>
+                        <strong>Crawl dữ liệu từ Cookpad</strong>
+                        <div class="command-block">
+                            <code>python code/Crawl/data_crawl_CP.py</code>
+                        </div>
+                        <p>Output: <code>result/raw_data_CP.csv</code> (dữ liệu thô)</p>
+                    </li>
+                    <li>
+                        <strong>Chuẩn hóa dữ liệu với NLP Processor</strong>
+                        <p>Sử dụng Python script:</p>
+                        <div class="command-block">
+                            <code>python nlp-processor/nlp-processor.py result/raw_data_CP.csv result/recipes_processed.json</code>
+                        </div>
+                        <p><strong>Hoặc:</strong> Sử dụng Jupyter Notebook (để phát triển):</p>
+                        <div class="command-block">
+                            <code>jupyter notebook nlp-processor/Ingredients_Parser.ipynb</code>
+                        </div>
+                        <p>Output: <code>result/recipes_processed.json</code> (dữ liệu chuẩn dạng JSON)</p>
+                    </li>
+                </ul>
+                
+                <h3>Bước 2: Xây Dựng Knowledge Graph</h3>
+                <ul class="step-list">
+                    <li>
+                        <strong>Export Payload và Cypher Commands</strong>
+                        <p>Lệnh:</p>
+                        <div class="command-block">
+                            <code>python code/KG/run_pipeline.py export</code>
+                        </div>
+                        <p>Output:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><code>result/kg_payload.json</code> - Payload cho KG</li>
+                            <li><code>result/load_kg.cypher</code> - Script Cypher để load vào Neo4j</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Chú ý:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li>Mặc định sử dụng file: <code>result/recipes_processed.json</code> (từ NLP processor)</li>
+                            <li>Để dùng file khác: <code>python code/KG/run_pipeline.py export --recipe-file result/your_file.json</code></li>
+                            <li>Đảm bảo đã có file stock: <code>data/Kho.json</code></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>Bước 3: Load Vào Neo4j Database</h3>
+                <ul class="step-list">
+                    <li>
+                        <strong>Load vào Neo4j Local</strong>
+                        <p>Lệnh:</p>
+                        <div class="command-block">
+                            <code>python code/KG/run_pipeline.py load-neo4j \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--uri bolt://localhost:7687 \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--user neo4j \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--password YOUR_PASSWORD \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--database neo4j \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--clear</code>
+                        </div>
+                        <p>Thay thế <code>YOUR_PASSWORD</code> bằng mật khẩu Neo4j của bạn</p>
+                    </li>
+                    <li>
+                        <strong>Hoặc load vào Neo4j Aura (Cloud)</strong>
+                        <p>Lệnh:</p>
+                        <div class="command-block">
+                            <code>python code/KG/run_pipeline.py load-neo4j \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--uri neo4j+s://YOUR_INSTANCE.databases.neo4j.io \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--user YOUR_USER \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--password YOUR_PASSWORD \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--database neo4j \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--clear</code>
+                        </div>
+                        <p>Lấy thông tin từ Neo4j Aura console</p>
+                    </li>
+                </ul>
+                
+                <h3>Bước 4: Chạy Gợi Ý Món Ăn</h3>
+                <ul class="step-list">
+                    <li>
+                        <strong>Sử dụng CLI (Command Line)</strong>
+                        <p>Lệnh cơ bản:</p>
+                        <div class="command-block">
+                            <code>python code/KG/run_pipeline.py recommend \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--top-k 10 \<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;--max-dishes 3</code>
+                        </div>
+                        <p><strong>Tham số:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><code>--top-k 10</code> - Giữ 10 món ăn hàng đầu</li>
+                            <li><code>--max-dishes 3</code> - Chọn 3 món cho meal set</li>
+                            <li><code>--max-minutes 60</code> - Thời gian nấu tối đa 60 phút (tùy chọn)</li>
+                            <li><code>--dish-type canh</code> - Lọc theo loại món (tùy chọn)</li>
+                            <li><code>--required-type canh --required-type rau</code> - Yêu cầu phải có loại này (tùy chọn)</li>
+                        </ul>
+                        <p style="margin-top: 10px;">Output: <code>result/recommendation_kg.json</code></p>
+                    </li>
+                    <li>
+                        <strong>Sử dụng GUI (Giao Diện Đồ Họa)</strong>
+                        <p>Lệnh:</p>
+                        <div class="command-block">
+                            <code>python code/KG/gui_test.py</code>
+                        </div>
+                        <p><strong>Tính năng:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Chọn số lượng món ăn muốn gợi ý (2-5)</li>
+                            <li>Chọn thời gian nấu tối đa</li>
+                            <li>Chọn loại món ăn (mặn, canh, rau, chay...)</li>
+                            <li>Tùy chọn "Không lọc theo loại" để tick nhiều loại</li>
+                            <li>Xem kết quả gợi ý trực tiếp trong giao diện</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Thuật Toán Gợi Ý -->
+            <div class="section">
+                <h2>🎲 Thuật Toán Gợi Ý Món Ăn</h2>
+                
+                <div class="subsection">
+                    <h3>1. Tính Điểm Món Ăn (Scoring)</h3>
+                    <p>Với mỗi món ăn, hệ thống tính điểm dựa trên:</p>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Nguyên liệu chính (60%):</strong> Những nguyên liệu quan trọng</li>
+                        <li><strong>Nguyên liệu phụ bắt buộc (35%):</strong> Những nguyên liệu phụ cần thiết</li>
+                        <li><strong>Nguyên liệu phụ tùy chọn (5%):</strong> Những nguyên liệu có thể bỏ qua</li>
+                    </ul>
+                    <p style="margin-top: 15px;">Với mỗi nguyên liệu, so sánh:</p>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Tên nguyên liệu (70%):</strong> Tương đồng semantic với embedding</li>
+                        <li><strong>Khối lượng có sẵn (30%):</strong> Ratio giữa khối lượng cần và có sẵn</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <h3>2. Chọn Meal Set (Selection)</h3>
+                    <p>Từ top-k món ăn có điểm cao nhất, chọn max-dishes món:</p>
+                    <ul style="margin-left: 20px;">
+                        <li>Tối ưu hóa: Tổng điểm cao nhất</li>
+                        <li>Ưu tiên: Bao phủ các loại món ăn yêu cầu (nếu có)</li>
+                        <li>Đảm bảo: Tất cả nguyên liệu chính có sẵn</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Cấu Hình -->
+            <div class="section">
+                <h2>⚙️ Cấu Hình Và Cài Đặt</h2>
+                
+                <h3>Cài Đặt Dependencies</h3>
+                <div class="command-block">
+                    <code>pip install -r requirements.txt</code>
+                </div>
+                
+                <h3>Cập Nhật config.py</h3>
+                <p>Chỉnh sửa file <code>code/KG/config.py</code> nếu cần:</p>
+                <div class="subsection">
+                    <ul style="margin-left: 20px;">
+                        <li><code>DEFAULT_RECIPE_FILE</code> - Mặc định: <code>result/recipes_processed.json</code> (từ NLP processor)</li>
+                        <li><code>DEFAULT_STOCK_FILE</code> - Mặc định: <code>data/Kho.json</code> (danh sách nguyên liệu kho)</li>
+                        <li><code>DEFAULT_NEO4J_URI</code> - URI kết nối Neo4j</li>
+                        <li><code>DEFAULT_NEO4J_USER</code> - User Neo4j</li>
+                        <li><code>DEFAULT_NEO4J_PASSWORD</code> - Password Neo4j (cập nhật nếu dùng local)</li>
+                        <li><code>DEFAULT_NEO4J_DATABASE</code> - Tên database Neo4j</li>
+                    </ul>
+                </div>
+                
+                <h3>File Format</h3>
+                <p><strong>data/Kho.json:</strong> Danh sách nguyên liệu kho có sẵn</p>
+                <div class="command-block">
+                    <code>[<br/>
+&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "Cà chua",<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"quantity": 500,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"unit": "g"<br/>
+&nbsp;&nbsp;},<br/>
+&nbsp;&nbsp;...<br/>
+]</code>
+                </div>
+                
+                <p style="margin-top: 20px;"><strong>result/recipes_processed.json:</strong> Danh sách công thức nấu ăn (output từ NLP processor)</p>
+                <div class="command-block">
+                    <code>{<br/>
+&nbsp;&nbsp;"total": 95,<br/>
+&nbsp;&nbsp;"recipes": [<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "MÌ spaghetti sốt tôm-rau củ",<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"main_ingredients": {"mì": 200.0, "tôm": 100.0},<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"required_ingredients": {"cải xanh": 1, ...},<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"optional_ingredients": ["hành tây", "muối", "tiêu"]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br/>
+&nbsp;&nbsp;]<br/>
+}</code>
+                </div>
+            </div>
+            
+            <!-- Các Lệnh Quan Trọng -->
+            <div class="section">
+                <h2>📝 Lệnh & Cách Sử Dụng</h2>
+                
+                <div class="info">
+                    <p><strong>Danh sách đầy đủ các lệnh xem tại:</strong> <a href="README.md"><code>README.md</code></a></p>
+                    <p>File README chứa hướng dẫn chạy pipeline, ví dụ, troubleshooting, và tất cả lệnh cần thiết.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <footer>
+            <p>📄 Tài liệu được tạo tự động - Cập nhật: 24/05/2026</p>
+            <p>🔗 Project: KHDL-Food-Recommendation</p>
+        </footer>
+    </div>
+</body>
+</html>
