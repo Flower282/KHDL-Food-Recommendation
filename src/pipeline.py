@@ -50,10 +50,15 @@ class PipelineOrchestrator:
         input_file = input_csv or self.config.raw_recipe_csv
         
         # Use existing normalize code
-        from nlp_processor.nlp_processor import process_csv
-        output_file = self.config.default_nlp_output_file
+        import sys
+        import importlib.util
+        nlp_processor_path = self.config.project_root / "nlp-processor" / "nlp-processor.py"
+        spec = importlib.util.spec_from_file_location("nlp_processor", nlp_processor_path)
+        nlp_processor = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(nlp_processor)
         
-        process_csv(str(input_file), str(output_file))
+        output_file = self.config.recipe_file
+        nlp_processor.process_csv(str(input_file), str(output_file))
         self.logger.info(f"✅ Normalization completed → {output_file}")
         return output_file
     

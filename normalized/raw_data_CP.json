@@ -1,0 +1,2795 @@
+[
+  {
+    "name": "MÌ spaghetti sốt tôm-rau củ",
+    "time": "40 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mì",
+        "weight": "200 gr"
+      },
+      {
+        "name": "tôm",
+        "weight": "100 gr"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "spaghetti",
+        "weight": null
+      },
+      {
+        "name": "cải xanh",
+        "weight": null
+      },
+      {
+        "name": "bí đỏ",
+        "weight": null
+      },
+      {
+        "name": "ngò rí",
+        "weight": "10 gr"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cơm Rang Dưa Bò",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt bò",
+        "weight": "150 g"
+      },
+      {
+        "name": "hành lá",
+        "weight": "2 cây"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Pate Nấm và Khoai Lang Chay",
+    "time": "30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "mì",
+        "weight": null
+      },
+      {
+        "name": "mì",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Rau luộc và trứng luộc",
+    "time": "15 phút",
+    "servings": "1 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "bắp cải",
+        "weight": "2"
+      },
+      {
+        "name": "cà chua",
+        "weight": "240 g"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Gà Hấp Nấm (One Pot)",
+    "time": "15 phút",
+    "servings": "2-3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "cải thảo",
+        "weight": "200 g"
+      },
+      {
+        "name": "hành lá",
+        "weight": "20 g"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "sả",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "nghệ",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Đậu phộng da cá nước cốt dừa",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "mì",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "đường",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Thịt Hươu Xào Xả Ớt",
+    "time": "35 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "mì",
+        "weight": "1 mcf"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "sả",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bữa cơm gia đình",
+    "time": "45 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "tôm",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Cá basa chiên giòn",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "cá basa",
+        "weight": "4 lát"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Cơm nhà nấu nhanh",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Thịt rang đậu hũ",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "ba rọi",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Canh Khổ qua dồn cá thác lác",
+    "time": "15 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "khổ qua",
+        "weight": "600"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "1 g"
+      },
+      {
+        "name": "hành lá",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "bột ngọt",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bánh Mì Bò Nướng Sả",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mì",
+        "weight": null
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "thịt bò",
+        "weight": "500 g"
+      },
+      {
+        "name": "hành tím",
+        "weight": null
+      },
+      {
+        "name": "hành tím",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "sả",
+        "weight": null
+      },
+      {
+        "name": "dầu hào",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cá basa chiên EatWell",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "cá basa",
+        "weight": "400 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "lê",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "nghệ",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cá Trèn Kho Tộ",
+    "time": "35 phút",
+    "servings": "3-4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "bột ngọt",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Thịt kho tàu",
+    "time": "30 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "đường",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Mực hấp EatWell",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mực",
+        "weight": "400 g"
+      },
+      {
+        "name": "mực",
+        "weight": "1 con"
+      },
+      {
+        "name": "mực",
+        "weight": null
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "xà lách",
+        "weight": null
+      },
+      {
+        "name": "diếp cá",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "sả",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Chả cá, giò lụa sốt cà chua",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "cà chua",
+        "weight": "240 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "hành khô",
+        "weight": "1 củ"
+      },
+      {
+        "name": "hành lá",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Mì trứng xào bò và hành tây",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mì",
+        "weight": "4 vắt"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "lê",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Mì trứng xào thịt xá xíu",
+    "time": "15 phút",
+    "servings": "1 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mì",
+        "weight": "2 vắt"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Mì Thái tôm chua cay",
+    "time": "10 phút",
+    "servings": "1 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": null
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "mì tôm",
+        "weight": "1 gói"
+      },
+      {
+        "name": "rau muống",
+        "weight": "1 ít"
+      },
+      {
+        "name": "mực",
+        "weight": null
+      },
+      {
+        "name": "nghêu",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Cá hộp sốt cà xào hành tây",
+    "time": "15 phút",
+    "servings": "1 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "mì",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "hành tây",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bánh mì cá hộp ốp la",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Nấm Hầu Thủ Kho Sa Tế",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "nước tương",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "MÌ spaghetti sốt tôm-rau củ",
+    "time": "40 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mì",
+        "weight": "200 gr"
+      },
+      {
+        "name": "tôm",
+        "weight": "100 gr"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "spaghetti",
+        "weight": null
+      },
+      {
+        "name": "cải xanh",
+        "weight": null
+      },
+      {
+        "name": "bí đỏ",
+        "weight": null
+      },
+      {
+        "name": "ngò rí",
+        "weight": "10 gr"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cơm Rang Dưa Bò",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt bò",
+        "weight": "150 g"
+      },
+      {
+        "name": "hành lá",
+        "weight": "2 cây"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Pate Nấm và Khoai Lang Chay",
+    "time": "30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "mì",
+        "weight": null
+      },
+      {
+        "name": "mì",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Rau luộc và trứng luộc",
+    "time": "15 phút",
+    "servings": "1 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "bắp cải",
+        "weight": "2"
+      },
+      {
+        "name": "cà chua",
+        "weight": "240 g"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Gà Hấp Nấm (One Pot)",
+    "time": "15 phút",
+    "servings": "2-3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "cải thảo",
+        "weight": "200 g"
+      },
+      {
+        "name": "hành lá",
+        "weight": "20 g"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "sả",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "nghệ",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cá Hộp Chưng Trứng Thịt Băm",
+    "time": "30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "hành tím",
+        "weight": "1 cũ"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bí xanh, cà rốt xào nấm",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "bí xanh",
+        "weight": "300 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "ngò rí",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Thịt ba chỉ/sườn ba chỉ kho trứng nước",
+    "time": "45 phút",
+    "servings": "4 người ăn",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "hành tím",
+        "weight": "4 củ"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cá xạo/bông lau sốt cà",
+    "time": "10-15 phút",
+    "servings": "4 người ăn",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "cà chua",
+        "weight": "2 trái"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh cá + thơm cà (hồng/dìa/)",
+    "time": "15 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "thơm",
+        "weight": "2 trái"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "cà chua",
+        "weight": "2 trái"
+      },
+      {
+        "name": "hành tím",
+        "weight": "3 cũ"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Đậu Phụ Xào Sa Tế",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "nước tương",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bí xanh xào nấm đông cô",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "bí xanh",
+        "weight": "300 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cá Hộp Ngâm Dầu Sốt Cà",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "cà chua",
+        "weight": null
+      },
+      {
+        "name": "mì",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Tôm sốt bơ tỏi xạ hương bất bại",
+    "time": "60 phút",
+    "servings": "4-6 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "1500 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cá nục kho nước mía",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "hành tím",
+        "weight": "4 củ"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Phở Trộn Sốt Nấm Hương",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "bánh phở",
+        "weight": null
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "rau cải",
+        "weight": "1 nắm"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "ớt",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Sandwich Bò Băm Vét Tủ Lạnh",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Đậu Hũ Non Xào Rong Biển",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bánh sandwich nướng bò phô mai",
+    "time": "10 phút",
+    "servings": "1 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "ớt",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cháo hạt sen nấm hương",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "100 g"
+      },
+      {
+        "name": "hành tím",
+        "weight": "1 mc"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Bún mọc bò viên",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "bún",
+        "weight": "400 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Phở thịt bằm",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "100 g"
+      },
+      {
+        "name": "hành tím",
+        "weight": "1 mc"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Bò kho mì giòn",
+    "time": "120 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mì",
+        "weight": "160 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "hành tím",
+        "weight": "10 g"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "sả",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh rau củ thịt bằm",
+    "time": "20 phút",
+    "servings": "2 - 3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "khoai tây",
+        "weight": null
+      },
+      {
+        "name": "hành tím",
+        "weight": "2 củ"
+      },
+      {
+        "name": "hành lá",
+        "weight": "2 nhánh"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "dầu ăn",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh cá khoai",
+    "time": "30 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "hành tím",
+        "weight": null
+      },
+      {
+        "name": "hành lá",
+        "weight": null
+      },
+      {
+        "name": "cà chua",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "bột ngọt",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Chả đậu thịt",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "200 gr"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Mì Ý xốt kem với thịt hun khói và nấm",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mì",
+        "weight": "200 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bò Kho",
+    "time": "2 giờ",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt bò",
+        "weight": "1000 g"
+      },
+      {
+        "name": "khoai tây",
+        "weight": "540 g"
+      },
+      {
+        "name": "hành lá",
+        "weight": "3 cây"
+      },
+      {
+        "name": "ngò rí",
+        "weight": "3 cây"
+      },
+      {
+        "name": "ngò gai",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "sả",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bún Thái hải sản",
+    "time": "60 phút",
+    "servings": "4 người ăn",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "bún",
+        "weight": "500 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "300 g"
+      },
+      {
+        "name": "mực",
+        "weight": "200 g"
+      },
+      {
+        "name": "cà chua",
+        "weight": null
+      },
+      {
+        "name": "dứa",
+        "weight": null
+      },
+      {
+        "name": "thơm",
+        "weight": null
+      },
+      {
+        "name": "lá chanh",
+        "weight": null
+      },
+      {
+        "name": "rau muống",
+        "weight": null
+      },
+      {
+        "name": "chuối",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "sả",
+        "weight": null
+      },
+      {
+        "name": "riềng",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh sườn bò hầm kiểu Hàn",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "sườn bò",
+        "weight": "2000 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "miến",
+        "weight": "1 bịch"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "xì dầu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Hoành thánh lá nấu tôm khô, nấm rơm",
+    "time": "1 giờ",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "30 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "hẹ",
+        "weight": "1 ít"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cháo hải sản",
+    "time": "15 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "1 ít"
+      },
+      {
+        "name": "bí đỏ",
+        "weight": null
+      },
+      {
+        "name": "mực",
+        "weight": "200 gr"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Bò om dưa",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "sườn bò",
+        "weight": null
+      },
+      {
+        "name": "gân bò",
+        "weight": null
+      },
+      {
+        "name": "bắp bò",
+        "weight": null
+      },
+      {
+        "name": "cà chua",
+        "weight": null
+      },
+      {
+        "name": "hành tím",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "nước tương",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Trứng đúc thịt hấp nồi cơm",
+    "time": "30-45 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "150 g"
+      },
+      {
+        "name": "hành khô",
+        "weight": "1 ít"
+      },
+      {
+        "name": "ngò rí",
+        "weight": "2 cây"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cá ngừ kho dưa cải",
+    "time": "1h 30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "cá ngừ",
+        "weight": "4 lát"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Nui xào tôm thịt măng tây",
+    "time": "30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "100 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "nui",
+        "weight": "150 g"
+      },
+      {
+        "name": "hành tím",
+        "weight": null
+      },
+      {
+        "name": "hành lá",
+        "weight": "1 ít"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "dầu hào",
+        "weight": null
+      },
+      {
+        "name": "nước tương",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cơm GÀ nấu rau củ bằng nồi cơm điện",
+    "time": "30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "ức gà",
+        "weight": "250 gr"
+      },
+      {
+        "name": "ngò rí",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "nước tương",
+        "weight": null
+      },
+      {
+        "name": "dầu hào",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "nước tương",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bữa cơm lười",
+    "time": "30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "cà chua",
+        "weight": "4 trái"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Miến Sườn Rau Húng Quế",
+    "time": "35 phút",
+    "servings": "3-4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "miến",
+        "weight": "4 vắt"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "sườn non",
+        "weight": "500 gam"
+      },
+      {
+        "name": "hành tím",
+        "weight": "1.5 tbsp"
+      },
+      {
+        "name": "ngò rí",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "bột ngọt",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bò hầm pate tiêu xanh",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "bắp bò",
+        "weight": "1000 g"
+      },
+      {
+        "name": "mì",
+        "weight": null
+      },
+      {
+        "name": "khoai tây",
+        "weight": "540 g"
+      },
+      {
+        "name": "mì",
+        "weight": null
+      },
+      {
+        "name": "cà chua",
+        "weight": "1 hộp"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "nước tương",
+        "weight": null
+      },
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "bột ngọt",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bánh mì Tôm Phô Mai Mayonnaise bằng Nồi chiên không dầu",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mì",
+        "weight": null
+      },
+      {
+        "name": "tôm",
+        "weight": "100 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "hành lá",
+        "weight": "1 nhánh"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Cơm Gà Nấm Bằng Nồi Cơm Điện",
+    "time": "45 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt gà",
+        "weight": "150 g"
+      },
+      {
+        "name": "đùi gà",
+        "weight": null
+      },
+      {
+        "name": "ức gà",
+        "weight": null
+      },
+      {
+        "name": "đùi gà",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "nước tương",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Nấm hương tươi chiên giòn",
+    "time": "30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Canh Gà Hầm Cải Thảo Da Heo Khô",
+    "time": "40 phút",
+    "servings": "2-3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "da heo",
+        "weight": "20 gam"
+      },
+      {
+        "name": "cải thảo",
+        "weight": "250 gam"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "cánh gà",
+        "weight": "500 gam"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh rau dền nấu tôm và chả cá",
+    "time": "20 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "100 g"
+      },
+      {
+        "name": "rau dền",
+        "weight": "200 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Canh rau đay nấu tôm thịt",
+    "time": "20 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "150 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "100 g"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Canh mồng tơi nấm nấu tôm thịt",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "30 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "100 g"
+      },
+      {
+        "name": "rau mồng tơi",
+        "weight": "250 g"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Cải xoăn xào hải sản",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "cải xoăn",
+        "weight": "1 cây"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh xà lách xoong nấu thịt băm",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "xà lách",
+        "weight": "150 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "thịt heo",
+        "weight": "100 g"
+      },
+      {
+        "name": "hành tím",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh rong biển nấu tôm khô",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "50 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "hành lá",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Canh rau dền cơm nấu tôm khô",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "50 g"
+      },
+      {
+        "name": "rau dền",
+        "weight": "200 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Súp Nấm, Bí Đỏ, Hạt Mắc Ca",
+    "time": "15 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "bí đỏ",
+        "weight": "400 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "thơm",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "hành tây",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bò xào măng tây",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt bò",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Rau Bí Xào Đơn Giản",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "đùi gà",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "dầu ăn",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh rong biển bò băm",
+    "time": "20 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "hành lá",
+        "weight": "20 g"
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Canh cải ngọt nấu mọc và bò viên",
+    "time": "20 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "cải ngọt",
+        "weight": "250 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Rau muống xào ốc giác",
+    "time": "30 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "ốc",
+        "weight": "500 g"
+      },
+      {
+        "name": "ốc",
+        "weight": null
+      },
+      {
+        "name": "ốc",
+        "weight": null
+      },
+      {
+        "name": "rau muống",
+        "weight": "200 g"
+      },
+      {
+        "name": "rau muống",
+        "weight": null
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "hành tím",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      },
+      {
+        "name": "dầu hào",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh Rau Dền, Mướp nấu Cá Thác Lác",
+    "time": "20 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "mướp",
+        "weight": "1 trái"
+      },
+      {
+        "name": "rau dền",
+        "weight": "200 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Cá hồi sốt cam bơ tỏi măng tây",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "cá hồi",
+        "weight": "300 gr"
+      },
+      {
+        "name": "cam",
+        "weight": "250 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "dầu hào",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Ốc móng tay xào rau muống",
+    "time": "20 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "ốc",
+        "weight": "500 g"
+      },
+      {
+        "name": "rau muống",
+        "weight": "500 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh rau muống nấu tôm càng xanh chua cay",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "tôm",
+        "weight": "4 con"
+      },
+      {
+        "name": "rau muống",
+        "weight": "300 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Cơm nhà nấu nhanh 20 phút",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": null
+      },
+      {
+        "name": "cải ngọt",
+        "weight": null
+      },
+      {
+        "name": "tôm",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Thịt xay rim trứng",
+    "time": "20 phút",
+    "servings": "3 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "300 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Bữa cơm gia đình",
+    "time": "60 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "tôm",
+        "weight": null
+      },
+      {
+        "name": "cải ngọt",
+        "weight": null
+      },
+      {
+        "name": "thịt xay",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Canh cải ngọt nấu thịt xay",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "thịt xay",
+        "weight": "50 g"
+      },
+      {
+        "name": "cải ngọt",
+        "weight": "250 g"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Cơm nhà mình",
+    "time": "60 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [
+      {
+        "name": "đùi gà",
+        "weight": null
+      },
+      {
+        "name": "cà chua",
+        "weight": null
+      },
+      {
+        "name": "cải xoăn",
+        "weight": null
+      },
+      {
+        "name": "nho",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": []
+  },
+  {
+    "name": "Canh lá hẹ nấu nấm đông cô",
+    "time": "20 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "hẹ",
+        "weight": null
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "thịt heo",
+        "weight": "60 gr"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      },
+      {
+        "name": "bột ngọt",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh Rau Nấu Ghẹ",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "ghẹ",
+        "weight": "400 g"
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "hành lá",
+        "weight": "1 củ"
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "muối",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Bún cá chấm",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "bún",
+        "weight": null
+      }
+    ],
+    "required_ingredients": [
+      {
+        "name": "cá rô",
+        "weight": null
+      },
+      {
+        "name": "lê",
+        "weight": null
+      },
+      {
+        "name": "xà lách",
+        "weight": null
+      },
+      {
+        "name": "tía tô",
+        "weight": null
+      },
+      {
+        "name": "mì",
+        "weight": null
+      }
+    ],
+    "optional_ingredients": [
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "gừng",
+        "weight": null
+      },
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "hạt nêm",
+        "weight": null
+      },
+      {
+        "name": "nước mắm",
+        "weight": null
+      },
+      {
+        "name": "đường",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "ớt",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Rau đậu hòa lan xào thịt bò",
+    "time": "15 phút",
+    "servings": "2 người",
+    "difficulty": "dễ",
+    "main_ingredients": [
+      {
+        "name": "thịt bò",
+        "weight": "1 chén"
+      }
+    ],
+    "required_ingredients": [],
+    "optional_ingredients": [
+      {
+        "name": "tiêu",
+        "weight": null
+      },
+      {
+        "name": "tỏi",
+        "weight": null
+      },
+      {
+        "name": "dầu hào",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "name": "Canh cải cúc nấu thịt băm",
+    "time": "20 phút",
+    "servings": "4 người",
+    "difficulty": "dễ",
+    "main_ingredients": [],
+    "required_ingredients": [],
+    "optional_ingredients": []
+  }
+]
