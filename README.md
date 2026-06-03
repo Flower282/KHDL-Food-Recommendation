@@ -31,7 +31,65 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Khởi Động Nhanh
+## � Chuẩn Bị Dữ Liệu
+
+### Bước 1: Xử Lý Dữ Liệu Thô (Data Processing)
+
+Trước tiên, bạn cần xử lý các file CSV thô bằng script `process_recipes_csv.py`:
+
+```bash
+# Xử lý một file CSV
+python scripts/process_recipes_csv.py <input_file.csv>
+
+# Hoặc xử lý file cụ thể
+python scripts/process_recipes_csv.py rawCSV/raw_data.csv
+```
+
+Script này sẽ:
+- 🧹 Làm sạch và chuẩn hóa dữ liệu
+- ✅ Xoá các hàng không hợp lệ
+- 📊 Tạo output file đã xử lý
+
+### Bước 2: Di Chuyển File vào Folder rawCSV
+
+Sau khi xử lý dữ liệu, **di chuyển các file CSV đã xử lý** vào thư mục `rawCSV/`:
+
+```bash
+# Tạo thư mục nếu chưa tồn tại
+mkdir -p rawCSV
+
+# Di chuyển file đã xử lý (ví dụ)
+mv path/to/processed_file.csv rawCSV/
+
+# Hoặc di chuyển nhiều file
+mv path/to/processed/*.csv rawCSV/
+```
+
+**Lưu ý:**
+- ⚠️ **Chỉ đưa các file CSV đã được xử lý bởi `process_recipes_csv.py` vào folder `rawCSV/`**
+- 📁 Folder `rawCSV/` sẽ chứa các file nguồn cho pipeline normalize
+- 🔄 File đầu vào phải có cấu trúc cột hợp lệ (xem examples)
+
+### Bước 3: Normalize Recipes (CSV → JSON)
+
+Khi đã có file trong `rawCSV/`, chạy script normalize để xử lý batch:
+
+```bash
+# Chế độ batch (xử lý tất cả CSV files)
+python scripts/normalize.py --batch
+
+# Hoặc chế độ interactive (chọn file)
+python scripts/normalize.py
+
+# Chỉ định file riêng
+python scripts/normalize.py -i rawCSV/recipes.csv -o normalized/recipes.json
+```
+
+Output sẽ được lưu vào thư mục `normalized/` với tên: `<input_name>.json`
+
+---
+
+## �🚀 Khởi Động Nhanh
 
 ### 1. Cấu Hình (Optional)
 
@@ -65,13 +123,22 @@ Kết quả sẽ hiển thị:
 
 ### 3. Chạy Pipeline
 
-#### a) Chỉ Normalize Recipes (CSV → JSON)
+#### a) Normalize Recipes (CSV → JSON)
+
+Sau khi di chuyển file CSV đã xử lý vào folder `rawCSV/`, bạn có thể normalize batch:
 
 ```bash
+# Batch mode - xử lý tất cả CSV files từ rawCSV/
+python scripts/normalize.py --batch
+
+# Interactive mode - chọn file cụ thể
 python scripts/normalize.py
+
+# Chỉ định file input riêng
+python scripts/normalize.py -i rawCSV/recipes.csv
 ```
 
-Xử lý: `result/raw_data_CP.csv` → `result/recipes_processed.json`
+Output: `normalized/` folder chứa các file `.json` tương ứng
 
 #### b) Build Knowledge Graph
 
@@ -141,6 +208,59 @@ python scripts/recommend.py --top-k 20 --max-dishes 4
 
 ---
 
+## 📁 Cấu Trúc Thư Mục & Dòng Chảy Dữ Liệu
+
+```
+📦 KHDL-Food-Recommendation/
+├── 📂 rawCSV/                    ← Di chuyển CSV đã xử lý vào đây
+│   ├── raw_data_CP.csv
+│   ├── raw_data_DMX.csv
+│   └── ...
+├── 📂 normalized/                ← Output của normalize.py
+│   ├── raw_data_CP.json
+│   ├── raw_data_DMX.json
+│   └── ...
+├── 📂 result/                    ← Output của build_kg & recommend
+│   ├── recipes_processed.json
+│   ├── kg_payload.json
+│   ├── load_kg.cypher
+│   └── recommendation_kg.json
+├── 📂 data/
+│   └── Kho.json                  ← Stock data
+├── scripts/
+│   ├── normalize.py              ← Chạy này sau khi có rawCSV
+│   ├── build_kg.py
+│   ├── recommend.py
+│   └── ...
+└── src/
+    ├── config.py
+    ├── pipeline.py
+    └── ...
+```
+
+**Dòng chảy dữ liệu:**
+```
+Raw Data
+   ↓
+[process_recipes_csv.py] ← Xử lý thô
+   ↓
+📁 rawCSV/ (CSV files)
+   ↓
+[scripts/normalize.py] ← Batch normalize
+   ↓
+📁 normalized/ (JSON files)
+   ↓
+[scripts/build_kg.py] ← Build Knowledge Graph
+   ↓
+📁 result/ (KG payload + Cypher)
+   ↓
+[scripts/recommend.py] ← Generate recommendations
+   ↓
+📁 result/recommendation_kg.json ✅
+```
+
+---
+
 ## 🧪 Kiểm Tra Kết Quả
 
 ### Xem Recommendations
@@ -157,12 +277,65 @@ python scripts/build_kg.py  # Hiển thị số lượng dishes, ingredients
 
 ---
 
-## 🐛 Troubleshooting
+## � Format Dữ Liệu Đầu Vào
+
+### Format CSV cần có:
+
+Các file CSV trong `rawCSV/` **phải có** các cột sau (tiếng Việt):
+
+| Cột | Bắt buộc | Ví dụ |
+|-----|---------|------|
+| `tên` | ✅ | Cơm rang dưa bò |
+| `thời gian` | ✅ | 30 phút |
+| `số người` | ✅ | 4 người |
+| `độ khó` | ✅ | dễ / trung bình / khó |
+| `nguyên liệu` | ✅ | Cơm 500g \| Thịt bò 300g \| ... |
+| `cách chế biến` | ❌ | (Optional) |
+| `link` | ❌ | (Optional) |
+
+### Yêu cầu chi tiết:
+
+- **`tên`**: Tên món ăn (không được rỗng)
+- **`nguyên liệu`**: Danh sách nguyên liệu cách nhau bằng ` | ` (pipe)
+  - Ví dụ: `Gạo 500g | Thịt bò 300g | Cà rốt 100g`
+  - Mỗi nguyên liệu nên có tên + khối lượng (nếu có)
+- **`thời gian`**: Có thể có số phút hoặc text (ví dụ: `30 phút`, `1h30`)
+- **`độ khó`**: `dễ`, `trung bình`, `khó`
+
+### Xử lý file trước khi đưa vào:
+
+```bash
+# 1. Xử lý file CSV thô
+python scripts/process_recipes_csv.py raw_input.csv
+
+# 2. Di chuyển file đã xử lý
+mv raw_input.csv rawCSV/
+
+# 3. Chạy normalize
+python scripts/normalize.py --batch
+```
+
+---
+
+### Q: File CSV không được nhận diện trong rawCSV/
+**A:** Đảm bảo file:
+- ✅ Đã được xử lý bằng `process_recipes_csv.py`
+- ✅ Có cấu trúc cột hợp lệ: `tên`, `thời gian`, `số người`, `độ khó`, `nguyên liệu`
+- ✅ Có đuôi `.csv`
+
+### Q: Lỗi "nguyên liệu" không hợp lệ
+**A:** File CSV cần có:
+- Tên cột tiếng Việt chính xác
+- Hoặc chạy `process_recipes_csv.py` để chuẩn hóa trước
 
 ### Q: Lỗi "recipes_processed.json not found"
-**A:** Chạy normalize trước:
+**A:** Bạn cần normalize trước:
 ```bash
-python scripts/normalize.py
+# 1. Đưa file CSV vào rawCSV/
+mv file.csv rawCSV/
+
+# 2. Chạy normalize
+python scripts/normalize.py --batch
 ```
 
 ### Q: Lỗi kết nối Neo4j
@@ -171,36 +344,65 @@ python scripts/normalize.py
 ### Q: Muốn xem chi tiết kiến trúc?
 **A:** Mở file [ARCHITECTURE.html](ARCHITECTURE.html) trong browser
 
+### Q: Folder rawCSV/ chưa tồn tại?
+**A:** Tạo folder:
+```bash
+mkdir -p rawCSV
+```
+
 ---
 
 ## 📝 Các Lệnh Thường Dùng
 
 ```bash
-# Kiểm tra trạng thái
-python -m src status
+# === CHUẨN BỊ DỮ LIỆU ===
+# Xử lý file CSV thô (bằng process_recipes_csv.py)
+python scripts/process_recipes_csv.py input.csv
 
-# Normalize recipes
+# Di chuyển file đã xử lý vào rawCSV
+mv processed_file.csv rawCSV/
+
+# === NORMALIZE (CSV → JSON) ===
+# Batch mode - tất cả files
+python scripts/normalize.py --batch
+
+# Interactive mode - chọn file
 python scripts/normalize.py
 
-# Build KG
+# Chỉ định file input
+python scripts/normalize.py -i rawCSV/recipes.csv
+
+# === KIẾN THỨC ĐỒ THỊ ===
+# Kiểm tra trạng thái pipeline
+python -m src status
+
+# Build Knowledge Graph
 python scripts/build_kg.py
 
+# === GỢI Ý ===
 # Tạo gợi ý (mặc định 3 bộ, top-10)
 python scripts/recommend.py
 
-# Tạo gợi ý (5 bộ, top-20)
+# Tạo gợi ý tùy chỉnh
 python scripts/recommend.py --top-k 20 --max-dishes 5
 
-# Full pipeline: normalize → build → recommend
+# === FULL PIPELINE ===
+# Normalize → Build KG → Recommend
 python scripts/pipeline.py --normalize --build-kg --recommend
 
-# Full pipeline with Neo4j
+# Load vào Neo4j
 python scripts/pipeline.py --normalize --build-kg --load-neo4j --recommend \
     --neo4j-password YOUR_PASSWORD
 ```
 
 ---
 
-**Last Updated:** May 24, 2026  
-**Version:** 1.0.0  
+**Last Updated:** June 3, 2026  
+**Version:** 1.1.0 - Enhanced data pipeline with rawCSV folder support  
 **Status:** Production Ready
+
+### Thay Đổi Gần Đây (v1.1.0):
+- ✨ Thêm hỗ trợ batch processing từ folder `rawCSV/`
+- 📁 Normalize script tự động scan và convert CSV → JSON
+- 🔄 Hỗ trợ xử lý multiple files cùng lúc
+- 📝 Cập nhật documentation đầy đủ về data pipeline

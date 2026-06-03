@@ -142,16 +142,17 @@ def build_kg_payload(recipe_path: str | Path, stock_path: str | Path) -> dict[st
     ingredient_rows: list[dict[str, Any]] = []
 
     for recipe in recipe_rows:
-        dish_name = str(recipe.get("tên", "")).strip()
+        # Support both Vietnamese and English field names
+        dish_name = str(recipe.get("tên", "") or recipe.get("name", "")).strip()
         if not dish_name:
             continue
 
         dish_rows.append(
             {
                 "name": dish_name,
-                "time_text": recipe.get("thời gian"),
-                "serving_text": recipe.get("số người"),
-                "difficulty": str(recipe.get("độ khó", "khong_ro")).strip() or "khong_ro",
+                "time_text": recipe.get("thời gian") or recipe.get("time"),
+                "serving_text": recipe.get("số người") or recipe.get("servings"),
+                "difficulty": str(recipe.get("độ khó", "") or recipe.get("difficulty", "khong_ro")).strip() or "khong_ro",
                 "time_minutes": _parse_minutes(recipe.get("thời gian")),
                 "dish_type": resolve_recipe_dish_type(recipe)[0],
                 "dish_type_key": resolve_recipe_dish_type(recipe)[1],
