@@ -1,0 +1,453 @@
+{
+  "dish_rows": [
+    {
+      "name": "Sườn heo hấp kiểu Hàn Quốc",
+      "time_text": "60 phút",
+      "serving_text": "4 người",
+      "difficulty": "Trung bình",
+      "time_minutes": 60,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Sườn heo nướng tương Miso",
+      "time_text": "90 phút",
+      "serving_text": "4 người",
+      "difficulty": "Trung bình",
+      "time_minutes": 90,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Bánh tráng cuộn mì cay",
+      "time_text": "10 phút",
+      "serving_text": "1 người",
+      "difficulty": "Dễ",
+      "time_minutes": 10,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Xôi kiểu Hàn (Yaksik)",
+      "time_text": "90 phút",
+      "serving_text": "3-4 người",
+      "difficulty": "Trung bình",
+      "time_minutes": 90,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Mì kim chi nấu đậu hũ non",
+      "time_text": "15 phút",
+      "serving_text": "1 người",
+      "difficulty": "Dễ",
+      "time_minutes": 15,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Canh đậu hũ non kim chi thịt băm",
+      "time_text": "20 phút",
+      "serving_text": "2 người",
+      "difficulty": "Dễ",
+      "time_minutes": 20,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Thịt cổ heo hầm kim chi",
+      "time_text": "90 phút",
+      "serving_text": "3 người",
+      "difficulty": "Dễ",
+      "time_minutes": 90,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Kim chi cải thảo truyền thống",
+      "time_text": "120 phút",
+      "serving_text": "10 người",
+      "difficulty": "Khó",
+      "time_minutes": 120,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Canh miso nấm mỡ rong biển",
+      "time_text": "15 phút",
+      "serving_text": "2 người",
+      "difficulty": "Dễ",
+      "time_minutes": 15,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Đậu phụ chiên giòn sốt Teriyaki",
+      "time_text": "15 phút",
+      "serving_text": "2 người",
+      "difficulty": "Dễ",
+      "time_minutes": 15,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Nấm hải sản chiên giòn (Món chay)",
+      "time_text": "15 phút",
+      "serving_text": "2 người",
+      "difficulty": "Dễ",
+      "time_minutes": 15,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Cơm hấp thập cẩm kiểu Nhật",
+      "time_text": "45 phút",
+      "serving_text": "3 người",
+      "difficulty": "Dễ",
+      "time_minutes": 45,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Canh ngao nấu tương Miso",
+      "time_text": "20 phút",
+      "serving_text": "3 người",
+      "difficulty": "Dễ",
+      "time_minutes": 20,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Cá diêu hồng nấu lẩu Thái",
+      "time_text": "30 phút",
+      "serving_text": "3 người",
+      "difficulty": "Dễ",
+      "time_minutes": 30,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Bánh mì phô mai bơ tỏi Hàn Quốc",
+      "time_text": "45 phút",
+      "serving_text": "3 người",
+      "difficulty": "Trung bình",
+      "time_minutes": 45,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Bánh mì dân tổ Hà Nội",
+      "time_text": "20 phút",
+      "serving_text": "2 người",
+      "difficulty": "Dễ",
+      "time_minutes": 20,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Sandwich sữa chua rau củ chay",
+      "time_text": "15 phút",
+      "serving_text": "2 người",
+      "difficulty": "Dễ",
+      "time_minutes": 15,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Sandwich trái cây (Fruit Sando)",
+      "time_text": "30 phút",
+      "serving_text": "2 người",
+      "difficulty": "Dễ",
+      "time_minutes": 30,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Bánh mì bơ tỏi truyền thống",
+      "time_text": "20 phút",
+      "serving_text": "4 người",
+      "difficulty": "Dễ",
+      "time_minutes": 20,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Bánh da lợn nhân đậu xanh lá dứa",
+      "time_text": "60 phút",
+      "serving_text": "6 người",
+      "difficulty": "Trung bình",
+      "time_minutes": 60,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    },
+    {
+      "name": "Mì Quảng Gà truyền thống",
+      "time_text": "60 phút",
+      "serving_text": "4 người",
+      "difficulty": "Trung bình",
+      "time_minutes": 60,
+      "dish_type": null,
+      "dish_type_key": null,
+      "source": "data_monan_day_du_CP.json"
+    }
+  ],
+  "ingredient_rows": [],
+  "stock_rows": [
+    {
+      "name": "Thịt ức gà",
+      "available_raw": "300 g",
+      "available_value": 300.0,
+      "available_unit": "g",
+      "available_value_base": 300.0,
+      "canonical_name": "thit ga"
+    },
+    {
+      "name": "Cá hồi",
+      "available_raw": "150 g",
+      "available_value": 150.0,
+      "available_unit": "g",
+      "available_value_base": 150.0,
+      "canonical_name": "ca hoi"
+    },
+    {
+      "name": "Trứng gà",
+      "available_raw": "2 quả",
+      "available_value": 2.0,
+      "available_unit": "piece",
+      "available_value_base": 2.0,
+      "canonical_name": "thit ga"
+    },
+    {
+      "name": "Đậu hũ",
+      "available_raw": "2 miếng",
+      "available_value": 2.0,
+      "available_unit": "mieng",
+      "available_value_base": 2.0,
+      "canonical_name": "au hu"
+    },
+    {
+      "name": "Khoai tây",
+      "available_raw": "2 củ",
+      "available_value": 2.0,
+      "available_unit": "piece",
+      "available_value_base": 2.0,
+      "canonical_name": "khoai tay"
+    },
+    {
+      "name": "Cà chua",
+      "available_raw": "3 quả",
+      "available_value": 3.0,
+      "available_unit": "piece",
+      "available_value_base": 3.0,
+      "canonical_name": "ca chua"
+    },
+    {
+      "name": "Bắp cải",
+      "available_raw": "200 g",
+      "available_value": 200.0,
+      "available_unit": "g",
+      "available_value_base": 200.0,
+      "canonical_name": "rau cai"
+    },
+    {
+      "name": "Ớt chuông",
+      "available_raw": "1 quả",
+      "available_value": 1.0,
+      "available_unit": "piece",
+      "available_value_base": 1.0,
+      "canonical_name": "ot chuong"
+    },
+    {
+      "name": "Nấm hương",
+      "available_raw": "50 g",
+      "available_value": 50.0,
+      "available_unit": "g",
+      "available_value_base": 50.0,
+      "canonical_name": "nam"
+    },
+    {
+      "name": "Hành lá 3 nhánh",
+      "available_raw": null,
+      "available_value": null,
+      "available_unit": null,
+      "available_value_base": null,
+      "canonical_name": "hanh la 3"
+    },
+    {
+      "name": "Gừng nhỏ",
+      "available_raw": "1 củ",
+      "available_value": 1.0,
+      "available_unit": "piece",
+      "available_value_base": 1.0,
+      "canonical_name": "gung nho"
+    },
+    {
+      "name": "Sữa tươi",
+      "available_raw": "200 ml",
+      "available_value": 200.0,
+      "available_unit": "ml",
+      "available_value_base": 200.0,
+      "canonical_name": "sua"
+    },
+    {
+      "name": "Phô mai",
+      "available_raw": "50 g",
+      "available_value": 50.0,
+      "available_unit": "g",
+      "available_value_base": 50.0,
+      "canonical_name": "pho mai"
+    },
+    {
+      "name": "Mật ong",
+      "available_raw": "20 ml",
+      "available_value": 20.0,
+      "available_unit": "ml",
+      "available_value_base": 20.0,
+      "canonical_name": "mat ong"
+    },
+    {
+      "name": "Hạt điều",
+      "available_raw": "30 g",
+      "available_value": 30.0,
+      "available_unit": "g",
+      "available_value_base": 30.0,
+      "canonical_name": "hat ieu"
+    },
+    {
+      "name": "Tôm",
+      "available_raw": "300 g",
+      "available_value": 300.0,
+      "available_unit": "g",
+      "available_value_base": 300.0,
+      "canonical_name": "tom"
+    },
+    {
+      "name": "Thịt bò",
+      "available_raw": "300 g",
+      "available_value": 300.0,
+      "available_unit": "g",
+      "available_value_base": 300.0,
+      "canonical_name": "thit bo"
+    },
+    {
+      "name": "Mỳ ý",
+      "available_raw": "200 g",
+      "available_value": 200.0,
+      "available_unit": "g",
+      "available_value_base": 200.0,
+      "canonical_name": "mi y"
+    }
+  ],
+  "stock_mapping_rows": [
+    {
+      "stock_name": "Thịt ức gà",
+      "ingredient_canonical": "thit ga",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Cá hồi",
+      "ingredient_canonical": "ca hoi",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Trứng gà",
+      "ingredient_canonical": "thit ga",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Đậu hũ",
+      "ingredient_canonical": "au hu",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Khoai tây",
+      "ingredient_canonical": "khoai tay",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Cà chua",
+      "ingredient_canonical": "ca chua",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Bắp cải",
+      "ingredient_canonical": "rau cai",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Ớt chuông",
+      "ingredient_canonical": "ot chuong",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Nấm hương",
+      "ingredient_canonical": "nam",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Hành lá 3 nhánh",
+      "ingredient_canonical": "hanh la 3",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Gừng nhỏ",
+      "ingredient_canonical": "gung nho",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Sữa tươi",
+      "ingredient_canonical": "sua",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Phô mai",
+      "ingredient_canonical": "pho mai",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Mật ong",
+      "ingredient_canonical": "mat ong",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Hạt điều",
+      "ingredient_canonical": "hat ieu",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Tôm",
+      "ingredient_canonical": "tom",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Thịt bò",
+      "ingredient_canonical": "thit bo",
+      "name_score": 0.0
+    },
+    {
+      "stock_name": "Mỳ ý",
+      "ingredient_canonical": "mi y",
+      "name_score": 0.0
+    }
+  ]
+}
