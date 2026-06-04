@@ -509,6 +509,41 @@ def convert_to_json_format(dish_name, grouped_data):
     return output
 
 
+def parse_cooking_steps(procedure_text):
+    """
+    Parse cooking procedure text into an array of steps.
+    Each step should start with "Bước X:" pattern.
+    
+    Args:
+        procedure_text: Text containing cooking steps
+    
+    Returns:
+        List of steps, or empty list if no valid steps found
+    """
+    if not procedure_text or not isinstance(procedure_text, str):
+        return None
+    
+    # Pattern to match "Bước X:" or "Step X:" or similar
+    # Matches: Bước 1:, Bước 2:, Bước 10:, etc.
+    step_pattern = r'(?:Bước|Step)\s+\d+\s*:'
+    
+    # Split by the pattern but keep the pattern as part of the text
+    parts = re.split(f'(?={step_pattern})', procedure_text.strip())
+    
+    # Filter out empty parts and clean up
+    steps = [part.strip() for part in parts if part.strip()]
+    
+    # Return as array only if we have multiple steps, or if it starts with "Bước"
+    if len(steps) > 1 or (steps and re.match(step_pattern, steps[0])):
+        return steps
+    
+    # If no "Bước" pattern found, return as single-item array
+    if procedure_text.strip():
+        return [procedure_text.strip()]
+    
+    return None
+
+
 # ============================================================================
 # MAIN / TESTING
 # ============================================================================
@@ -536,18 +571,37 @@ def process_csv(input_csv, output_json=None):
             if reader.fieldnames:
                 print(f"📋 Columns detected: {reader.fieldnames}")
             
+            # Detect column names and create mapping
+            col_mapping = {}
+            if reader.fieldnames:
+                fieldnames_lower = {f.lower().strip() for f in reader.fieldnames}
+                for field in reader.fieldnames:
+                    field_lower = field.lower().strip()
+                    if 'tên' in field_lower:
+                        col_mapping['tên'] = field
+                    elif 'nguyên liệu' in field_lower:
+                        col_mapping['nguyên liệu'] = field
+                    elif 'cách' in field_lower and ('nấu' in field_lower or 'biến' in field_lower):
+                        col_mapping['cách'] = field
+                    elif 'thời gian' in field_lower:
+                        col_mapping['thời gian'] = field
+                    elif 'số người' in field_lower:
+                        col_mapping['số người'] = field
+                    elif 'độ khó' in field_lower:
+                        col_mapping['độ khó'] = field
+            
             for idx, row in enumerate(reader, start=1):
                 total_rows = idx
-                dish_name = row.get('tên', '').strip()
-                ingredients_text = row.get('nguyên liệu', '').strip()
+                dish_name = row.get(col_mapping.get('tên', 'tên'), '').strip()
+                ingredients_text = row.get(col_mapping.get('nguyên liệu', 'nguyên liệu'), '').strip()
                 
                 # Extract cooking procedure
-                procedure_text = row.get('cách chế biến', '').strip()
+                procedure_text = row.get(col_mapping.get('cách', 'cách chế biến'), '').strip()
                 
                 # Extract metadata
-                cooking_time = row.get('thời gian', '').strip()
-                servings = row.get('số người', '').strip()
-                difficulty = row.get('độ khó', '').strip()
+                cooking_time = row.get(col_mapping.get('thời gian', 'thời gian'), '').strip()
+                servings = row.get(col_mapping.get('số người', 'số người'), '').strip()
+                difficulty = row.get(col_mapping.get('độ khó', 'độ khó'), '').strip()
                 
                 if not dish_name or dish_name == 'N/A':
                     skipped_count += 1
@@ -576,15 +630,8 @@ def process_csv(input_csv, output_json=None):
                     
                     # Add cooking procedure (parse steps if needed)
                     if procedure_text:
-                        # Split into steps if separated by "|"
-                        if '|' in procedure_text:
-                            steps = [step.strip() for step in procedure_text.split('|') if step.strip()]
-                            json_item["cách chế biến"] = steps
-                        elif 'Bước' in procedure_text or 'Step' in procedure_text:
-                            # Keep as text but preserve structure
-                            json_item["cách chế biến"] = procedure_text
-                        else:
-                            json_item["cách chế biến"] = procedure_text
+                        steps = parse_cooking_steps(procedure_text)
+                        json_item["cách chế biến"] = steps
                     else:
                         json_item["cách chế biến"] = None
                     
