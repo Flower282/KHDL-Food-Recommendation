@@ -39,26 +39,39 @@ class PipelineOrchestrator:
         self.logger.info(f"✅ Crawling completed")
         return self.config.raw_recipe_csv
     
-    def step_normalize(self, input_csv: Optional[Path] = None):
+    def step_normalize(self, input_csv: Optional[Path] = None, output_json: Optional[Path] = None):
         """
         Step 2: Normalize recipe data
         
         Args:
             input_csv: Path to raw CSV file. If None, uses default
+            output_json: Path to output JSON file. If None, uses config.recipe_file
         """
         self.logger.info("🧹 Step 2: Normalizing recipe data")
         input_file = input_csv or self.config.raw_recipe_csv
         
-        # Use existing normalize code
+        # Import from nlp-processor folder
         import sys
-        import importlib.util
-        nlp_processor_path = self.config.project_root / "nlp-processor" / "nlp-processor.py"
-        spec = importlib.util.spec_from_file_location("nlp_processor", nlp_processor_path)
-        nlp_processor = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(nlp_processor)
+        project_root = Path(__file__).parent.parent
+        nlp_processor_path = project_root / "nlp-processor"
         
-        output_file = self.config.recipe_file
-        nlp_processor.process_csv(str(input_file), str(output_file))
+        # Add nlp-processor to path
+        if str(nlp_processor_path) not in sys.path:
+            sys.path.insert(0, str(nlp_processor_path))
+        
+        # Import from nlp_processor.py (file renamed from nlp-processor.py)
+        from nlp_processor.nlp_processor import process_csv
+        
+        # Allow custom output path
+        if output_json:
+            output_file = output_json
+        else:
+            output_file = self.config.recipe_file
+        
+        # Ensure output directory exists
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        process_csv(str(input_file), str(output_file))
         self.logger.info(f"✅ Normalization completed → {output_file}")
         return output_file
     
