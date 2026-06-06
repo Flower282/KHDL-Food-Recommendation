@@ -459,12 +459,54 @@ def format_weight(value, unit):
         return str(value)
     else:
         return None
+    
+def classify_dish_type(dish_name: str) -> str:
+    """
+    Classify dish type based on name: "mặn", "rau", or "canh"
+    
+    Args:
+        dish_name: Name of the dish
+        
+    Returns:
+        "mặn", "rau", or "canh"
+    """
+    if not dish_name:
+        return "mặn"  # Default
+    
+    name_lower = dish_name.lower().strip()
+    
+    # Canh / Soup dishes (highest priority)
+    canh_keywords = [
+        "canh", "súp", "cháo", "chè", "nước", "bún", "phở", "miến", 
+        "mì", "hủ tiếu", "bánh canh", "lẩu"
+    ]
+    
+    for keyword in canh_keywords:
+        if keyword in name_lower:
+            return "canh"
+    
+    # Rau / Vegetable dishes
+    rau_keywords = [
+        "rau", "xà lách", "salad", "nấm", "đậu", "bí", "cà tím", 
+        "bông cải", "cải", "giá", "mướp", "khổ qua", "dưa leo", 
+        "su su", "củ cải", "khoai tây", "khoai lang", "cà rốt"
+    ]
+    
+    for keyword in rau_keywords:
+        if keyword in name_lower:
+            # Exclude if it's actually a soup with vegetables
+            if "canh" not in name_lower and "cháo" not in name_lower:
+                return "rau"
+    
+    # Default to mặn (main dish)
+    return "mặn"
 
 
 def convert_to_json_format(dish_name, grouped_data):
     """Convert grouped result to format expected by KG pipeline"""
     output = {
         "tên": dish_name,
+        "loại món": classify_dish_type(dish_name),  # NEW FIELD
         "thời gian": None,
         "số người": None,
         "độ khó": None,
