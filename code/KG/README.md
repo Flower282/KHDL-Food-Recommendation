@@ -24,22 +24,40 @@ pip install neo4j
 
 ## Cap nhat KG va nap Neo4j
 
-1) Xuat payload + cypher (cap nhat KG tu JSON):
+### Phuong an 1: Khoi tao KG lan dau (hoac xay lai tu dau)
 
+Dung cho lan dau chay hoac khi muon dong bo lai toan bo tu file JSON nguon:
+
+1) Xuat payload va Cypher tu file JSON cong thuc:
 ```bash
-python code/KG/run_pipeline.py export
+python code/KG/run_pipeline.py --recipe-file result/data_monan_day_du_CP.json export
 ```
 
-2) Nap vao Neo4j local:
-
+2) Nap vao Neo4j (co the dung `--clear` de xoa sach du lieu cu tren graph truoc khi nap):
 ```bash
-python code/KG/run_pipeline.py load-neo4j --uri neo4j://127.0.0.1:7687 --user neo4j --password YOUR_PASSWORD --database neo4j
+# Neo4j local
+python code/KG/run_pipeline.py load-neo4j --password YOUR_PASSWORD --clear
+
+# Neo4j Aura (online)
+python code/KG/run_pipeline.py load-neo4j --uri neo4j+s://YOUR_INSTANCE.databases.neo4j.io --user YOUR_USER --password YOUR_PASSWORD --database neo4j --clear
 ```
 
-3) Nap vao Neo4j Aura (online):
+### Phuong an 2: Cap nhat/Them moi gia tang (Incremental Merge)
 
+Dung khi co file recipe JSON moi can nap vao ma khong muon hop nhat file JSON thu cong hay re-build lai toan bo KG. Tu dong so khop do tuong dong ten mon an de gop/them moi:
+
+1) Run merge de tao payload con va hop nhat vao payload chinh (`kg_payload.json`):
 ```bash
-python code/KG/run_pipeline.py load-neo4j --uri neo4j+s://YOUR_INSTANCE.databases.neo4j.io --user YOUR_USER --password YOUR_PASSWORD --database neo4j
+# He thong se hoi duong dan file JSON moi neu khong truyen tham so
+python code/KG/run_pipeline.py merge
+
+# Hoac truyen truc tiep qua CLI:
+python code/KG/run_pipeline.py merge --new-recipe-file result/your_new_recipes.json
+```
+
+2) Dong bo du lieu moi len Neo4j (KHONG dung `--clear` de giu lai cac mon cu):
+```bash
+python code/KG/run_pipeline.py load-neo4j --password YOUR_PASSWORD
 ```
 
 Chay goi y (1 mon va nhieu mon):
