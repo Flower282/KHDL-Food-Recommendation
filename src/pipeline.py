@@ -23,16 +23,26 @@ class PipelineOrchestrator:
         Step 1: Crawl recipe data from source
         
         Args:
-            source: "CP" (Cookpad) or "MNMN" (Mon Ngon Moi Ngay)
+            source: "CP" (Cookpad), "MNMN" (Mon Ngon Moi Ngay), "MAGGI", "KNORR", or "MAGGI_KNORR" for both.
         """
         self.logger.info(f"🕷️  Step 1: Crawling recipes from {source}")
         
-        if source == "CP":
+        source_key = source.strip().upper()
+        if source_key == "CP":
             from code.Crawl.data_crawl_CP import crawl as crawl_cp
             crawl_cp()
-        elif source == "MNMN":
+        elif source_key == "MNMN":
             from code.Crawl.data_crawl_MNMN import crawl as crawl_mnmn
             crawl_mnmn()
+        elif source_key == "MAGGI":
+            from code.Crawl.data_crawl_maggi_knorr import crawl_maggi_listing
+            crawl_maggi_listing()
+        elif source_key == "KNORR":
+            from code.Crawl.data_crawl_maggi_knorr import KNORR_BASE, crawl_knorr_listing
+            crawl_knorr_listing(KNORR_BASE)
+        elif source_key in {"MAGGI_KNORR", "ALL", "DEFAULT"}:
+            from code.Crawl.data_crawl_maggi_knorr import crawl_default
+            crawl_default()
         else:
             raise ValueError(f"Unknown source: {source}")
         

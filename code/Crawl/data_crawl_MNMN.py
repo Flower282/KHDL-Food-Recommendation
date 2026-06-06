@@ -4,15 +4,17 @@ import csv
 import time
 import random
 import os
+from pathlib import Path
+from typing import Optional
 
 # Cấu hình header
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
 }
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RESULT_DIR = os.path.join(PROJECT_ROOT, 'result')
-FILE_NAME = os.path.join(RESULT_DIR, 'tong_hop_mon_an_viet_nam.csv')
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+RAWCSV_DIR = PROJECT_ROOT / 'rawCSV'
+FILE_NAME = RAWCSV_DIR / 'tong_hop_mon_an_viet_nam.csv'
 
 def get_recipe_list_data(page_url):
     """Lấy link, thời gian, số người và độ khó ngay tại trang danh sách"""
@@ -80,53 +82,76 @@ def get_recipe_ingredients(url):
         print(f" Lỗi khi lấy chi tiết {url}: {e}")
         return None, None
 
-def main():
-    os.makedirs(RESULT_DIR, exist_ok=True)
+def ensure_output_folder() -> None:
+    RAWCSV_DIR.mkdir(parents=True, exist_ok=True)
 
-    try:
-        start_page = int(input("Nhập trang bắt đầu: "))
-        end_page = int(input("Nhập trang kết thúc: "))
-    except ValueError:
-        print("Vui lòng nhập số nguyên!")
-        return
 
-    file_exists = os.path.isfile(FILE_NAME)
-    # Thêm 2 cột mới vào danh sách keys
-    keys = ['tên', 'thời gian', 'số người', 'độ khó', 'nguyên liệu', 'link']
+def crawl(start_page: int = 1, end_page: int = 1, output_file: Optional[str] = None) -> str:
+    ensure_output_folder()
+    if output_file is None:
+        output_file = str(FILE_NAME)
 
-    with open(FILE_NAME, 'a', encoding='utf-8-sig', newline='') as f:
-        dict_writer = csv.DictWriter(f, fieldnames=keys)
-        if not file_exists:
-            dict_writer.writeheader()
+    file_exists = os.path.isfile(output_file)
+    keys = ['tên', 'thời gian', 'số người', 'độ khó', 'nguyên liệu', 'cách chế biến', 'link']
 
-        for page in range(start_page, end_page + 1):
-            page_url = f"https://monngonmoingay.com/tim-kiem-mon-ngon/page/{page}/"
-            print(f"\n--- ĐANG XỬ LÝ TRANG {page} ---")
-            
-            recipes_in_page = get_recipe_list_data(page_url)
-            
-            count = 0
-            for item in recipes_in_page:
-                name, ingredients = get_recipe_ingredients(item['link'])
-                
-                if name:
-                    row = {
-                        'tên': name,
-                        'thời gian': item['time'],
-                        'số người': item['servings'],
-                        'độ khó': item['difficulty'],
-                        'nguyên liệu': ingredients,
-                        'link': item['link']
-                    }
-                    dict_writer.writerow(row)
-                    count += 1
-                    print(f"   + Đã ghi: {name} | {item['servings']} | {item['difficulty']}")
-                
-                time.sleep(random.uniform(1.2, 2.8))
-            
-            print(f"==> Xong trang {page}. Thêm mới {count} món.")
+    rows = []
+    for page in range(start_page, end_page + 1):
+        page_url = f"https://monngonmoingay.com/tim-kiem-mon-ngon/page/{page}/"
+        print(f"\n--- ĐANG XỬ LÝ TRANG {page} ---")
 
-    print(f"\n HOÀN THÀNH! Dữ liệu được lưu tại: {FILE_NAME}")
+        recipes_in_page = get_recipe_list_data(page_url)
+
+        count = 0
+        for item in recipes_in_page:
+            name, ingredients = get_recipe_ingredients(item['link'])
+
+            if name:
+                row = {
+                    'tên': name,
+                    'thời gian': item['time'],
+                    'số người': item['servings'],
+                    'độ khó': item['difficulty'],
+                    'nguyên liệu': ingredients,
+                    'cách chế biến': '',
+                    'link': item['link']
+                }
+                rows.append(row)
+                count += 1
+                print(f"   + Đã ghi: {name} | {item['servings']} | {item['difficulty']}")
+
+            time.sleep(random.uniform(1.2, 2.8))
+
+        print(f"==> Xong trang {page}. Thêm mới {count} món.")
+
+    if rows:
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        with open(output_file, 'a', encoding='utf-8-sig', newline='') as f:
+            dict_writer = csv.DictWriter(f, fieldnames=keys)
+            if not file_exists:
+                dict_writer.writeheader()
+            dict_writer.writerows(rows)
+
+        print(f"\n HOÀN THÀNH! Dữ liệu được lưu tại: {output_file}")
+    else:
+        print("\n⚠️  Không có dữ liệu mới.")
+
+    return output_file
+
+
+def main() -> None:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Crawl MonNgonMoiNgay recipes into rawCSV/tong_hop_mon_an_viet_nam.csv")
+    parser.add_argument("--start-page", type=int, default=1, help="Trang bắt đầu")
+    parser.add_argument("--end-page", type=int, default=5, help="Trang kết thúc")
+    parser.add_argument("--output", type=str, default=str(FILE_NAME), help="Đường dẫn file CSV đầu ra")
+    args = parser.parse_args()
+
+    if args.start_page < 1 or args.end_page < args.start_page:
+        parser.error("--end-page phải >= --start-page và cả hai phải >= 1")
+
+    crawl(start_page=args.start_page, end_page=args.end_page, output_file=args.output)
+
 
 if __name__ == "__main__":
     main()

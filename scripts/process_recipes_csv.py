@@ -8,6 +8,8 @@ Output: CSV với 3 cột - Tên Món, Nguyên Liệu, Cách Nấu
 
 import csv
 import re
+import os
+import sys
 
 def clean_text(text):
     """Làm sạch text"""
@@ -92,11 +94,25 @@ def is_description_line(text):
     return False
 
 def main():
-    input_file = '/home/duonglt/KHDL-Food-Recommendation/result/toi_vao_bep_afamily_categories.csv'
-    output_file = '/home/duonglt/KHDL-Food-Recommendation/result/recipes_processed_clean.csv'
-    
+    cwd = os.getcwd()
+    default_input = os.path.join(cwd, 'result', 'toi_vao_bep_afamily_categories.csv')
+    default_output = os.path.join(cwd, 'result', 'recipes_processed_clean.csv')
+
+    input_file = sys.argv[1] if len(sys.argv) > 1 else default_input
+    output_file = sys.argv[2] if len(sys.argv) > 2 else default_output
+
+    if not os.path.isabs(input_file):
+        input_file = os.path.normpath(os.path.join(cwd, input_file))
+    if not os.path.isabs(output_file):
+        output_file = os.path.normpath(os.path.join(cwd, output_file))
+
     print(f"📖 Đang xử lý file: {input_file}\n")
-    
+
+    if not os.path.exists(input_file):
+        print(f"❌ Không tìm thấy file input: {input_file}")
+        print("Hãy chạy: python scripts/process_recipes_csv.py rawCSV/raw_data.csv")
+        return
+
     # Đọc tất cả dòng
     all_lines = []
     with open(input_file, 'r', encoding='utf-8-sig') as f:

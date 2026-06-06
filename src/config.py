@@ -20,7 +20,7 @@ RESULT_DIR.mkdir(exist_ok=True)
 # Data file paths
 DEFAULT_STOCK_FILE = DATA_DIR / "Kho.json"
 DEFAULT_RECIPE_FILE = RESULT_DIR / "recipes_processed.json"
-DEFAULT_RAW_RECIPE_CSV = RESULT_DIR / "raw_data_CP.csv"
+DEFAULT_RAW_RECIPE_CSV = PROJECT_ROOT / "rawCSV" / "raw_data_CP.csv"
 DEFAULT_NLP_OUTPUT_FILE = RESULT_DIR / "recipes_processed.json"
 
 # Load .env file (simple parser) and set environment variables if not present

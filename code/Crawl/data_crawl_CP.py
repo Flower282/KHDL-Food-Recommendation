@@ -1,9 +1,15 @@
+import argparse
 import requests
 from bs4 import BeautifulSoup
 import time
 import random
 import pandas as pd
 import os
+from typing import Optional
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAWCSV_DIR = os.path.join(PROJECT_ROOT, 'rawCSV')
+OUTPUT_FILE = os.path.join(RAWCSV_DIR, 'raw_data_CP.csv')
 
 class CookpadCrawler:
     def __init__(self):
@@ -75,7 +81,8 @@ class CookpadCrawler:
                 'thời gian': time_val,
                 'số người': servings,
                 'độ khó': 'dễ', # Mặc định là dễ như yêu cầu
-                'nguyên liệu': ingredients_str
+                'nguyên liệu': ingredients_str,
+                'cách chế biến': ''
             }
         except Exception as e:
             print(f"Lỗi khi crawl {url}: {e}")
@@ -101,50 +108,44 @@ class CookpadCrawler:
 
 
 
-# --- Chạy thử nghiệm ---
-if __name__ == "__main__":
-    PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    RESULT_DIR = os.path.join(PROJECT_ROOT, 'result')
-    OUTPUT_FILE = os.path.join(RESULT_DIR, 'raw_data_CP.csv')
-
+def crawl(search_keyword: str = "món ăn hàng ngày", start_page: int = 1, end_page: int = 5, output_file: Optional[str] = None) -> None:
+    os.makedirs(RAWCSV_DIR, exist_ok=True)
     crawler = CookpadCrawler()
-    os.makedirs(RESULT_DIR, exist_ok=True)
-    
-    # Bước 1: Nhập khoảng trang cần crawl
-    search_keyword = "món ăn hàng ngày"
-    try:
-        start_page = int(input("Nhập số trang bắt đầu a (>=1): ").strip())
-        end_page = int(input("Nhập số trang kết thúc b (>= a): ").strip())
-    except ValueError:
-        print("Giá trị a/b không hợp lệ. Vui lòng nhập số nguyên.")
-        raise SystemExit(1)
+    if output_file is None:
+        output_file = OUTPUT_FILE
 
-    if start_page < 1 or end_page < start_page:
-        print("Khoảng trang không hợp lệ (a phải >= 1 và b phải >= a).")
-        raise SystemExit(1)
-
-    print(f"Crawl từ trang {start_page} đến trang {end_page}...")
-    
-    # Bước 2: Tìm kiếm và lấy link các món ăn từ các trang
+    print(f"Crawl '{search_keyword}' từ trang {start_page} đến trang {end_page}...")
     links = crawler.get_recipe_links(search_keyword, start_page=start_page, end_page=end_page)
-    
+
     total_links = len(links)
     if total_links == 0:
         print("Không tìm thấy món ăn nào.")
-        raise SystemExit(0)
+        return
 
-    print(f"Tìm thấy {total_links} món ăn từ trang {start_page} đến {end_page}.")
-    print(f"Bắt đầu crawl chi tiết tất cả các món...")
-    
-    # Bước 3: Crawl chi tiết từng link
+    print(f"Tìm thấy {total_links} món ăn. Bắt đầu crawl chi tiết...")
     for link in links:
         print(f"Đang crawl: {link}")
         data = crawler.parse_recipe(link)
         if data:
             crawler.results.append(data)
-        
-        # Quan trọng: Nghỉ ngẫu nhiên để tránh bị server Cookpad block
-        time.sleep(random.uniform(2, 4)) 
-    
-    # Bước 4: Xuất file
-    crawler.save_to_csv(OUTPUT_FILE)
+        time.sleep(random.uniform(2, 4))
+
+    crawler.save_to_csv(output_file)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Crawl Cookpad recipes into rawCSV/raw_data_CP.csv")
+    parser.add_argument("--search", type=str, default="món ăn hàng ngày", help="Từ khóa tìm kiếm trên Cookpad")
+    parser.add_argument("--start-page", type=int, default=1, help="Trang bắt đầu")
+    parser.add_argument("--end-page", type=int, default=5, help="Trang kết thúc")
+    parser.add_argument("--output", type=str, default=OUTPUT_FILE, help="Đường dẫn file CSV đầu ra")
+    args = parser.parse_args()
+
+    if args.start_page < 1 or args.end_page < args.start_page:
+        parser.error("--end-page phải >= --start-page và cả hai phải >= 1")
+
+    crawl(search_keyword=args.search, start_page=args.start_page, end_page=args.end_page, output_file=args.output)
+
+
+if __name__ == "__main__":
+    main()

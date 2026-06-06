@@ -1,10 +1,10 @@
 {
   "top_dishes": [
     {
-      "dish_name": "Rau đậu hòa lan xào thịt bò",
+      "dish_name": "khong_ro",
       "score": 0.9531,
       "missing_required": 0,
-      "dish_type": "rau",
+      "dish_type": null,
       "dish_type_filter": null,
       "ingredient_matches": [
         {
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "dish_name": "Cá xạo/bông lau sốt cà",
+      "dish_name": "khong_ro",
       "score": 0.9236,
       "missing_required": 0,
-      "dish_type": "mon man",
+      "dish_type": null,
       "dish_type_filter": null,
       "ingredient_matches": [
         {
@@ -97,28 +97,162 @@
           "final_score": 0.4045
         }
       ]
+    },
+    {
+      "dish_name": "khong_ro",
+      "score": 0.9229,
+      "missing_required": 0,
+      "dish_type": null,
+      "dish_type_filter": null,
+      "ingredient_matches": [
+        {
+          "ingredient_name": "thịt bò",
+          "ingredient_group": "required_ingredients",
+          "stock_name": "Thịt bò",
+          "name_score": 1.0,
+          "quantity_score": 1.0,
+          "final_score": 1.0
+        },
+        {
+          "ingredient_name": "tỏi",
+          "ingredient_group": "optional_ingredients",
+          "stock_name": null,
+          "name_score": 0.3333,
+          "quantity_score": 0.5,
+          "final_score": 0.3833
+        }
+      ]
+    },
+    {
+      "dish_name": "khong_ro",
+      "score": 0.875,
+      "missing_required": 0,
+      "dish_type": null,
+      "dish_type_filter": null,
+      "ingredient_matches": [
+        {
+          "ingredient_name": "tôm",
+          "ingredient_group": "required_ingredients",
+          "stock_name": "Tôm",
+          "name_score": 1.0,
+          "quantity_score": 1.0,
+          "final_score": 1.0
+        }
+      ]
+    },
+    {
+      "dish_name": "khong_ro",
+      "score": 0.8318,
+      "missing_required": 0,
+      "dish_type": null,
+      "dish_type_filter": null,
+      "ingredient_matches": [
+        {
+          "ingredient_name": "thịt gà",
+          "ingredient_group": "required_ingredients",
+          "stock_name": "Thịt ức gà",
+          "name_score": 0.9951,
+          "quantity_score": 1.0,
+          "final_score": 0.9966
+        },
+        {
+          "ingredient_name": "đùi gà",
+          "ingredient_group": "required_ingredients",
+          "stock_name": "Trứng gà",
+          "name_score": 0.7244,
+          "quantity_score": 1.0,
+          "final_score": 0.8071
+        },
+        {
+          "ingredient_name": "ức gà",
+          "ingredient_group": "required_ingredients",
+          "stock_name": "Thịt ức gà",
+          "name_score": 0.9167,
+          "quantity_score": 1.0,
+          "final_score": 0.9417
+        },
+        {
+          "ingredient_name": "đùi gà",
+          "ingredient_group": "required_ingredients",
+          "stock_name": "Trứng gà",
+          "name_score": 0.7244,
+          "quantity_score": 1.0,
+          "final_score": 0.8071
+        },
+        {
+          "ingredient_name": "tỏi",
+          "ingredient_group": "optional_ingredients",
+          "stock_name": null,
+          "name_score": 0.3333,
+          "quantity_score": 0.5,
+          "final_score": 0.3833
+        },
+        {
+          "ingredient_name": "gừng",
+          "ingredient_group": "optional_ingredients",
+          "stock_name": "Gừng nhỏ",
+          "name_score": 0.5833,
+          "quantity_score": 0.5,
+          "final_score": 0.5583
+        },
+        {
+          "ingredient_name": "nước tương",
+          "ingredient_group": "optional_ingredients",
+          "stock_name": null,
+          "name_score": 0.3158,
+          "quantity_score": 0.5,
+          "final_score": 0.3711
+        }
+      ]
+    },
+    {
+      "dish_name": "khong_ro",
+      "score": 0.7555,
+      "missing_required": 0,
+      "dish_type": null,
+      "dish_type_filter": null,
+      "ingredient_matches": [
+        {
+          "ingredient_name": "đùi gà",
+          "ingredient_group": "required_ingredients",
+          "stock_name": "Trứng gà",
+          "name_score": 0.7244,
+          "quantity_score": 1.0,
+          "final_score": 0.8071
+        },
+        {
+          "ingredient_name": "muối",
+          "ingredient_group": "optional_ingredients",
+          "stock_name": null,
+          "name_score": 0.25,
+          "quantity_score": 0.5,
+          "final_score": 0.325
+        },
+        {
+          "ingredient_name": "hạt nêm",
+          "ingredient_group": "optional_ingredients",
+          "stock_name": null,
+          "name_score": 0.5238,
+          "quantity_score": 0.5,
+          "final_score": 0.5167
+        },
+        {
+          "ingredient_name": "dầu ăn",
+          "ingredient_group": "optional_ingredients",
+          "stock_name": null,
+          "name_score": 0.2727,
+          "quantity_score": 0.5,
+          "final_score": 0.3409
+        }
+      ]
     }
   ],
   "meal_set": [
     {
-      "dish_name": "Rau đậu hòa lan xào thịt bò",
+      "dish_name": "khong_ro",
       "score": 0.9531,
       "missing_required": 0,
-      "dish_type": "rau",
-      "dish_type_filter": null
-    },
-    {
-      "dish_name": "Cá xạo/bông lau sốt cà",
-      "score": 0.9236,
-      "missing_required": 0,
-      "dish_type": "mon man",
-      "dish_type_filter": null
-    },
-    {
-      "dish_name": "Canh rong biển nấu tôm khô",
-      "score": 0.7917,
-      "missing_required": 0,
-      "dish_type": "canh",
+      "dish_type": null,
       "dish_type_filter": null
     }
   ]
