@@ -1,6 +1,7 @@
 [
   {
     "tên": "Sườn heo hấp kiểu Hàn Quốc",
+    "loại món": "mặn",
     "thời gian": "60 phút",
     "số người": "4 người",
     "độ khó": "Trung bình",
@@ -59,6 +60,7 @@
   },
   {
     "tên": "Sườn heo nướng tương Miso",
+    "loại món": "mặn",
     "thời gian": "90 phút",
     "số người": "4 người",
     "độ khó": "Trung bình",
@@ -117,6 +119,7 @@
   },
   {
     "tên": "Bánh tráng cuộn mì cay",
+    "loại món": "canh",
     "thời gian": "10 phút",
     "số người": "1 người",
     "độ khó": "Dễ",
@@ -137,6 +140,7 @@
   },
   {
     "tên": "Xôi kiểu Hàn (Yaksik)",
+    "loại món": "mặn",
     "thời gian": "90 phút",
     "số người": "3-4 người",
     "độ khó": "Trung bình",
@@ -169,6 +173,7 @@
   },
   {
     "tên": "Mì kim chi nấu đậu hũ non",
+    "loại món": "canh",
     "thời gian": "15 phút",
     "số người": "1 người",
     "độ khó": "Dễ",
@@ -203,6 +208,7 @@
   },
   {
     "tên": "Canh đậu hũ non kim chi thịt băm",
+    "loại món": "canh",
     "thời gian": "20 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
@@ -260,6 +266,7 @@
   },
   {
     "tên": "Thịt cổ heo hầm kim chi",
+    "loại món": "mặn",
     "thời gian": "90 phút",
     "số người": "3 người",
     "độ khó": "Dễ",
@@ -312,6 +319,7 @@
   },
   {
     "tên": "Kim chi cải thảo truyền thống",
+    "loại món": "rau",
     "thời gian": "120 phút",
     "số người": "10 người",
     "độ khó": "Khó",
@@ -374,6 +382,7 @@
   },
   {
     "tên": "Canh miso nấm mỡ rong biển",
+    "loại món": "canh",
     "thời gian": "15 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
@@ -398,6 +407,7 @@
   },
   {
     "tên": "Đậu phụ chiên giòn sốt Teriyaki",
+    "loại món": "rau",
     "thời gian": "15 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
@@ -422,6 +432,7 @@
   },
   {
     "tên": "Nấm hải sản chiên giòn (Món chay)",
+    "loại món": "rau",
     "thời gian": "15 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
@@ -458,6 +469,7 @@
   },
   {
     "tên": "Cơm hấp thập cẩm kiểu Nhật",
+    "loại món": "mặn",
     "thời gian": "45 phút",
     "số người": "3 người",
     "độ khó": "Dễ",
@@ -495,6 +507,7 @@
   },
   {
     "tên": "Canh ngao nấu tương Miso",
+    "loại món": "canh",
     "thời gian": "20 phút",
     "số người": "3 người",
     "độ khó": "Dễ",
@@ -524,6 +537,7 @@
   },
   {
     "tên": "Cá diêu hồng nấu lẩu Thái",
+    "loại món": "canh",
     "thời gian": "30 phút",
     "số người": "3 người",
     "độ khó": "Dễ",
@@ -561,6 +575,7 @@
   },
   {
     "tên": "Bánh mì phô mai bơ tỏi Hàn Quốc",
+    "loại món": "canh",
     "thời gian": "45 phút",
     "số người": "3 người",
     "độ khó": "Trung bình",
@@ -594,6 +609,7 @@
   },
   {
     "tên": "Bánh mì dân tổ Hà Nội",
+    "loại món": "canh",
     "thời gian": "20 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
@@ -619,6 +635,7 @@
   },
   {
     "tên": "Sandwich sữa chua rau củ chay",
+    "loại món": "rau",
     "thời gian": "15 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
@@ -664,6 +681,7 @@
   },
   {
     "tên": "Sandwich trái cây (Fruit Sando)",
+    "loại món": "mặn",
     "thời gian": "30 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
@@ -691,6 +709,7 @@
   },
   {
     "tên": "Bánh mì bơ tỏi truyền thống",
+    "loại món": "canh",
     "thời gian": "20 phút",
     "số người": "4 người",
     "độ khó": "Dễ",
@@ -724,6 +743,7 @@
   },
   {
     "tên": "Bánh da lợn nhân đậu xanh lá dứa",
+    "loại món": "rau",
     "thời gian": "60 phút",
     "số người": "6 người",
     "độ khó": "Trung bình",
@@ -748,6 +768,7 @@
   },
   {
     "tên": "Mì Quảng Gà truyền thống",
+    "loại món": "canh",
     "thời gian": "60 phút",
     "số người": "4 người",
     "độ khó": "Trung bình",
