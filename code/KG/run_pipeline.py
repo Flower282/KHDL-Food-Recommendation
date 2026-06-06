@@ -12,12 +12,12 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(current_dir.parent))
 
     from KG.config import DEFAULT_RECIPE_FILE, DEFAULT_STOCK_FILE  # type: ignore
-    from KG.neo4j_pipeline import Neo4jKnowledgeGraph, build_kg_payload, payload_to_cypher_commands  # type: ignore
+    from KG.neo4j_pipeline import Neo4jKnowledgeGraph, build_kg_payload, payload_to_cypher_commands, merge_payloads  # type: ignore
     from KG.ontology import ONTOLOGY_NODES, ONTOLOGY_RELATIONS  # type: ignore
     from KG.recommender import load_and_recommend  # type: ignore
 else:
     from .config import DEFAULT_RECIPE_FILE, DEFAULT_STOCK_FILE
-    from .neo4j_pipeline import Neo4jKnowledgeGraph, build_kg_payload, payload_to_cypher_commands
+    from .neo4j_pipeline import Neo4jKnowledgeGraph, build_kg_payload, payload_to_cypher_commands, merge_payloads
     from .ontology import ONTOLOGY_NODES, ONTOLOGY_RELATIONS
     from .recommender import load_and_recommend
 
@@ -55,6 +55,93 @@ def command_export(args: argparse.Namespace) -> None:
     _print_ontology()
     print(f"\nPayload written to: {args.payload_output}")
     print(f"Cypher script written to: {args.cypher_output}")
+
+
+def command_merge(args: argparse.Namespace) -> None:
+    # 1. Resolve path of new recipe file (prompt user if not provided)
+    new_recipe_file = args.new_recipe_file
+    if not new_recipe_file:
+        try:
+            new_recipe_file = input("Nhập đường dẫn file JSON mới: ").strip()
+        except (KeyboardInterrupt, EOFError):
+            print("\nOperation cancelled.")
+            return
+
+    if not new_recipe_file:
+        print("❌ Error: Path of the new recipe file cannot be empty.")
+        return
+
+    new_path = Path(new_recipe_file)
+    if not new_path.exists():
+        print(f"❌ Error: File '{new_path}' does not exist.")
+        return
+
+    # 2. Load the main payload (default payload path is args.payload_output)
+    main_payload_path = Path(args.payload_output)
+    print(f"📖 Master payload path: {main_payload_path}")
+    
+    if main_payload_path.exists():
+        try:
+            with open(main_payload_path, "r", encoding="utf-8") as f:
+                main_payload = json.load(f)
+            print(f"Loaded existing master payload with:")
+            print(f"  - {len(main_payload.get('dish_rows', []))} dishes")
+            print(f"  - {len(main_payload.get('ingredient_rows', []))} ingredients")
+        except Exception as e:
+            print(f"⚠️ Error reading master payload: {e}. Starting with an empty payload.")
+            main_payload = {
+                "dish_rows": [],
+                "ingredient_rows": [],
+                "stock_rows": [],
+                "stock_mapping_rows": [],
+            }
+    else:
+        print("ℹ️ Master payload file does not exist yet. Starting with a new payload.")
+        main_payload = {
+            "dish_rows": [],
+            "ingredient_rows": [],
+            "stock_rows": [],
+            "stock_mapping_rows": [],
+        }
+
+    # 3. Build the child payload from the new file
+    print(f"📖 Processing new recipe file: {new_path}")
+    print(f"📖 Using stock file: {args.stock_file}")
+    
+    try:
+        child_payload = build_kg_payload(new_path, args.stock_file)
+        # Update source name for child dishes to be the basename of new file
+        for dish in child_payload.get("dish_rows", []):
+            dish["source"] = new_path.name
+    except Exception as e:
+        print(f"❌ Error building child payload: {e}")
+        return
+
+    # 4. Merge payloads
+    print(f"🔄 Merging payloads (similarity threshold = {args.threshold})...")
+    merged_payload, num_merged, num_added = merge_payloads(
+        main_payload, child_payload, threshold=args.threshold
+    )
+
+    # 5. Save the updated main payload
+    _dump_json(main_payload_path, merged_payload)
+    print(f"✅ Master payload saved to: {main_payload_path}")
+    print(f"Summary of merge:")
+    print(f"  - Dishes merged (updated): {num_merged}")
+    print(f"  - New dishes added: {num_added}")
+    print(f"  - Total dishes now: {len(merged_payload.get('dish_rows', []))}")
+
+    # 6. Generate and write the Cypher script
+    cypher_path = Path(args.cypher_output)
+    print(f"🔄 Generating updated Cypher script: {cypher_path}...")
+    try:
+        commands = payload_to_cypher_commands(merged_payload)
+        cypher_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(cypher_path, "w", encoding="utf-8") as file:
+            file.write("\n".join(commands))
+        print(f"✅ Cypher script written to: {cypher_path}")
+    except Exception as e:
+        print(f"⚠️ Error generating Cypher script: {e}")
 
 
 def command_load_neo4j(args: argparse.Namespace) -> None:
@@ -146,6 +233,30 @@ Examples:
     )
     export_cmd.set_defaults(func=command_export)
 
+    merge_cmd = subparsers.add_parser("merge", help="Merge a new recipe JSON file incrementally into the master payload")
+    merge_cmd.add_argument(
+        "--new-recipe-file",
+        default=None,
+        help="Path to the new recipe JSON file to merge. If not provided, you will be prompted."
+    )
+    merge_cmd.add_argument(
+        "--payload-output",
+        default="result/kg_payload.json",
+        help="Path to the master payload JSON file (default: result/kg_payload.json)",
+    )
+    merge_cmd.add_argument(
+        "--cypher-output",
+        default="result/load_kg.cypher",
+        help="Output path for the updated Cypher script (default: result/load_kg.cypher)",
+    )
+    merge_cmd.add_argument(
+        "--threshold",
+        type=float,
+        default=0.8,
+        help="Similarity threshold for merging dishes (default: 0.8)",
+    )
+    merge_cmd.set_defaults(func=command_merge)
+
     load_cmd = subparsers.add_parser("load-neo4j", help="Load KG payload into Neo4j")
     load_cmd.add_argument("--uri", default="bolt://localhost:7687", help="Neo4j URI")
     load_cmd.add_argument("--user", default="neo4j", help="Neo4j user")
@@ -176,6 +287,13 @@ Examples:
 
 
 def main() -> None:
+    import sys
+    if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
+        try:
+            sys.stdout.reconfigure(encoding="utf-8")
+            sys.stderr.reconfigure(encoding="utf-8")
+        except Exception:
+            pass
     parser = build_parser()
     args = parser.parse_args()
     args.func(args)

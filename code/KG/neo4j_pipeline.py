@@ -10,6 +10,7 @@ from .preprocess import (
     normalize_recipe_ingredients,
     normalize_stock,
     resolve_recipe_dish_type,
+    ingredient_name_similarity,
 )
 
 
@@ -132,6 +133,163 @@ def _parse_minutes(time_text: Any) -> int | None:
         return None
 
 
+def dish_name_similarity(name_a: str, name_b: str) -> float:
+    """Computes similarity score between two dish names using ingredient_name_similarity."""
+    return ingredient_name_similarity(name_a, name_b)
+
+
+def merge_payloads(
+    main_payload: dict[str, list[dict[str, Any]]],
+    child_payload: dict[str, list[dict[str, Any]]],
+    threshold: float = 0.8,
+) -> tuple[dict[str, list[dict[str, Any]]], int, int]:
+    """
+    Merges child_payload into main_payload.
+    For dishes in child_payload:
+      - Finds the best matching dish in main_payload using dish_name_similarity.
+      - If similarity >= threshold:
+        - Resolves dish name to the matched one.
+        - Merges ingredients.
+        - Updates properties (time, difficulty, source).
+        - Count as merged.
+      - If similarity < threshold:
+        - Appends dish and its ingredients as new.
+        - Count as added.
+    For stock_rows:
+      - Updates availability or appends new stock items.
+    For stock_mapping_rows:
+      - Updates or appends new stock mappings.
+    Returns: (updated_main_payload, num_merged, num_added)
+    """
+    if not main_payload:
+        main_payload = {
+            "dish_rows": [],
+            "ingredient_rows": [],
+            "stock_rows": [],
+            "stock_mapping_rows": [],
+        }
+
+    # Helper mapping to lookup dishes by name in main payload
+    main_dishes = {d["name"]: d for d in main_payload.get("dish_rows", [])}
+    
+    # We will build a helper lookup for ingredients of main dishes
+    # Structure: (dish_name, ingredient_canonical) -> ingredient_row_dict
+    main_ingredients = {}
+    for r in main_payload.get("ingredient_rows", []):
+        main_ingredients[(r["dish_name"], r["ingredient_canonical"])] = r
+
+    num_merged = 0
+    num_added = 0
+
+    for c_dish in child_payload.get("dish_rows", []):
+        c_name = c_dish["name"]
+        
+        # Find best match in main payload
+        best_match_name = None
+        best_score = -1.0
+        
+        for m_name in main_dishes:
+            score = dish_name_similarity(c_name, m_name)
+            if score > best_score:
+                best_score = score
+                best_match_name = m_name
+
+        if best_match_name and best_score >= threshold:
+            # Match found! Merge into existing dish
+            num_merged += 1
+            m_dish = main_dishes[best_match_name]
+            
+            # Update difficulty if "khong_ro"
+            if m_dish.get("difficulty") == "khong_ro" and c_dish.get("difficulty") != "khong_ro":
+                m_dish["difficulty"] = c_dish["difficulty"]
+            
+            # Update time minutes
+            if c_dish.get("time_minutes") is not None:
+                m_dish["time_minutes"] = c_dish["time_minutes"]
+                m_dish["time_text"] = c_dish["time_text"]
+                
+            # Update dish type if null
+            if not m_dish.get("dish_type") and c_dish.get("dish_type"):
+                m_dish["dish_type"] = c_dish["dish_type"]
+                m_dish["dish_type_key"] = c_dish["dish_type_key"]
+
+            # Append source if not already present
+            sources = [s.strip() for s in str(m_dish.get("source", "")).split(",") if s.strip()]
+            new_source = c_dish.get("source")
+            if new_source and new_source not in sources:
+                sources.append(new_source)
+                m_dish["source"] = ", ".join(sources)
+
+            # Match child ingredients to the resolved dish name
+            for c_ing in child_payload.get("ingredient_rows", []):
+                if c_ing["dish_name"] == c_name:
+                    canonical = c_ing["ingredient_canonical"]
+                    key = (best_match_name, canonical)
+                    
+                    if key in main_ingredients:
+                        # Update quantity / values of existing ingredient
+                        m_ing = main_ingredients[key]
+                        m_ing["required_raw"] = c_ing["required_raw"]
+                        m_ing["required_value"] = c_ing["required_value"]
+                        m_ing["required_unit"] = c_ing["required_unit"]
+                        m_ing["required_value_base"] = c_ing["required_value_base"]
+                        m_ing["weight"] = c_ing["weight"]
+                        m_ing["optional"] = c_ing["optional"]
+                    else:
+                        # Add new ingredient to existing dish
+                        new_ing = dict(c_ing)
+                        new_ing["dish_name"] = best_match_name
+                        main_payload["ingredient_rows"].append(new_ing)
+                        main_ingredients[key] = new_ing
+        else:
+            # No match found. Add as a new dish
+            num_added += 1
+            new_dish = dict(c_dish)
+            main_payload["dish_rows"].append(new_dish)
+            main_dishes[c_name] = new_dish
+            
+            # Add all ingredients for this new dish
+            for c_ing in child_payload.get("ingredient_rows", []):
+                if c_ing["dish_name"] == c_name:
+                    new_ing = dict(c_ing)
+                    main_payload["ingredient_rows"].append(new_ing)
+                    main_ingredients[(c_name, new_ing["ingredient_canonical"])] = new_ing
+
+    # Merge stock_rows
+    # Lookup by name
+    main_stocks = {s["name"]: s for s in main_payload.get("stock_rows", [])}
+    for c_stock in child_payload.get("stock_rows", []):
+        s_name = c_stock["name"]
+        if s_name in main_stocks:
+            # Update stock level
+            m_stock = main_stocks[s_name]
+            m_stock["available_raw"] = c_stock["available_raw"]
+            m_stock["available_value"] = c_stock["available_value"]
+            m_stock["available_unit"] = c_stock["available_unit"]
+            m_stock["available_value_base"] = c_stock["available_value_base"]
+            m_stock["canonical_name"] = c_stock["canonical_name"]
+        else:
+            new_stock = dict(c_stock)
+            main_payload["stock_rows"].append(new_stock)
+            main_stocks[s_name] = new_stock
+
+    # Merge stock_mapping_rows
+    # Lookup by stock_name
+    main_stock_maps = {m["stock_name"]: m for m in main_payload.get("stock_mapping_rows", [])}
+    for c_map in child_payload.get("stock_mapping_rows", []):
+        s_name = c_map["stock_name"]
+        if s_name in main_stock_maps:
+            m_map = main_stock_maps[s_name]
+            m_map["ingredient_canonical"] = c_map["ingredient_canonical"]
+            m_map["name_score"] = c_map["name_score"]
+        else:
+            new_map = dict(c_map)
+            main_payload["stock_mapping_rows"].append(new_map)
+            main_stock_maps[s_name] = new_map
+
+    return main_payload, num_merged, num_added
+
+
 def build_kg_payload(recipe_path: str | Path, stock_path: str | Path) -> dict[str, list[dict[str, Any]]]:
     recipe_rows = load_json_array(recipe_path)
     stock_rows_input = load_json_array(stock_path)
@@ -153,7 +311,7 @@ def build_kg_payload(recipe_path: str | Path, stock_path: str | Path) -> dict[st
                 "time_text": recipe.get("thời gian") or recipe.get("time"),
                 "serving_text": recipe.get("số người") or recipe.get("servings"),
                 "difficulty": str(recipe.get("độ khó", "") or recipe.get("difficulty", "khong_ro")).strip() or "khong_ro",
-                "time_minutes": _parse_minutes(recipe.get("thời gian")),
+                "time_minutes": _parse_minutes(recipe.get("thời gian") or recipe.get("time")),
                 "dish_type": resolve_recipe_dish_type(recipe)[0],
                 "dish_type_key": resolve_recipe_dish_type(recipe)[1],
                 "source": "data_monan_day_du_CP.json",

@@ -332,13 +332,15 @@ def normalize_stock(stock_rows: list[dict[str, Any]]) -> list[StockRecord]:
 def normalize_recipe_ingredients(recipe: dict[str, Any]) -> list[IngredientRecord]:
     normalized: list[IngredientRecord] = []
 
-    for original_group in [
-        "main_ingredients",      # thay cho "nguyên liệu chính"
-        "required_ingredients",  # thay cho "nguyên liệu phụ_1 cần thiết"
-        "optional_ingredients",  # thay cho "nguyên liệu phụ_2 có thể bỏ qua"
-    ]:
-        group_key = normalize_group_key(original_group)
-        rows = recipe.get(original_group, [])
+    groups = [
+        ("main_ingredients", "nguyên liệu chính"),
+        ("required_ingredients", "nguyên liệu phụ_1 cần thiết"),
+        ("optional_ingredients", "nguyên liệu phụ_2 có thể bỏ qua"),
+    ]
+
+    for eng_group, vi_group in groups:
+        group_key = normalize_group_key(eng_group)
+        rows = recipe.get(eng_group) or recipe.get(vi_group) or []
         if not isinstance(rows, list):
             continue
 
@@ -346,11 +348,11 @@ def normalize_recipe_ingredients(recipe: dict[str, Any]) -> list[IngredientRecor
             if not isinstance(row, dict):
                 continue
 
-            name = str(row.get("name", "")).strip()  # "tên" → "name"
+            name = str(row.get("name") or row.get("tên") or "").strip()
             if not name:
                 continue
 
-            raw_quantity = row.get("weight")  # "khối lượng" → "weight"
+            raw_quantity = row.get("weight") or row.get("khối lượng")
             value, unit = parse_quantity(raw_quantity)
 
             normalized.append(
