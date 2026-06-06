@@ -3,7 +3,7 @@
 """
 NLP Processor for Vietnamese Recipe Ingredient Parsing
 Dependencies: pip install underthesea pyvi
-Usage: python3 nlp-processor.py <input_csv> [output_json]
+Usage: python3 nlp_processor.py <input_csv> [output_json]
 """
 
 from underthesea import word_tokenize
@@ -115,7 +115,7 @@ fruit = [
     "xoài","đu đủ","dứa","thơm","chuối",
     "táo","lê","cam","quýt","bưởi",
     "nho","dưa hấu","dưa lưới","thanh long",
-    "vải","nhãn","mận"
+    "vải","nhãn","mận","dâu","kiwi","bơ","măng cụt","chôm chôm","mít","na"
 ]
 
 spice = [
@@ -129,7 +129,7 @@ spice = [
 starch = [
     "bánh phở", "bún", "miến", "mì", "mì tôm", "mì sợi",
     "nui", "macaroni", "spaghetti", "bánh đa", "bánh đa cua",
-    "bánh canh", "hủ tiếu"
+    "bánh canh", "hủ tiếu", "cơm", "xôi", "gạo"
 ]
 
 all_ing = set(veg + meat + fruit + spice + starch)
@@ -459,46 +459,158 @@ def format_weight(value, unit):
         return str(value)
     else:
         return None
-    
-def classify_dish_type(dish_name: str) -> str:
+
+
+def classify_by_main_ingredients(ingredients_data: dict) -> str:
     """
-    Classify dish type based on name: "mặn", "rau", or "canh"
+    Fallback classification based on main ingredients when dish name is ambiguous
+    
+    Args:
+        ingredients_data: Grouped ingredients data
+        
+    Returns:
+        Classification string: "mặn", "rau", or "canh"
+    """
+    if not ingredients_data:
+        return "mặn"
+    
+    main_ingredients = ingredients_data.get("main", [])
+    required_ingredients = ingredients_data.get("required", [])
+    all_key_ingredients = main_ingredients + required_ingredients
+    
+    has_meat = False
+    has_seafood = False
+    has_veg_only = True
+    has_broth_liquid = False
+    
+    # Liquid/broth indicators for soup classification
+    broth_indicators = ["nước", "nước dùng", "nước lèo", "nước súp", "broth", "nước lọc"]
+    
+    for item in all_key_ingredients:
+        ing_name = item.get("ingredient", "").lower()
+        
+        # Check for meat
+        if ing_name in meat:
+            has_meat = True
+            has_veg_only = False
+        
+        # Check for seafood (still considered protein, but not "meat" per se)
+        if any(sea in ing_name for sea in ["tôm", "cua", "mực", "cá", "ghẹ", "sò", "nghêu", "hến", "ốc"]):
+            has_seafood = True
+            has_veg_only = False
+        
+        # Check for broth/liquid (soup indicator)
+        if any(broth in ing_name for broth in broth_indicators):
+            has_broth_liquid = True
+    
+    # Classification logic
+    # 1. If has broth and no solid protein, could be vegetable soup
+    if has_broth_liquid and has_veg_only:
+        return "canh"
+    
+    # 2. If has broth with any protein -> soup
+    if has_broth_liquid and (has_meat or has_seafood):
+        return "canh"
+    
+    # 3. If only vegetables (no meat/seafood) -> vegetable dish
+    if has_veg_only and not has_meat and not has_seafood:
+        return "rau"
+    
+    # 4. Default to main dish (has protein)
+    return "mặn"
+
+
+def classify_dish_type(dish_name: str, ingredients_data: dict = None) -> str:
+    """
+    Classify dish type based on name and ingredients
+    
+    Categories:
+    - "món hoàn chỉnh": Complete meal dishes (phở, bún, xôi, mì, cơm, bánh canh)
+    - "ăn vặt, tráng miệng": Snacks/desserts (bánh, fruit-based without meat/starch)
+    - "canh": Soup dishes
+    - "rau": Vegetable dishes  
+    - "mặn": Main/salty dishes (fallback)
     
     Args:
         dish_name: Name of the dish
+        ingredients_data: Optional grouped ingredients data for fallback classification
         
     Returns:
-        "mặn", "rau", or "canh"
+        Classification string
     """
     if not dish_name:
-        return "mặn"  # Default
+        return classify_by_main_ingredients(ingredients_data) if ingredients_data else "mặn"
     
     name_lower = dish_name.lower().strip()
     
-    # Canh / Soup dishes (highest priority)
-    canh_keywords = [
-        "canh", "súp", "cháo", "chè", "nước", "bún", "phở", "miến", 
-        "mì", "hủ tiếu", "bánh canh", "lẩu"
-    ]
+    # Priority 1: Complete meal dishes (highest priority)
+    complete_meal_keywords = ["phở", "bún", "xôi", "cơm", "mì", "bánh canh"]
+    for keyword in complete_meal_keywords:
+        if name_lower.startswith(keyword):
+            return "món hoàn chỉnh"
     
+    # Priority 2: Snacks/Desserts - Bánh (excluding bánh mì and bánh canh)
+    if "bánh" in name_lower:
+        if "bánh mì" not in name_lower and "bánh canh" not in name_lower:
+            return "ăn vặt, tráng miệng"
+    
+    # Priority 3: Snacks/Desserts - Fruit-based without meat or starch
+    if ingredients_data:
+        has_fruit = False
+        has_meat = False
+        has_seafood = False
+        has_starch = False
+        
+        # Check all ingredients
+        all_ingredients = (
+            ingredients_data.get("main", []) + 
+            ingredients_data.get("required", []) + 
+            ingredients_data.get("optional", [])
+        )
+        
+        for item in all_ingredients:
+            ing_name = item.get("ingredient", "").lower()
+            
+            # Check for fruits
+            if ing_name in fruit or any(fruit_item in ing_name for fruit_item in 
+                ["xoài", "chuối", "cam", "dứa", "thơm", "đu đủ", "táo", "lê", 
+                 "nho", "dưa hấu", "thanh long", "vải", "nhãn", "mận", "quýt", "bưởi"]):
+                has_fruit = True
+            
+            # Check for meat
+            if ing_name in meat:
+                has_meat = True
+            
+            # Check for seafood
+            if any(sea in ing_name for sea in ["tôm", "cua", "mực", "cá", "ghẹ", "sò", "nghêu", "hến", "ốc"]):
+                has_seafood = True
+            
+            # Check for starch
+            if ing_name in starch or any(starch_item in ing_name for starch_item in 
+                ["gạo", "bún", "phở", "mì", "miến", "nui", "bánh", "cơm", "xôi", "khoai", "ngô", "bắp"]):
+                has_starch = True
+        
+        # Fruit-based snack/dessert (no meat, no seafood, no starch)
+        if has_fruit and not has_meat and not has_seafood and not has_starch:
+            return "ăn vặt, tráng miệng"
+    
+    # Priority 4: Canh / Soup dishes
+    canh_keywords = ["canh", "súp", "cháo", "chè", "lẩu"]
     for keyword in canh_keywords:
         if keyword in name_lower:
             return "canh"
     
-    # Rau / Vegetable dishes
-    rau_keywords = [
-        "rau", "xà lách", "salad", "nấm", "đậu", "bí", "cà tím", 
-        "bông cải", "cải", "giá", "mướp", "khổ qua", "dưa leo", 
-        "su su", "củ cải", "khoai tây", "khoai lang", "cà rốt"
-    ]
-    
+    # Priority 5: Rau / Vegetable dishes
+    rau_keywords = ["rau", "xà lách", "salad", "giá", "cải", "bông cải", "nấm"]
     for keyword in rau_keywords:
         if keyword in name_lower:
-            # Exclude if it's actually a soup with vegetables
-            if "canh" not in name_lower and "cháo" not in name_lower:
-                return "rau"
+            return "rau"
     
-    # Default to mặn (main dish)
+    # Priority 6: Fallback to ingredient-based classification
+    if ingredients_data:
+        return classify_by_main_ingredients(ingredients_data)
+    
+    # Final fallback
     return "mặn"
 
 
@@ -506,14 +618,14 @@ def convert_to_json_format(dish_name, grouped_data):
     """Convert grouped result to format expected by KG pipeline"""
     output = {
         "tên": dish_name,
-        "loại món": classify_dish_type(dish_name),  # NEW FIELD
+        "loại món": classify_dish_type(dish_name, grouped_data),
         "thời gian": None,
         "số người": None,
         "độ khó": None,
+        "cách chế biến": None,
         "nguyên liệu chính": [],
         "nguyên liệu phụ_1 cần thiết": [],
-        "nguyên liệu phụ_2 có thể bỏ qua": [],
-        "cách chế biến": None
+        "nguyên liệu phụ_2 có thể bỏ qua": []
     }
     
     # Main ingredients
@@ -616,7 +728,6 @@ def process_csv(input_csv, output_json=None):
             # Detect column names and create mapping
             col_mapping = {}
             if reader.fieldnames:
-                fieldnames_lower = {f.lower().strip() for f in reader.fieldnames}
                 for field in reader.fieldnames:
                     field_lower = field.lower().strip()
                     if 'tên' in field_lower:
@@ -719,21 +830,21 @@ def test_sample():
     """
 
     print("=" * 50)
-    print("New JSON Output Format:")
+    print("Sample Output:")
     print("=" * 50)
     result = group(extract(name, ingredients))
-    json_data = convert_to_json_format(name, result, "30 phút", "4 người", "trung bình")
+    json_data = convert_to_json_format(name, result)
     print(json.dumps(json_data, ensure_ascii=False, indent=2))
 
 
 def main():
     """Main entry point"""
     if len(sys.argv) < 2:
-        print("Usage: python3 nlp-processor.py <input_csv> [output_json]")
+        print("Usage: python3 nlp_processor.py <input_csv> [output_json]")
         print("\nExample:")
-        print("  python3 nlp-processor.py raw_data_CP.csv recipes.json")
+        print("  python3 nlp_processor.py raw_data_CP.csv recipes.json")
         print("\nOr run test:")
-        print("  python3 nlp-processor.py --test")
+        print("  python3 nlp_processor.py --test")
         sys.exit(1)
     
     if sys.argv[1] == "--test":
