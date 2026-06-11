@@ -36,6 +36,7 @@ UNIT_ALIASES = {
     "cu": "piece",
     "lat": "piece",
     "con": "piece",
+    "nhanh": "piece",
     "muong": "spoon",
     "thia": "spoon",
 }

@@ -2,6 +2,14 @@ import json
 import os
 import re
 
+import sys
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 import pandas as pd
 
 # Cấu hình file
@@ -66,6 +74,7 @@ STANDARD_UNIT_ALIASES = {
 	'tô': 'tô',
 	'con': 'con',
 	'củ': 'củ',
+	'nhánh': 'nhánh',
 }
 
 COUNT_UNIT_KEYWORDS = {
@@ -83,7 +92,7 @@ COUNT_UNIT_KEYWORDS = {
 	],
 }
 
-QUANTITY_UNIT_PATTERN = r'(?:muỗng\s*cà\s*phê|muỗng\s*canh|thìa\s*cà\s*phê|thìa\s*canh|muỗng|thìa|chén|cốc|kg|gr|g|ml|lít|lit|l|M|m|trái|quả|củ|con|hộp|miếng|vắt|gói|hũ|cái|lát|bát|tép|tô|cây|bắp)'
+QUANTITY_UNIT_PATTERN = r'(?:muỗng\s*cà\s*phê|muỗng\s*canh|thìa\s*cà\s*phê|thìa\s*canh|muỗng|thìa|chén|cốc|kg|gr|g|ml|lít|lit|l|M|m|trái|quả|củ|con|hộp|miếng|vắt|gói|hũ|cái|lát|bát|tép|tô|cây|bắp|nhánh)'
 
 
 def _contains_keyword(text, keywords):
