@@ -397,6 +397,29 @@ python scripts/pipeline.py --normalize --build-kg --load-neo4j --recommend \
 
 ---
 
+<<<<<<< HEAD
+=======
+## HTTP API: Gợi ý món ăn từ JSON nguyên liệu
+
+Chạy API không cần cài thêm framework web:
+
+```bash
+py -m src.api --host 127.0.0.1 --port 8000
+```
+
+Gọi endpoint:
+
+```bash
+curl -X POST http://127.0.0.1:8000/recommend ^
+  -H "Content-Type: application/json" ^
+  -d "{\"ingredients\":[{\"name\":\"Thịt bò\",\"quantity\":\"300 g\"},{\"name\":\"Cà chua\",\"quantity\":\"3 quả\"},{\"name\":\"Trứng gà\",\"quantity\":\"2 quả\"}],\"top_k\":5,\"max_dishes\":2}"
+```
+
+Body có thể dùng key tiếng Anh (`name`, `quantity`) hoặc tiếng Việt (`tên`, `khối lượng`). API trả về `top_dishes` và `meal_set`.
+
+---
+
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
 **Last Updated:** June 3, 2026  
 **Version:** 1.1.0 - Enhanced data pipeline with rawCSV folder support  
 **Status:** Production Ready

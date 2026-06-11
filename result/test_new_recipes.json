@@ -1,0 +1,158 @@
+[
+  {
+    "tên": "MÌ spaghetti sốt tôm-rau củ",
+    "thời gian": "40 phút",
+    "số người": "3 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "mì Ý spaghetti",
+        "khối lượng": "200 g"
+      },
+      {
+        "tên": "tôm lột vỏ",
+        "khối lượng": "100 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "nấm kim châm",
+        "khối lượng": "150 g"
+      },
+      {
+        "tên": "bông cải xanh",
+        "khối lượng": "90 g"
+      },
+      {
+        "tên": "cà rốt hoặc bí đỏ",
+        "khối lượng": "80 g"
+      },
+      {
+        "tên": "hành tây",
+        "khối lượng": "50 g"
+      },
+      {
+        "tên": "ngò rí",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "whipping cream cooking cream hoặc sữa tươi",
+        "khối lượng": "200 ml"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "bơ lạt",
+        "khối lượng": "20 g"
+      },
+      {
+        "tên": "cafe muối",
+        "khối lượng": "1 muỗng"
+      },
+      {
+        "tên": "cafe tiêu xay",
+        "khối lượng": "1/2 muỗng"
+      }
+    ]
+  },
+  {
+    "tên": "Cơm Rang Dưa Bò",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Thịt bò",
+        "khối lượng": "150 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Cơm nguội",
+        "khối lượng": "400 g"
+      },
+      {
+        "tên": "Hành lá",
+        "khối lượng": "2 cây"
+      },
+      {
+        "tên": "Trứng gà",
+        "khối lượng": "1 quả"
+      },
+      {
+        "tên": "Tỏi băm",
+        "khối lượng": "1 thìa cà phê"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Dưa cải muối",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Dầu ăn",
+        "khối lượng": "2 thìa canh"
+      },
+      {
+        "tên": "Nước mắm",
+        "khối lượng": "1 thìa canh"
+      },
+      {
+        "tên": "Hạt tiêu",
+        "khối lượng": "1/2 thìa cà phê"
+      }
+    ]
+  },
+  {
+    "tên": "Pate Nấm và Khoai Lang Chay",
+    "thời gian": "30 phút",
+    "số người": "2 người",
+    "độ khó": "dễ",
+    "nguyên liệu chính": [
+      {
+        "tên": "Khoai lang",
+        "khối lượng": "200 g"
+      }
+    ],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "Nấm hương tươi",
+        "khối lượng": "100 g"
+      },
+      {
+        "tên": "Hành tây",
+        "khối lượng": "1/2 củ"
+      },
+      {
+        "tên": "Bơ đậu phộng",
+        "khối lượng": "1 thìa canh"
+      },
+      {
+        "tên": "Bánh mì nguyên cám hoặc bánh mì hạt",
+        "khối lượng": "2 lát"
+      },
+      {
+        "tên": "hạt lanh nếu có",
+        "khối lượng": "1 cái"
+      }
+    ],
+    "nguyên liệu phụ_2 có thể bỏ qua": [
+      {
+        "tên": "Bơ thực vật",
+        "khối lượng": "10 g"
+      },
+      {
+        "tên": "Muối",
+        "khối lượng": "1/4 thìa cà phê"
+      },
+      {
+        "tên": "Tiêu",
+        "khối lượng": "1/4 thìa cà phê"
+      },
+      {
+        "tên": "Hạt mè",
+        "khối lượng": "1 thìa cà phê"
+      }
+    ]
+  }
+]

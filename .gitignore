@@ -6,6 +6,12 @@ __pycache__/
 # Virtual env
 .venv/
 venv/
+<<<<<<< HEAD
+=======
+Lib/
+Scripts/
+share/
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
 # VSCode
 .vscode/
 # Logs and runtime files
@@ -13,5 +19,12 @@ logs/
 *.log
 # Byte-compiled / optimized
 __pycache__/
+<<<<<<< HEAD
+=======
+# Large binary/model files
+*.dll
+*.pyd
+*.bin
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
 # Optional: ignore results if you prefer to not commit outputs
 # result/

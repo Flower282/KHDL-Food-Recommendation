@@ -25,10 +25,49 @@ NAME_WEIGHT = 0.7
 QUANTITY_WEIGHT = 0.3
 
 
+def _first_non_empty(row: dict[str, Any], keys: list[str], default: Any = None) -> Any:
+    for key in keys:
+        value = row.get(key)
+        if value is not None and str(value).strip():
+            return value
+    return default
+
+
+def _recipe_name(recipe: dict[str, Any]) -> str:
+    value = _first_non_empty(recipe, ["name", "tên", "tÃªn"], "khong_ro")
+    return str(value).strip() or "khong_ro"
+
+
+def _recipe_time(recipe: dict[str, Any]) -> Any:
+    return _first_non_empty(recipe, ["time", "thời gian", "thá»i gian"])
+
+
+def _recipe_servings(recipe: dict[str, Any]) -> Any:
+    return _first_non_empty(recipe, ["servings", "số người", "so nguoi", "sá»‘ ngÆ°á»i"])
+
+
+def _recipe_difficulty_text(recipe: dict[str, Any]) -> Any:
+    return _first_non_empty(recipe, ["difficulty", "độ khó", "do kho", "Ä‘á»™ khÃ³"])
+
+
+def _recipe_instructions(recipe: dict[str, Any]) -> list[str]:
+    value = _first_non_empty(
+        recipe,
+        ["instructions", "steps", "cách chế biến", "cach che bien", "cÃ¡ch cháº¿ biáº¿n"],
+        [],
+    )
+    if isinstance(value, list):
+        return [str(item).strip() for item in value if str(item).strip()]
+    if isinstance(value, str) and value.strip():
+        return [part.strip() for part in value.split("|") if part.strip()]
+    return []
+
+
 @dataclass
 class IngredientMatch:
     ingredient_name: str
     ingredient_group: str
+    ingredient_quantity: Any
     stock_name: str | None
     name_score: float
     quantity_score: float
@@ -56,7 +95,11 @@ def _group_score(matches: list[IngredientMatch], group: str) -> float:
 
 def score_dish(recipe: dict[str, Any], stock: list[StockRecord]) -> DishScore:
     # Updated: "tên" → "name"
+<<<<<<< HEAD
     dish_name = str(recipe.get("name", "khong_ro")).strip() or "khong_ro"
+=======
+    dish_name = _recipe_name(recipe)
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ingredients = normalize_recipe_ingredients(recipe)
     dish_type, _ = resolve_recipe_dish_type(recipe)
 
@@ -90,6 +133,7 @@ def score_dish(recipe: dict[str, Any], stock: list[StockRecord]) -> DishScore:
             IngredientMatch(
                 ingredient_name=ingredient.name,
                 ingredient_group=ingredient.group,
+                ingredient_quantity=ingredient.raw_quantity,
                 stock_name=stock_item.name if stock_item else None,
                 name_score=round(name_score, 4),
                 quantity_score=round(quantity_score, 4),
@@ -140,7 +184,17 @@ def rank_dishes(recipe_rows: list[dict[str, Any]], stock_rows: list[dict[str, An
     scored = [score_dish(recipe, normalized_stock) for recipe in recipe_rows]
 
     scored.sort(key=lambda item: (item.score, -item.missing_required), reverse=True)
-    return scored[:top_k]
+    unique_scored: list[DishScore] = []
+    seen_names: set[str] = set()
+    for item in scored:
+        if item.dish_name in seen_names:
+            continue
+        unique_scored.append(item)
+        seen_names.add(item.dish_name)
+        if len(unique_scored) >= top_k:
+            break
+
+    return unique_scored
 
 
 def _recipe_matches_dish_type(recipe: dict[str, Any], dish_type_filter: str | None) -> bool:
@@ -148,12 +202,24 @@ def _recipe_matches_dish_type(recipe: dict[str, Any], dish_type_filter: str | No
         return True
 
     # Support both old and new field names
+<<<<<<< HEAD
     recipe_type = (
         recipe.get("loại món") or 
         recipe.get("loai mon") or 
         recipe.get("loại món ăn") or 
         recipe.get("loai mon an") or
         recipe.get("dish_type")  # New field
+=======
+    recipe_type = _first_non_empty(
+        recipe,
+        [
+            "dish_type",
+            "loại món",
+            "loại món ăn",
+            "loai mon",
+            "loai mon an",
+        ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     )
     if recipe_type is None:
         return False
@@ -181,8 +247,12 @@ def _recipe_within_time_limit(recipe: dict[str, Any], max_minutes: int | None) -
     if max_minutes is None:
         return True
 
+<<<<<<< HEAD
     # Support both old "thời gian" and new "time" fields
     time_value = recipe.get("time") or recipe.get("thời gian")
+=======
+    time_value = _recipe_time(recipe)
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     minutes = _parse_minutes(time_value)
     return minutes is not None and minutes <= max_minutes
 
@@ -370,6 +440,26 @@ def load_and_recommend(
     recipe_rows = load_json_array(recipe_path)
     stock_rows = load_json_array(stock_path)
 
+    return recommend_from_rows(
+        recipe_rows=recipe_rows,
+        stock_rows=stock_rows,
+        top_k=top_k,
+        max_dishes=max_dishes,
+        dish_type_filter=dish_type_filter,
+        required_types=required_types,
+        max_minutes=max_minutes,
+    )
+
+
+def recommend_from_rows(
+    recipe_rows: list[dict[str, Any]],
+    stock_rows: list[dict[str, Any]],
+    top_k: int = 10,
+    max_dishes: int = 3,
+    dish_type_filter: str | None = None,
+    required_types: list[str] | None = None,
+    max_minutes: int | None = None,
+) -> dict[str, Any]:
     if dish_type_filter:
         filtered_recipe_rows = [recipe for recipe in recipe_rows if _recipe_matches_dish_type(recipe, dish_type_filter)]
     else:
@@ -379,9 +469,25 @@ def load_and_recommend(
 
     # Updated: "tên" → "name"
     recipe_type_map = {
+<<<<<<< HEAD
         str(recipe.get("name", "")).strip(): _recipe_dish_type(recipe)
         for recipe in filtered_recipe_rows
         if str(recipe.get("name", "")).strip()
+=======
+        _recipe_name(recipe): _recipe_dish_type(recipe)
+        for recipe in filtered_recipe_rows
+        if _recipe_name(recipe)
+    }
+    recipe_detail_map = {
+        _recipe_name(recipe): {
+            "instructions": _recipe_instructions(recipe),
+            "time": _recipe_time(recipe),
+            "servings": _recipe_servings(recipe),
+            "difficulty": _recipe_difficulty_text(recipe),
+        }
+        for recipe in filtered_recipe_rows
+        if _recipe_name(recipe)
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     }
 
     ranked = rank_dishes(filtered_recipe_rows, stock_rows, top_k=top_k)
@@ -407,6 +513,10 @@ def load_and_recommend(
                 "missing_required": row.missing_required,
                 "dish_type": row.dish_type or recipe_type_map.get(row.dish_name),
                 "dish_type_filter": dish_type_filter,
+                "instructions": recipe_detail_map.get(row.dish_name, {}).get("instructions", []),
+                "time": recipe_detail_map.get(row.dish_name, {}).get("time"),
+                "servings": recipe_detail_map.get(row.dish_name, {}).get("servings"),
+                "difficulty": recipe_detail_map.get(row.dish_name, {}).get("difficulty"),
                 "ingredient_matches": [match.__dict__ for match in row.ingredient_matches],
             }
             for index, row in enumerate(display_ranked)

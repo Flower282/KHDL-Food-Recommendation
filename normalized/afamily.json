@@ -1,9 +1,22 @@
 [
   {
     "tên": "Sườn heo hấp kiểu Hàn Quốc",
+<<<<<<< HEAD
     "thời gian": "60 phút",
     "số người": "4 người",
     "độ khó": "Trung bình",
+=======
+    "loại món": "mặn",
+    "thời gian": "60 phút",
+    "số người": "4 người",
+    "độ khó": "Trung bình",
+    "cách chế biến": [
+      "Bước 1: Ngâm sườn trong nước sạch 1 giờ. Luộc sơ sườn 10 phút với hành, tỏi, nguyệt quế rồi rửa sạch.",
+      "Bước 2: Thái khúc rau củ, pha hỗn hợp nước sốt.",
+      "Bước 3: Cho sườn và sốt vào nồi đun 20 phút. Thêm củ cải, cà rốt, ớt khô vào đun tiếp 20 phút.",
+      "Bước 4: Cho nấm, hành tây đun nhỏ lửa 5 phút. Rắc vừng, hành lá và thưởng thức."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [
       {
         "tên": "sườn heo",
@@ -49,19 +62,35 @@
         "tên": "gừng",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Ngâm sườn trong nước sạch 1 giờ. Luộc sơ sườn 10 phút với hành, tỏi, nguyệt quế rồi rửa sạch.",
       "Bước 2: Thái khúc rau củ, pha hỗn hợp nước sốt.",
       "Bước 3: Cho sườn và sốt vào nồi đun 20 phút. Thêm củ cải, cà rốt, ớt khô vào đun tiếp 20 phút.",
       "Bước 4: Cho nấm, hành tây đun nhỏ lửa 5 phút. Rắc vừng, hành lá và thưởng thức."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Sườn heo nướng tương Miso",
+<<<<<<< HEAD
     "thời gian": "90 phút",
     "số người": "4 người",
     "độ khó": "Trung bình",
+=======
+    "loại món": "mặn",
+    "thời gian": "90 phút",
+    "số người": "4 người",
+    "độ khó": "Trung bình",
+    "cách chế biến": [
+      "Bước 1: Ngâm sườn 30 phút. Luộc sườn với Miso, tỏi, nguyệt quế khoảng 1 tiếng cho mềm.",
+      "Bước 2: Trộn sườn đã luộc với gia vị sốt.",
+      "Bước 3: Xếp sườn, bánh gạo, rau củ vào khay, bọc giấy bạc nướng ở 200 độ C trong 30 phút.",
+      "Bước 4: Chần giá đỗ trộn cùng dầu mè, tỏi, ớt bột. Bày sườn và giá đỗ ra đĩa ăn kèm."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [
       {
         "tên": "sườn heo",
@@ -70,6 +99,13 @@
     ],
     "nguyên liệu phụ_1 cần thiết": [
       {
+<<<<<<< HEAD
+=======
+        "tên": "gạo",
+        "khối lượng": "1"
+      },
+      {
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
         "tên": "hành lá",
         "khối lượng": "1"
       },
@@ -107,19 +143,35 @@
         "tên": "gừng",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Ngâm sườn 30 phút. Luộc sườn với Miso, tỏi, nguyệt quế khoảng 1 tiếng cho mềm.",
       "Bước 2: Trộn sườn đã luộc với gia vị sốt.",
       "Bước 3: Xếp sườn, bánh gạo, rau củ vào khay, bọc giấy bạc nướng ở 200 độ C trong 30 phút.",
       "Bước 4: Chần giá đỗ trộn cùng dầu mè, tỏi, ớt bột. Bày sườn và giá đỗ ra đĩa ăn kèm."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Bánh tráng cuộn mì cay",
+<<<<<<< HEAD
     "thời gian": "10 phút",
     "số người": "1 người",
     "độ khó": "Dễ",
+=======
+    "loại món": "ăn vặt, tráng miệng",
+    "thời gian": "10 phút",
+    "số người": "1 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Nấu phần mì cay trong nước sôi khoảng 4-5 phút cho mềm.",
+      "Bước 2: Vớt mì ra, trộn đều với gói sốt gia vị đi kèm.",
+      "Bước 3: Thấm ướt bánh tráng trải ra phẳng. Gắp mì cho vào giữa, gấp 4 cạnh gói kín lại.",
+      "Bước 4: Chấm cùng sốt mayonnaise hoặc sốt phô mai để thưởng thức."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [
       {
         "tên": "mì",
@@ -127,6 +179,7 @@
       }
     ],
     "nguyên liệu phụ_1 cần thiết": [],
+<<<<<<< HEAD
     "nguyên liệu phụ_2 có thể bỏ qua": [],
     "cách chế biến": [
       "Bước 1: Nấu phần mì cay trong nước sôi khoảng 4-5 phút cho mềm.",
@@ -143,6 +196,28 @@
     "nguyên liệu chính": [],
     "nguyên liệu phụ_1 cần thiết": [
       {
+=======
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Xôi kiểu Hàn (Yaksik)",
+    "loại món": "món hoàn chỉnh",
+    "thời gian": "90 phút",
+    "số người": "3-4 người",
+    "độ khó": "Trung bình",
+    "cách chế biến": [
+      "Bước 1: Gạo nếp vo sạch ngâm 1 tiếng. Các loại hạt và trái cây sấy sơ chế sạch, rang sơ qua cho thơm.",
+      "Bước 2: Trộn gạo nếp với nước lọc, nước tương, đường vàng, dầu mè, bột quế. Bấm nồi cơm điện nấu chín.",
+      "Bước 3: Xôi chín trộn đều cùng hạt. Dàn xôi ra khay nén chặt, cất ngăn mát tủ lạnh 1 tiếng rồi dùng dao cắt miếng."
+    ],
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "gạo",
+        "khối lượng": "250.0 g"
+      },
+      {
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
         "tên": "táo",
         "khối lượng": "1"
       },
@@ -160,18 +235,35 @@
         "tên": "nước tương",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Gạo nếp vo sạch ngâm 1 tiếng. Các loại hạt và trái cây sấy sơ chế sạch, rang sơ qua cho thơm.",
       "Bước 2: Trộn gạo nếp với nước lọc, nước tương, đường vàng, dầu mè, bột quế. Bấm nồi cơm điện nấu chín.",
       "Bước 3: Xôi chín trộn đều cùng hạt. Dàn xôi ra khay nén chặt, cất ngăn mát tủ lạnh 1 tiếng rồi dùng dao cắt miếng."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Mì kim chi nấu đậu hũ non",
+<<<<<<< HEAD
     "thời gian": "15 phút",
     "số người": "1 người",
     "độ khó": "Dễ",
+=======
+    "loại món": "món hoàn chỉnh",
+    "thời gian": "15 phút",
+    "số người": "1 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Đậu hũ non thái miếng vừa ăn, hành lá thái nhỏ.",
+      "Bước 2: Xào sơ gói gia vị mì với 20ml dầu ăn.",
+      "Bước 3: Cho 550ml nước lọc và kim chi vào đun sôi.",
+      "Bước 4: Thêm vắt mì, rau sấy, đậu hũ non đun sôi lại.",
+      "Bước 5: Cho thêm lòng đỏ trứng, rắc hành lá và bột tiêu rồi tắt bếp."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [],
     "nguyên liệu phụ_1 cần thiết": [
       {
@@ -192,6 +284,7 @@
         "tên": "dầu ăn",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Đậu hũ non thái miếng vừa ăn, hành lá thái nhỏ.",
@@ -199,13 +292,28 @@
       "Bước 3: Cho 550ml nước lọc và kim chi vào đun sôi.",
       "Bước 4: Thêm vắt mì, rau sấy, đậu hũ non đun sôi lại.",
       "Bước 5: Cho thêm lòng đỏ trứng, rắc hành lá và bột tiêu rồi tắt bếp."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Canh đậu hũ non kim chi thịt băm",
+<<<<<<< HEAD
     "thời gian": "20 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
+=======
+    "loại món": "canh",
+    "thời gian": "20 phút",
+    "số người": "2 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Đun nóng dầu ăn và dầu mè, phi thơm hành tây, hành lá.",
+      "Bước 2: Đổ thịt băm vào xào tới khi chuyển màu, thêm kim chi vào xào cùng.",
+      "Bước 3: Nêm nếm nước tương, dầu hào, đường, mắm, bột ớt cho vừa miệng.",
+      "Bước 4: Đổ nước hầm xương vào đun sôi. Cuối cùng cho đậu hũ non thái khối vào đun sôi lại."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [],
     "nguyên liệu phụ_1 cần thiết": [
       {
@@ -250,19 +358,34 @@
         "tên": "tỏi",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Đun nóng dầu ăn và dầu mè, phi thơm hành tây, hành lá.",
       "Bước 2: Đổ thịt băm vào xào tới khi chuyển màu, thêm kim chi vào xào cùng.",
       "Bước 3: Nêm nếm nước tương, dầu hào, đường, mắm, bột ớt cho vừa miệng.",
       "Bước 4: Đổ nước hầm xương vào đun sôi. Cuối cùng cho đậu hũ non thái khối vào đun sôi lại."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Thịt cổ heo hầm kim chi",
+<<<<<<< HEAD
     "thời gian": "90 phút",
     "số người": "3 người",
     "độ khó": "Dễ",
+=======
+    "loại món": "mặn",
+    "thời gian": "90 phút",
+    "số người": "3 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Kim chi cắt làm 3 đoạn dài. Cắt thịt cổ heo thành miếng dày, to. Hành tây, hành lá, ớt thái xéo. Pha hỗn hợp nước sốt.",
+      "Bước 2: Xếp kim chi, thịt heo, hành tây vào nồi, đổ nước sốt và nước dùng cá cơm ngập mặt.",
+      "Bước 3: Đun sôi rồi hạ lửa nhỏ hầm trong 1 tiếng 20 phút. Thêm hành, ớt đun thêm 2 phút là hoàn thành."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [],
     "nguyên liệu phụ_1 cần thiết": [
       {
@@ -276,6 +399,13 @@
       {
         "tên": "cá cơm",
         "khối lượng": "1"
+<<<<<<< HEAD
+=======
+      },
+      {
+        "tên": "gạo",
+        "khối lượng": "1"
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
       }
     ],
     "nguyên liệu phụ_2 có thể bỏ qua": [
@@ -303,6 +433,7 @@
         "tên": "tỏi",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Kim chi cắt làm 3 đoạn dài. Cắt thịt cổ heo thành miếng dày, to. Hành tây, hành lá, ớt thái xéo. Pha hỗn hợp nước sốt.",
@@ -370,13 +501,27 @@
       "Bước 2: Nấu 300ml nước với bột nếp cho sôi lăn tăn, thêm đường khuấy sánh đặc rồi để nguội.",
       "Bước 3: Trộn hồ nếp với ớt bột, mắm, gia vị xay nhuyễn và hành hẹ cắt khúc.",
       "Bước 4: Phết đều sốt vào từng bẹ cải thảo. Lên men ở nhiệt độ phòng 1-2 ngày."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Canh miso nấm mỡ rong biển",
+<<<<<<< HEAD
     "thời gian": "15 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
+=======
+    "loại món": "canh",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Đun sôi 400ml nước cùng hạt nêm.",
+      "Bước 2: Thả nấm mỡ và hành boa rô cắt lát vào nấu chín mềm.",
+      "Bước 3: Đặt rây lọc vào nồi canh, cho tương miso vào rây và dùng thìa khuấy tan tương vào nước dùng (không nấu sôi bùng tương Miso để giữ dinh dưỡng). Rắc hành lá và múc ra bát."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [],
     "nguyên liệu phụ_1 cần thiết": [
       {
@@ -389,18 +534,34 @@
         "tên": "hạt nêm",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Đun sôi 400ml nước cùng hạt nêm.",
       "Bước 2: Thả nấm mỡ và hành boa rô cắt lát vào nấu chín mềm.",
       "Bước 3: Đặt rây lọc vào nồi canh, cho tương miso vào rây và dùng thìa khuấy tan tương vào nước dùng (không nấu sôi bùng tương Miso để giữ dinh dưỡng). Rắc hành lá và múc ra bát."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Đậu phụ chiên giòn sốt Teriyaki",
+<<<<<<< HEAD
     "thời gian": "15 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
+=======
+    "loại món": "rau",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Đậu phụ rửa sạch, dùng giấy thấm khô hoàn toàn rồi cắt thành miếng vuông nhỏ đều nhau.",
+      "Bước 2: Lăn đậu qua một lớp áo mỏng bột khoai tây.",
+      "Bước 3: Đun nóng dầu thực vật, chiên đậu phụ ở lửa vừa khoảng 1-2 phút mỗi bên tới khi vàng giòn.",
+      "Bước 4: Vớt đậu ra, rưới sốt teriyaki trộn vừng rang lên trên mặt."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [],
     "nguyên liệu phụ_1 cần thiết": [
       {
@@ -412,6 +573,7 @@
         "khối lượng": "1"
       }
     ],
+<<<<<<< HEAD
     "nguyên liệu phụ_2 có thể bỏ qua": [],
     "cách chế biến": [
       "Bước 1: Đậu phụ rửa sạch, dùng giấy thấm khô hoàn toàn rồi cắt thành miếng vuông nhỏ đều nhau.",
@@ -425,6 +587,21 @@
     "thời gian": "15 phút",
     "số người": "2 người",
     "độ khó": "Dễ",
+=======
+    "nguyên liệu phụ_2 có thể bỏ qua": []
+  },
+  {
+    "tên": "Nấm hải sản chiên giòn (Món chay)",
+    "loại món": "rau",
+    "thời gian": "15 phút",
+    "số người": "2 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Nấm hải sản cắt bỏ chân, rửa sạch để thật ráo nước. Rắc một xíu muối tiêu lên nấm.",
+      "Bước 2: Xóc nấm hải sản đều qua một lớp bột khoai tây mỏng.",
+      "Bước 3: Đun sôi dầu nóng già, thả nấm vào chiên ngập dầu tới khi lớp vỏ cứng lại vàng giòn. Vớt ra để ráo dầu, rắc hành lá thưởng thức."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [],
     "nguyên liệu phụ_1 cần thiết": [
       {
@@ -449,21 +626,44 @@
         "tên": "dầu ăn",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Nấm hải sản cắt bỏ chân, rửa sạch để thật ráo nước. Rắc một xíu muối tiêu lên nấm.",
       "Bước 2: Xóc nấm hải sản đều qua một lớp bột khoai tây mỏng.",
       "Bước 3: Đun sôi dầu nóng già, thả nấm vào chiên ngập dầu tới khi lớp vỏ cứng lại vàng giòn. Vớt ra để ráo dầu, rắc hành lá thưởng thức."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Cơm hấp thập cẩm kiểu Nhật",
+<<<<<<< HEAD
     "thời gian": "45 phút",
     "số người": "3 người",
     "độ khó": "Dễ",
     "nguyên liệu chính": [],
     "nguyên liệu phụ_1 cần thiết": [
       {
+=======
+    "loại món": "món hoàn chỉnh",
+    "thời gian": "45 phút",
+    "số người": "3 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Vo gạo để ráo. Cà rốt, nấm thái nhỏ vừa ăn. Thịt heo và đậu hũ chiên thái hạt lựu.",
+      "Bước 2: Đun nóng chảo xào săn thịt heo, sau đó cho nấm và rau củ vào đảo nhanh tay ở lửa lớn.",
+      "Bước 3: Pha nước tương Kikkoman cùng nước lọc, đường, hạt nêm.",
+      "Bước 4: Cho gạo vào nồi cơm điện, đổ nước tương vừa pha vào, xếp thịt và rau củ xào lên trên rồi bấm nút nấu."
+    ],
+    "nguyên liệu chính": [],
+    "nguyên liệu phụ_1 cần thiết": [
+      {
+        "tên": "gạo",
+        "khối lượng": "1.5 bát"
+      },
+      {
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
         "tên": "thịt heo",
         "khối lượng": "200.0 g"
       },
@@ -485,6 +685,7 @@
         "tên": "hạt nêm",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Vo gạo để ráo. Cà rốt, nấm thái nhỏ vừa ăn. Thịt heo và đậu hũ chiên thái hạt lựu.",
@@ -520,13 +721,27 @@
       "Bước 2: Cho ngao, rong biển ngâm nở, nấm linh chi vào nước dùng đun sôi vớt bọt.",
       "Bước 3: Lấy chút nước canh pha loãng tương miso rồi đổ ngược vào nồi.",
       "Bước 4: Thêm đậu hũ non thái khối, đun sôi tăm nhỏ, rắc gừng băm, hành lá."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   },
   {
     "tên": "Cá diêu hồng nấu lẩu Thái",
+<<<<<<< HEAD
     "thời gian": "30 phút",
     "số người": "3 người",
     "độ khó": "Dễ",
+=======
+    "loại món": "canh",
+    "thời gian": "30 phút",
+    "số người": "3 người",
+    "độ khó": "Dễ",
+    "cách chế biến": [
+      "Bước 1: Cá cắt khúc vừa ăn, chần qua nước sôi có gừng và hành lá 10 giây để khử mùi tanh, sau đó vớt ra ngâm nước đá.",
+      "Bước 2: Đun sôi 1.2 lít nước, thả nguyên gói gia vị lẩu Thái vào.",
+      "Bước 3: Cho cá vào đun chín. Cà chua bổ múi cau cho vào đun mềm nhưng không nát. Tắt bếp rắc thì là cắt khúc dài 5cm."
+    ],
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     "nguyên liệu chính": [
       {
         "tên": "cá diêu hồng",
@@ -552,6 +767,7 @@
         "tên": "gừng",
         "khối lượng": null
       }
+<<<<<<< HEAD
     ],
     "cách chế biến": [
       "Bước 1: Cá cắt khúc vừa ăn, chần qua nước sôi có gừng và hành lá 10 giây để khử mùi tanh, sau đó vớt ra ngâm nước đá.",
@@ -777,6 +993,8 @@
       "Bước 2: Măng khô luộc xả nhiều lần xé sợi. Phi hành nén xào gà thật săn, thêm măng vào xào.",
       "Bước 3: Đổ nước dùng hầm từ xương gà vào xâm xấp mặt thịt, đun riu riu cho thấm.",
       "Bước 4: Cho mì Quảng ra tô, chan nước lèo vừa đủ ướt sợi mì, rắc đậu phộng, hành lá, ăn kèm rau sống và bánh tráng."
+=======
+>>>>>>> ba34e0891da923704e0e35fe0b8243790d96d12e
     ]
   }
 ]
