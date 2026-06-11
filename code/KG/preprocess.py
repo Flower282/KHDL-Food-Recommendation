@@ -283,12 +283,12 @@ def resolve_recipe_dish_type(recipe: dict[str, Any]) -> tuple[str | None, str | 
     if explicit_key is not None:
         return explicit_value, explicit_key
 
-    inferred_value, inferred_key = infer_dish_type_from_text(recipe.get("name"))  # "tên" → "name"
+    inferred_value, inferred_key = infer_dish_type_from_text(recipe.get("name") or recipe.get("tên"))
     if inferred_key is not None:
         return inferred_value, inferred_key
 
     ingredient_text = " ".join(
-        str(item.get("name", ""))  # "tên" → "name"
+        str(item.get("name") or item.get("tên") or "")
         for group_name in ["main_ingredients", "required_ingredients", "optional_ingredients"]  # Các group mới
         for item in (recipe.get(group_name, []) if isinstance(recipe.get(group_name, []), list) else [])
         if isinstance(item, dict)
@@ -309,11 +309,11 @@ def load_json_array(path: str | Path) -> list[dict[str, Any]]:
 def normalize_stock(stock_rows: list[dict[str, Any]]) -> list[StockRecord]:
     normalized: list[StockRecord] = []
     for row in stock_rows:
-        name = str(row.get("tên", "")).strip()
+        name = str(row.get("tên") or row.get("name") or row.get("ingredient") or "").strip()
         if not name:
             continue
 
-        raw_quantity = row.get("khối lượng")
+        raw_quantity = row.get("khối lượng") or row.get("quantity") or row.get("weight")
         value, unit = parse_quantity(raw_quantity)
         normalized.append(
             StockRecord(
