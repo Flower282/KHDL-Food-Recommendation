@@ -6,6 +6,9 @@ __pycache__/
 # Virtual env
 .venv/
 venv/
+Lib/
+Scripts/
+share/
 # VSCode
 .vscode/
 # Logs and runtime files
@@ -13,5 +16,9 @@ logs/
 *.log
 # Byte-compiled / optimized
 __pycache__/
+# Large binary/model files
+*.dll
+*.pyd
+*.bin
 # Optional: ignore results if you prefer to not commit outputs
 # result/
