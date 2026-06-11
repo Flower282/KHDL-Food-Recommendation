@@ -23,6 +23,7 @@ class Neo4jKnowledgeGraph:
         database: str = DEFAULT_NEO4J_DATABASE,
     ) -> None:
         try:
+            # pyrefly: ignore [missing-import]
             from neo4j import GraphDatabase
         except ImportError as exc:
             raise ImportError("Missing neo4j package. Install with: pip install neo4j") from exc
