@@ -42,10 +42,32 @@ def _recipe_time(recipe: dict[str, Any]) -> Any:
     return _first_non_empty(recipe, ["time", "thời gian", "thá»i gian"])
 
 
+def _recipe_servings(recipe: dict[str, Any]) -> Any:
+    return _first_non_empty(recipe, ["servings", "số người", "so nguoi", "sá»‘ ngÆ°á»i"])
+
+
+def _recipe_difficulty_text(recipe: dict[str, Any]) -> Any:
+    return _first_non_empty(recipe, ["difficulty", "độ khó", "do kho", "Ä‘á»™ khÃ³"])
+
+
+def _recipe_instructions(recipe: dict[str, Any]) -> list[str]:
+    value = _first_non_empty(
+        recipe,
+        ["instructions", "steps", "cách chế biến", "cach che bien", "cÃ¡ch cháº¿ biáº¿n"],
+        [],
+    )
+    if isinstance(value, list):
+        return [str(item).strip() for item in value if str(item).strip()]
+    if isinstance(value, str) and value.strip():
+        return [part.strip() for part in value.split("|") if part.strip()]
+    return []
+
+
 @dataclass
 class IngredientMatch:
     ingredient_name: str
     ingredient_group: str
+    ingredient_quantity: Any
     stock_name: str | None
     name_score: float
     quantity_score: float
@@ -107,6 +129,7 @@ def score_dish(recipe: dict[str, Any], stock: list[StockRecord]) -> DishScore:
             IngredientMatch(
                 ingredient_name=ingredient.name,
                 ingredient_group=ingredient.group,
+                ingredient_quantity=ingredient.raw_quantity,
                 stock_name=stock_item.name if stock_item else None,
                 name_score=round(name_score, 4),
                 quantity_score=round(quantity_score, 4),
@@ -432,6 +455,16 @@ def recommend_from_rows(
         for recipe in filtered_recipe_rows
         if _recipe_name(recipe)
     }
+    recipe_detail_map = {
+        _recipe_name(recipe): {
+            "instructions": _recipe_instructions(recipe),
+            "time": _recipe_time(recipe),
+            "servings": _recipe_servings(recipe),
+            "difficulty": _recipe_difficulty_text(recipe),
+        }
+        for recipe in filtered_recipe_rows
+        if _recipe_name(recipe)
+    }
 
     ranked = rank_dishes(filtered_recipe_rows, stock_rows, top_k=top_k)
     # filter out dishes that do not have all main/required ingredients fulfilled
@@ -456,6 +489,10 @@ def recommend_from_rows(
                 "missing_required": row.missing_required,
                 "dish_type": row.dish_type or recipe_type_map.get(row.dish_name),
                 "dish_type_filter": dish_type_filter,
+                "instructions": recipe_detail_map.get(row.dish_name, {}).get("instructions", []),
+                "time": recipe_detail_map.get(row.dish_name, {}).get("time"),
+                "servings": recipe_detail_map.get(row.dish_name, {}).get("servings"),
+                "difficulty": recipe_detail_map.get(row.dish_name, {}).get("difficulty"),
                 "ingredient_matches": [match.__dict__ for match in row.ingredient_matches],
             }
             for index, row in enumerate(display_ranked)
